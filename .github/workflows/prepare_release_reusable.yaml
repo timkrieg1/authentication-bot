@@ -1,68 +1,28 @@
-# This workflow manually triggers the prepare_release workflow from the shared pipeline repo
-# and uploads bot_mapping.json as an artifact named 'bot_mapping_file'.
-
 name: Prepare Release (Reusable)
 
 on:
   workflow_dispatch:
-    inputs:
-        releaseDescription:
-            description: 'Release description'
-            required: true
-            type: string
-        runAutomatedTest:
-            description: 'Run automated tests'
-            required: true
-            type: boolean
-            default: true
-        createPullRequest:
-            description: 'Create pull request automatically'
-            required: true
-            type: boolean
-            default: true
-
-permissions:
-  contents: write
-  pull-requests: write
 
 jobs:
-  upload-bot-mapping:
-    name: Upload bot_mapping.json as artifact
+  call-reusable-workflow:
     runs-on: ubuntu-latest
     steps:
+      # Checkout this repo to access bot_mapping.json
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Upload bot_mapping.json as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: bot_mapping_file
-          path: bot_mapping.json
 
-  call-prepare-release:
-    name: Prepare release using checked out pipeline repo
-    needs: upload-bot-mapping
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout this repository
-        uses: actions/checkout@v4
-
-      - name: Checkout pipeline repository
-        uses: actions/checkout@v4
-        with:
-          repository: timkrieg1/cognigy-ci-cd-pipeline
-          ref: main
-          path: pipeline-repo
-
-      # Example: Run a script from the checked out repo
-      - name: Run prepare_release script
+      # Read and base64 encode bot_mapping.json
+      - name: Encode bot_mapping.json
+        id: encode_bot_mapping
         run: |
-          # Example: call a script from the pipeline repo
-          bash pipeline-repo/scripts/prepare_release.sh \
-            --bot-mapping bot_mapping.json \
-            --release-description "${{ github.event.inputs.releaseDescription }}" \
-            --run-automated-test "${{ github.event.inputs.runAutomatedTest }}" \
-            --create-pull-request "${{ github.event.inputs.createPullRequest }}" \
-            --bot-name "${{ vars.BOT_NAME }}"
-        env:
-          # Pass secrets or environment variables as needed
-          # EXAMPLE_SECRET: ${{ secrets.EXAMPLE_SECRET }}
+          BOT_MAPPING_B64=$(base64 -w 0 bot_mapping.json)
+          echo "BOT_MAPPING_B64=$BOT_MAPPING_B64" >> $GITHUB_OUTPUT
+
+      # Call the reusable workflow in another repo
+      - name: Call reusable workflow
+        uses: timkrieg1/cognigy-ci-cd-pipeline/blob/main/.github/workflows/prepare_release.yaml@main
+        with:
+          repository: ${{ github.repository }}
+          bot_mapping_b64: ${{ steps.encode_bot_mapping.outputs.BOT_MAPPING_B64 }}
+        secrets: 
+          pat_token: ${{ secrets.PAT }}
