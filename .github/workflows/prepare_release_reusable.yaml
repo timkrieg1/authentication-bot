@@ -1,0 +1,43 @@
+# This workflow manually triggers the prepare_release workflow from the shared pipeline repo
+# and uploads bot_mapping.json as an artifact named 'bot_mapping_file'.
+
+name: Prepare Release (Reusable)
+
+on:
+  workflow_dispatch:
+    inputs:
+        releaseDescription:
+            description: 'Release description'
+            required: true
+            type: string
+        runAutomatedTest:
+            description: 'Run automated tests'
+            required: true
+            type: boolean
+            default: true
+        createPullRequest:
+            description: 'Create pull request automatically'
+            required: true
+            type: boolean
+            default: true
+
+jobs:
+  upload-bot-mapping:
+    name: Upload bot_mapping.json as artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Upload bot_mapping.json as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bot_mapping_file
+          path: bot_mapping.json
+
+  call-prepare-release:
+    name: Call prepare_release reusable workflow
+    needs: upload-bot-mapping
+    uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
+    with:
+      bot_mapping_artifact: bot_mapping_file
+    secrets: inherit
