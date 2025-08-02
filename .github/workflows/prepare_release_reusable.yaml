@@ -39,5 +39,9 @@ jobs:
     needs: upload-bot-mapping
     uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
     with:
-      bot_mapping_artifact: bot_mapping_file
+      BOT_MAPPING_ARTIFACT: bot_mapping_file
+      releaseDescription: ${{ github.event.inputs.releaseDescription }}
+      runAutomatedTest: ${{ github.event.inputs.runAutomatedTest }}
+      createPullRequest: ${{ github.event.inputs.createPullRequest }}
+      BOT_NAME: ${{ vars.BOT_NAME }}
     secrets: inherit
