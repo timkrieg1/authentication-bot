@@ -35,6 +35,9 @@ jobs:
 
   call-reusable-workflow:
     needs: prepare-data
+    permissions:
+      contents: write
+      pull-requests: write
     uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
     with:
       REPOSITORY: ${{ github.repository }}
