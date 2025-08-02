@@ -20,7 +20,7 @@ jobs:
 
       # Call the reusable workflow in another repo
       - name: Call reusable workflow
-        uses: timkrieg1/cognigy-ci-cd-pipeline/blob/main/.github/workflows/prepare_release.yaml@main
+        uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
         with:
           repository: ${{ github.repository }}
           bot_mapping_b64: ${{ steps.encode_bot_mapping.outputs.BOT_MAPPING_B64 }}
