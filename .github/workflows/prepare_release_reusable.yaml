@@ -1,5 +1,3 @@
-name: Prepare Release (Reusable)
-
 on:
   workflow_dispatch:
     inputs:
@@ -17,16 +15,17 @@ on:
         required: true
         type: boolean
         default: true
-      
 
 jobs:
-  call-reusable-workflow:
+  prepare-data:
     runs-on: ubuntu-latest
+    outputs:
+      bot-mapping-b64: ${{ steps.encode_bot_mapping.outputs.BOT_MAPPING_B64 }}
     steps:
       # Checkout this repo to access bot_mapping.json
       - name: Checkout repository
         uses: actions/checkout@v4
-
+      
       # Read and base64 encode bot_mapping.json
       - name: Encode bot_mapping.json
         id: encode_bot_mapping
@@ -34,15 +33,15 @@ jobs:
           BOT_MAPPING_B64=$(base64 -w 0 bot_mapping.json)
           echo "BOT_MAPPING_B64=$BOT_MAPPING_B64" >> $GITHUB_OUTPUT
 
-      # Call the reusable workflow in another repo
-      - name: Call reusable workflow
-        uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
-        with:
-          REPOSITORY: ${{ github.repository }}
-          BOT_MAPPING_BASE64: ${{ steps.encode_bot_mapping.outputs.BOT_MAPPING_B64 }}
-          BOT_NAME: ${{ vars.BOT_NAME }}
-          RELEASE_DESCRIPTION: ${{ github.event.inputs.releaseDescription }}
-          RUN_AUTOMATED_TEST: ${{ github.event.inputs.runAutomatedTest }}
-          CREATE_PULL_REQUEST: ${{ github.event.inputs.createPullRequest }}
-        secrets:
-          PAT_TOKEN: ${{ secrets.PAT }}
+  call-reusable-workflow:
+    needs: prepare-data
+    uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
+    with:
+      REPOSITORY: ${{ github.repository }}
+      BOT_MAPPING_BASE64: ${{ needs.prepare-data.outputs.bot-mapping-b64 }}
+      BOT_NAME: ${{ vars.BOT_NAME }}
+      RELEASE_DESCRIPTION: ${{ github.event.inputs.releaseDescription }}
+      RUN_AUTOMATED_TEST: ${{ github.event.inputs.runAutomatedTest }}
+      CREATE_PULL_REQUEST: ${{ github.event.inputs.createPullRequest }}
+    secrets:
+      PAT_TOKEN: ${{ secrets.PAT }}
