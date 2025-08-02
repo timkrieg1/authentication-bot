@@ -66,9 +66,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: requirements_file
-      # Add your step to use requirements.txt here, e.g., pip install -r requirements.txt
-      # - name: Install dependencies
-      #   run: pip install -r requirements.txt
+
       - name: Call reusable workflow
         uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
         with:
