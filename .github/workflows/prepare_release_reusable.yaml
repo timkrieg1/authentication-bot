@@ -2,6 +2,22 @@ name: Prepare Release (Reusable)
 
 on:
   workflow_dispatch:
+    inputs:
+      releaseDescription:
+        description: 'Description for the release'
+        required: true
+        type: string
+      runAutomatedTest:
+        description: 'Run automated tests'
+        required: true
+        type: boolean
+        default: true
+      createPullRequest:
+        description: 'Create pull request automatically'
+        required: true
+        type: boolean
+        default: true
+      
 
 jobs:
   call-reusable-workflow:
@@ -22,7 +38,11 @@ jobs:
       - name: Call reusable workflow
         uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
         with:
-          repository: ${{ github.repository }}
-          bot_mapping_b64: ${{ steps.encode_bot_mapping.outputs.BOT_MAPPING_B64 }}
-        secrets: 
-          pat_token: ${{ secrets.PAT }}
+          REPOSITORY: ${{ github.repository }}
+          BOT_MAPPING_BASE64: ${{ steps.encode_bot_mapping.outputs.BOT_MAPPING_B64 }}
+          BOT_NAME: ${{ vars.BOT_NAME }}
+          RELEASE_DESCRIPTION: ${{ github.event.inputs.releaseDescription }}
+          RUN_AUTOMATED_TEST: ${{ github.event.inputs.runAutomatedTest }}
+          CREATE_PULL_REQUEST: ${{ github.event.inputs.createPullRequest }}
+        secrets:
+          PAT_TOKEN: ${{ secrets.PAT }}
