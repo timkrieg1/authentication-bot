@@ -39,22 +39,30 @@ jobs:
           path: bot_mapping.json
 
   call-prepare-release:
-    name: Call prepare_release reusable workflow
+    name: Prepare release using checked out pipeline repo
     needs: upload-bot-mapping
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout reusable workflow repository
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+
+      - name: Checkout pipeline repository
         uses: actions/checkout@v4
         with:
           repository: timkrieg1/cognigy-ci-cd-pipeline
           ref: main
           path: pipeline-repo
-      - name: Call reusable workflow
-        uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
-        with:
-          BOT_MAPPING_ARTIFACT: bot_mapping_file
-          releaseDescription: ${{ github.event.inputs.releaseDescription }}
-          runAutomatedTest: ${{ github.event.inputs.runAutomatedTest }}
-          createPullRequest: ${{ github.event.inputs.createPullRequest }}
-          BOT_NAME: ${{ vars.BOT_NAME }}
-        secrets: inherit
+
+      # Example: Run a script from the checked out repo
+      - name: Run prepare_release script
+        run: |
+          # Example: call a script from the pipeline repo
+          bash pipeline-repo/scripts/prepare_release.sh \
+            --bot-mapping bot_mapping.json \
+            --release-description "${{ github.event.inputs.releaseDescription }}" \
+            --run-automated-test "${{ github.event.inputs.runAutomatedTest }}" \
+            --create-pull-request "${{ github.event.inputs.createPullRequest }}" \
+            --bot-name "${{ vars.BOT_NAME }}"
+        env:
+          # Pass secrets or environment variables as needed
+          # EXAMPLE_SECRET: ${{ secrets.EXAMPLE_SECRET }}
