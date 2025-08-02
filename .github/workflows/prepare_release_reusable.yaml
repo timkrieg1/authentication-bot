@@ -60,19 +60,11 @@ jobs:
   call-prepare-release:
     name: Call prepare_release reusable workflow
     needs: [upload-bot-mapping, checkout-reusable-workflow-repo]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download requirements.txt artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: requirements_file
-
-      - name: Call reusable workflow
-        uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
-        with:
-          BOT_MAPPING_ARTIFACT: bot_mapping_file
-          releaseDescription: ${{ github.event.inputs.releaseDescription }}
-          runAutomatedTest: ${{ github.event.inputs.runAutomatedTest }}
-          createPullRequest: ${{ github.event.inputs.createPullRequest }}
-          BOT_NAME: ${{ vars.BOT_NAME }}
-        secrets: inherit
+    uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
+    with:
+      BOT_MAPPING_ARTIFACT: bot_mapping_file
+      releaseDescription: ${{ github.event.inputs.releaseDescription }}
+      runAutomatedTest: ${{ github.event.inputs.runAutomatedTest }}
+      createPullRequest: ${{ github.event.inputs.createPullRequest }}
+      BOT_NAME: ${{ vars.BOT_NAME }}
+    secrets: inherit
