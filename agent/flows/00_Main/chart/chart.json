@@ -101,7 +101,7 @@
     {
         "node": "6873f80e432d29bf054f7705",
         "children": [],
-        "next": "688e6ab0f5740646ece8fb24",
+        "next": "6873f80e432d29bf054f7707",
         "_id": "6873f80e432d29bf054f7709",
         "_data": {
             "_id": "6873f80e432d29bf054f7705",
@@ -126,59 +126,6 @@
             "preview": {
                 "flow": "3ee2d312-87b7-4aca-838e-a8607291fe7d",
                 "node": "87ab4f39-e825-4194-bad0-7c7fc015453b"
-            },
-            "localeReference": "6873f7f242ec168c188334ee"
-        }
-    },
-    {
-        "node": "688e6ab0f5740646ece8fb24",
-        "children": [],
-        "next": "6873f80e432d29bf054f7707",
-        "_id": "688e6ab0f5740646ece8fb27",
-        "_data": {
-            "_id": "688e6ab0f5740646ece8fb24",
-            "referenceId": "297ddaf5-ac68-45b0-90f0-858305824acf",
-            "type": "say",
-            "label": "Say",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {
-                "say": {
-                    "data": "",
-                    "linear": false,
-                    "loop": false,
-                    "text": [
-                        "Test"
-                    ],
-                    "type": "text",
-                    "_cognigy": {},
-                    "_data": {
-                        "_cognigy": {}
-                    }
-                },
-                "handoverOutput": "userAndAgent",
-                "preventTranscript": false,
-                "generativeAI_rephraseOutputMode": "none",
-                "generativeAI_amountOfLastUserInputs": 5,
-                "generativeAI_customInputs": "",
-                "generativeAI_temperature": 0.7
-            },
-            "preview": {
-                "data": "",
-                "linear": false,
-                "loop": false,
-                "text": [
-                    "Test"
-                ],
-                "type": "text",
-                "_cognigy": {},
-                "_data": {
-                    "_cognigy": {}
-                }
             },
             "localeReference": "6873f7f242ec168c188334ee"
         }
