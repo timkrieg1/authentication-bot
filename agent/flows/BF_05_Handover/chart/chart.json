@@ -212,7 +212,8 @@
                 "deepgramEndpointing": false,
                 "deepgramEndpointingValue": 1000,
                 "deepgramSmartFormatting": false,
-                "googleModel": "latest_short"
+                "googleModel": "latest_short",
+                "mediaPath": "partialMedia"
             },
             "preview": "{{cc.sessionInformation.handover.transferTarget}}",
             "localeReference": "6873f7f242ec168c188334ee"
