@@ -2,7 +2,7 @@
     {
         "node": "6873f80e432d29bf054f7700",
         "children": [],
-        "next": "6873f80e432d29bf054f7701",
+        "next": "68a582b22cd3b5b7f9ef217b",
         "_id": "6873f80e432d29bf054f7702",
         "_data": {
             "_id": "6873f80e432d29bf054f7700",
@@ -127,6 +127,59 @@
                 "flow": "3ee2d312-87b7-4aca-838e-a8607291fe7d",
                 "node": "87ab4f39-e825-4194-bad0-7c7fc015453b"
             },
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "68a582b22cd3b5b7f9ef217b",
+        "children": [],
+        "next": "6873f80e432d29bf054f7701",
+        "_id": "68a582b22cd3b5b7f9ef217e",
+        "_data": {
+            "_id": "68a582b22cd3b5b7f9ef217b",
+            "referenceId": "88f8e009-d934-4cd2-b1de-f3fa8e2f1eab",
+            "type": "transfer",
+            "label": "Transfer",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/voicegateway2",
+            "config": {
+                "transferType": "refer",
+                "transferTarget": "+49123456789",
+                "referredBy": "",
+                "transferReason": "Bot initiated a transfer.",
+                "anchorMedia": false,
+                "useTransferSipHeaders": false,
+                "transferSipHeaders": {
+                    "X-Custom-Header": "YourValue"
+                },
+                "dialCallerId": "",
+                "dialMusic": "",
+                "dialTranscriptionWebhook": "",
+                "sttLabel": "",
+                "dialTimeout": 60,
+                "enableTimeLimit": false,
+                "timeLimit": 600,
+                "agentAssistEnabled": false,
+                "agentAssistHeadersKey": "X-Custom-Header",
+                "amdEnabled": false,
+                "amdRedirectOnMachineDetected": false,
+                "amdRedirectText": "",
+                "recognitionChannel": 0,
+                "sttVendor": "",
+                "sttDeepgramModel": "nova-2",
+                "sttLanguage": "",
+                "sttDisablePunctuation": false,
+                "deepgramEndpointing": false,
+                "deepgramEndpointingValue": 1000,
+                "deepgramSmartFormatting": false,
+                "googleModel": "latest_short",
+                "mediaPath": "partialMedia"
+            },
+            "preview": "+49123456789",
             "localeReference": "6873f7f242ec168c188334ee"
         }
     }
