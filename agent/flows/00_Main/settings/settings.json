@@ -1,8 +1,13 @@
 {
-    "_id": "6873f80e432d29bf054f76f2",
-    "positiveConfirmationWords": null,
+    "_id": "68e912615de540482b121570",
+    "positiveConfirmationWords": [
+        "Ja"
+    ],
     "negativeConfirmationWords": null,
-    "intentThreshold": null,
+    "intentThreshold": {
+        "lower": 0.7,
+        "upper": 0.8
+    },
     "systemSlots": {
         "useDateSlots": null,
         "useNumberSlots": null,
@@ -17,7 +22,7 @@
     },
     "learnNewExampleSentences": null,
     "learnNewExampleSentencesThreshold": null,
-    "yesNoLogic": "yesNoIntents",
+    "yesNoLogic": "confirmationWords",
     "yesNoIntentThreshold": null,
     "continueExecutionAfterAttachedFlow": false,
     "continueExecutionAfterDefaultReply": false,
