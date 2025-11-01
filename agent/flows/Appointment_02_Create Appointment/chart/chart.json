@@ -1,0 +1,308 @@
+[
+    {
+        "node": "69061f6345fdac4d5c8183ce",
+        "children": [],
+        "next": "69061f6345fdac4d5c8183cf",
+        "_id": "69061f6345fdac4d5c8183d0",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183ce",
+            "referenceId": "4b6296b8-15f8-488d-addc-3c45e1f21077",
+            "type": "start",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Start",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": true,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c8183d1",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c8183d2",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183d1",
+            "referenceId": "c3d7f4cc-1069-483a-be52-a4b5c1e22210",
+            "type": "end",
+            "extension": "@cognigy/basic-nodes",
+            "label": "End",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c8183cf",
+        "children": [],
+        "next": "69061f6345fdac4d5c8183d3",
+        "_id": "69061f6345fdac4d5c8183d4",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183cf",
+            "referenceId": "fa7b5964-b7c6-420b-af87-632f2be88468",
+            "type": "code",
+            "extension": "@cognigy/basic-nodes",
+            "label": "C: Testing",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "code": "if (!cc?.sessionInfo) {\r\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\")\r\n}",
+                "hasError": false,
+                "transpiled": "if (!(cc === null || cc === void 0 ? void 0 : cc.sessionInfo)) {\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\");\n}\n"
+            },
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c8183d3",
+        "children": [],
+        "next": "69061f6345fdac4d5c8183d5",
+        "_id": "69061f6345fdac4d5c8183d6",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183d3",
+            "referenceId": "fb9f8554-236d-43de-a16a-cede6216f976",
+            "type": "executeFlow",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Execute Flow",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "flowNode": {
+                    "flow": "817faca8-f573-4fcb-a4f9-f095d0b506a9",
+                    "node": "0b083e7a-2f05-4f94-ad27-04d3932411c5"
+                },
+                "parseIntents": true,
+                "parseKeyphrases": true,
+                "absorbContext": ""
+            },
+            "preview": {
+                "flow": "817faca8-f573-4fcb-a4f9-f095d0b506a9",
+                "node": "0b083e7a-2f05-4f94-ad27-04d3932411c5"
+            },
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c8183d5",
+        "children": [
+            "69061f6345fdac4d5c8183d7",
+            "69061f6345fdac4d5c8183d8"
+        ],
+        "next": "69061f6345fdac4d5c8183d1",
+        "_id": "69061f6345fdac4d5c8183d9",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183d5",
+            "referenceId": "5397d00c-730f-46ad-b447-2ffe1556613a",
+            "type": "if",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Patient found?",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "condition": {
+                    "type": "condition",
+                    "rule": {
+                        "left": "1",
+                        "operand": "eq",
+                        "right": "1"
+                    },
+                    "condition": "cc.sessionInfo?.patient?.sysId"
+                }
+            },
+            "preview": {
+                "type": "condition",
+                "rule": {
+                    "left": "1",
+                    "operand": "eq",
+                    "right": "1"
+                },
+                "condition": "cc.sessionInfo?.patient?.sysId"
+            },
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c8183d7",
+        "children": [],
+        "next": "69061f6345fdac4d5c8183da",
+        "_id": "69061f6345fdac4d5c8183db",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183d7",
+            "referenceId": "cbb5cf2b-b455-4b59-a2eb-6c016b840fad",
+            "type": "then",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Then",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c8183d8",
+        "children": [],
+        "next": "69061f6345fdac4d5c8183dc",
+        "_id": "69061f6345fdac4d5c8183dd",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183d8",
+            "referenceId": "d942f7c7-459a-41b2-a3b4-bd6a64e44316",
+            "type": "else",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Else",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c8183da",
+        "children": [],
+        "next": "69061f6345fdac4d5c8183de",
+        "_id": "69061f6345fdac4d5c8183df",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183da",
+            "referenceId": "1001d174-fcdf-4109-aaae-ebe2ac118778",
+            "type": "code",
+            "extension": "@cognigy/basic-nodes",
+            "label": "C: Set Post Body",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "code": "cc.sessionInfo.appointments.newAppointment = {\r\n    \"patient\": cc.sessionInfo.patient.sysId,\r\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\r\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\r\n}",
+                "hasError": false,
+                "transpiled": "cc.sessionInfo.appointments.newAppointment = {\n    \"patient\": cc.sessionInfo.patient.sysId,\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\n};\n"
+            },
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c8183de",
+        "children": [],
+        "next": "69061f6345fdac4d5c8183e0",
+        "_id": "69061f6345fdac4d5c8183e1",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183de",
+            "referenceId": "5d995006-9279-498f-9925-1fc82c4be6d4",
+            "type": "httpRequest",
+            "extension": "@cognigy/basic-nodes",
+            "label": "HTTP: Retrieve Appointments by Phone",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "type": "POST",
+                "url": "{{cc.constants.serviceNowApi.baseUrls.appointments}}",
+                "headers": "{\r\n    \"Accept\": \"application/json\",\r\n    \"Content-Type\": \"application/json\"\r\n}",
+                "payloadType": "json",
+                "payloadText": "",
+                "payloadJSON": "\"{{cc.sessionInfo.appointments.newAppointment}}\"",
+                "payloadFormData": "{}",
+                "storeLocation": "input",
+                "inputKey": "httprequest",
+                "contextKey": "asyncRequest",
+                "authType": "basic",
+                "basicConnection": "b2582db9-2bd7-4a35-94a3-fbbade0a581d",
+                "apiKeyAuthKeyConnection": "",
+                "apiKeyXKeyConnection": "",
+                "oAuth2Connection": "",
+                "async": false,
+                "cache": false,
+                "cacheExpiry": 0,
+                "timeout": 8000,
+                "retryAttempts": 0,
+                "storeResponseHeaders": false,
+                "allowSelfSigned": false,
+                "errorLogging": "none",
+                "debugLogging": "none",
+                "abortOnError": false,
+                "logWarning": ""
+            },
+            "preview": "{{cc.constants.serviceNowApi.baseUrls.appointments}}",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c8183e0",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c8183e2",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183e0",
+            "referenceId": "a0e66ed4-b29b-4c7b-9db8-2373a1dac9c6",
+            "type": "addToContext",
+            "extension": "@cognigy/basic-nodes",
+            "label": "AC: rtaText",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "key": "sessionInfo.appointments.newAppointment.rtaText",
+                "value": "The appointment was successfully created.",
+                "mode": "simple"
+            },
+            "preview": "sessionInfo.appointments.newAppointment.rtaText",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c8183dc",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c8183e3",
+        "_data": {
+            "_id": "69061f6345fdac4d5c8183dc",
+            "referenceId": "2bc2f3a6-5773-4055-be73-3abfe622e5b8",
+            "type": "addToContext",
+            "extension": "@cognigy/basic-nodes",
+            "label": "AC: rtaText (2)",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "key": "sessionInfo.appointments.newAppointment.rtaText",
+                "value": "The appointment could not be created because the patient name wasnt found. Ask the patient for his name again.",
+                "mode": "simple"
+            },
+            "preview": "sessionInfo.appointments.newAppointment.rtaText",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    }
+]
