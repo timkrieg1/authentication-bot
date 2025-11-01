@@ -1,0 +1,20 @@
+{
+    "_id": "69061f6345fdac4d5c818405",
+    "referenceId": "be80822c-7526-4c0f-aa14-aa970ff80b51",
+    "type": "aiAgentJobTool",
+    "label": "Tool",
+    "comment": "",
+    "commentColor": "",
+    "analyticsLabel": null,
+    "isDisabled": false,
+    "isEntryPoint": false,
+    "extension": "@cognigy/basic-nodes",
+    "config": {
+        "toolId": "get_detailed_ticket_information",
+        "description": "Use this tool to retrieve detailed informations about a specific ticket, if the user wants to know details that you are not able to see in the provided information.",
+        "useParameters": true,
+        "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"ticket_number\": {\n      \"type\": \"string\",\n      \"description\": \"The ticket number. Starts with \\\"INC\\\" and contains up to 10 digits afterwards.\"\n    },\n    \"generated_output\": {\n      \"type\": \"string\",\n      \"description\": \"A very short message to the user that you looking in the system for the information.\"\n    }\n  },\n  \"required\": [\n    \"ticket_number\",\n    \"generated_output\"\n  ],\n  \"additionalProperties\": false\n}",
+        "debugMessage": true,
+        "condition": ""
+    }
+}

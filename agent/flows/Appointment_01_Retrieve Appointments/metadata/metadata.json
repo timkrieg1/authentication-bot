@@ -1,20 +1,20 @@
 {
-    "_id": "6873f80e432d29bf054f76e0",
-    "referenceId": "5695db90-1987-429a-bd29-0dc89c2cd9f3",
-    "name": "BF_05_Handover",
+    "_id": "69061f6345fdac4d5c818355",
+    "referenceId": "3b195289-a467-432d-884b-c6d1aa2892aa",
+    "name": "Appointment_01_Retrieve Appointments",
     "description": "",
     "context": {},
     "attachedFlows": [],
     "img": "",
-    "chartReference": "6873f80e432d29bf054f76e1",
+    "chartReference": "69061f6345fdac4d5c818356",
     "projectReference": "6873f7f242ec168c188334ec",
     "organisationReference": "5f08b3f6619dfb1779da18f9",
-    "createdAt": 1734183414,
-    "lastChanged": 1761317818,
+    "createdAt": 1753124951,
+    "lastChanged": 1762008931,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
     "attachedLexicons": [],
     "localeReference": "6873f7f242ec168c188334ee",
-    "intentTrainGroupReference": "6873f80e432d29bf054f7882",
-    "isTrainingOutOfDate": null
+    "intentTrainGroupReference": "69061f6345fdac4d5c8184e6",
+    "isTrainingOutOfDate": true
 }
