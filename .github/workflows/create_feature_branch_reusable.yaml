@@ -12,7 +12,7 @@ on:
           options:
           - de-DE
           - en-US
-  jobs:
+jobs:
     prepare-data:
       runs-on: ubuntu-latest
       outputs:
