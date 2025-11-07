@@ -1,0 +1,20 @@
+{
+    "_id": "69061f6345fdac4d5c818407",
+    "referenceId": "50414d31-b5d7-49a2-ae2c-31567d8372b0",
+    "type": "aiAgentJobTool",
+    "label": "Tool",
+    "comment": "",
+    "commentColor": "",
+    "analyticsLabel": null,
+    "isDisabled": true,
+    "isEntryPoint": false,
+    "extension": "@cognigy/basic-nodes",
+    "config": {
+        "toolId": "add_comment",
+        "description": "Use this tool to add a comment to an existing ticket. Ask the user what they want to add, and confirm the ticket ID and user ID before proceeding.",
+        "useParameters": true,
+        "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"ticket_id\": {\n      \"type\": \"string\",\n      \"description\": \"The ticket ID of the ticket to add a comment on.\"\n    },\n    \"comment\": {\n      \"type\": \"string\",\n      \"description\": \"The comment to add to the ticket.\"\n    }\n  },\n  \"required\": [\n    \"ticket_id\",\n    \"comment\"\n  ],\n  \"additionalProperties\": false\n}",
+        "debugMessage": true,
+        "condition": ""
+    }
+}

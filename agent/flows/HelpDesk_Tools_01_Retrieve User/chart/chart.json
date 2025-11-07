@@ -1,0 +1,821 @@
+[
+    {
+        "node": "69061f6345fdac4d5c818438",
+        "children": [],
+        "next": "69061f6345fdac4d5c818439",
+        "_id": "69061f6345fdac4d5c81843a",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818438",
+            "referenceId": "17c5dcb3-a595-4259-af72-c086e568b932",
+            "type": "start",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Start",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": true,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81843b",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c81843c",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81843b",
+            "referenceId": "8f49e955-e1fc-44a4-95a6-22421b4fa047",
+            "type": "end",
+            "extension": "@cognigy/basic-nodes",
+            "label": "End",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818439",
+        "children": [],
+        "next": "69061f6345fdac4d5c81843d",
+        "_id": "69061f6345fdac4d5c81843e",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818439",
+            "referenceId": "aeb6ddf4-ade5-446e-9284-b3d51d5545f1",
+            "type": "code",
+            "extension": "@cognigy/basic-nodes",
+            "label": "C: Testing",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "code": "if (!cc.sessionInfo) {\r\n    cc.sessionInfo = {\r\n        \"callerNumber\":\"+4915141803172\",\r\n        \"user\": {\r\n            \"initialSearch\": true\r\n        },\r\n        \"aiAgent\": {\r\n            \"prompts\": {\r\n                \"instructions\": {\r\n                    \"helpdesk\": \"\"\r\n                },\r\n                \"context\": {\r\n                    \"helpdesk\": \"\"\r\n                }\r\n            },\r\n            \"shortTermMemory\": {\r\n                \r\n            }\r\n        }\r\n    }\r\n\r\n    cc.constants = {\r\n        \"serviceNowApi\": {\r\n            \"baseUrls\": {\r\n                \"incidents\": \"https://ven07073.service-now.com/api/now/table/incident\",\r\n                \"users\": \"https://ven07073.service-now.com/api/now/table/sys_user\",\r\n                \"appointments\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment \",\r\n                \"patients\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_patient\",\r\n                \"departments\": \"https://ven07073.service-now.com/api/now/table/cmn_department\"\r\n            } \r\n        }\r\n    };\r\n}",
+                "hasError": false,
+                "transpiled": "if (!cc.sessionInfo) {\n    cc.sessionInfo = {\n        \"callerNumber\": \"+4915141803172\",\n        \"user\": {\n            \"initialSearch\": true\n        },\n        \"aiAgent\": {\n            \"prompts\": {\n                \"instructions\": {\n                    \"helpdesk\": \"\"\n                },\n                \"context\": {\n                    \"helpdesk\": \"\"\n                }\n            },\n            \"shortTermMemory\": {}\n        }\n    };\n    cc.constants = {\n        \"serviceNowApi\": {\n            \"baseUrls\": {\n                \"incidents\": \"https://ven07073.service-now.com/api/now/table/incident\",\n                \"users\": \"https://ven07073.service-now.com/api/now/table/sys_user\",\n                \"appointments\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment \",\n                \"patients\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_patient\",\n                \"departments\": \"https://ven07073.service-now.com/api/now/table/cmn_department\"\n            }\n        }\n    };\n}\n"
+            },
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81843d",
+        "children": [
+            "69061f6345fdac4d5c81843f",
+            "69061f6345fdac4d5c818440"
+        ],
+        "next": "69061f6345fdac4d5c818441",
+        "_id": "69061f6345fdac4d5c818442",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81843d",
+            "referenceId": "a965d5b6-c254-43b8-8843-0534fa03b16e",
+            "type": "if",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Initial Search?",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "condition": {
+                    "type": "condition",
+                    "rule": {
+                        "left": "1",
+                        "operand": "eq",
+                        "right": "1"
+                    },
+                    "condition": "cc.sessionInfo.user.initialSearch"
+                }
+            },
+            "preview": {
+                "type": "condition",
+                "rule": {
+                    "left": "1",
+                    "operand": "eq",
+                    "right": "1"
+                },
+                "condition": "cc.sessionInfo.user.initialSearch"
+            },
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81843f",
+        "children": [],
+        "next": "69061f6345fdac4d5c818443",
+        "_id": "69061f6345fdac4d5c818444",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81843f",
+            "referenceId": "a4bd1030-2d97-4ae7-9a95-c16ee58bbde0",
+            "type": "then",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Then",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818440",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c818445",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818440",
+            "referenceId": "218d26eb-9210-4231-a9dc-7ac4eec09b17",
+            "type": "else",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Else",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818443",
+        "children": [],
+        "next": "69061f6345fdac4d5c818446",
+        "_id": "69061f6345fdac4d5c818447",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818443",
+            "referenceId": "c393bd2a-12ca-410f-9fbd-e7ff1db1778c",
+            "type": "httpRequest",
+            "extension": "@cognigy/basic-nodes",
+            "label": "HTTP: Retrieve with mobile",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "type": "GET",
+                "url": "{{context.constants.serviceNowApi.baseUrls.users}}?mobile_phone={{cc.sessionInfo.callerNumber}}",
+                "headers": "{}",
+                "payloadType": "json",
+                "payloadText": "",
+                "payloadJSON": "{}",
+                "payloadFormData": "{}",
+                "storeLocation": "input",
+                "inputKey": "httprequest",
+                "contextKey": "httprequest",
+                "authType": "basic",
+                "basicConnection": "b2582db9-2bd7-4a35-94a3-fbbade0a581d",
+                "apiKeyAuthKeyConnection": "",
+                "apiKeyXKeyConnection": "",
+                "oAuth2Connection": "",
+                "async": false,
+                "cache": false,
+                "cacheExpiry": 0,
+                "timeout": 8000,
+                "retryAttempts": 0,
+                "storeResponseHeaders": false,
+                "allowSelfSigned": false,
+                "errorLogging": "full",
+                "debugLogging": "full",
+                "abortOnError": false,
+                "logWarning": ""
+            },
+            "preview": "{{context.constants.serviceNowApi.baseUrls.users}}?mobile_phone={{cc.sessionInfo.callerNumber}}",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818446",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c818448",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818446",
+            "referenceId": "bf618301-a9fb-4a35-8b06-3edf8005591f",
+            "type": "code",
+            "extension": "@cognigy/basic-nodes",
+            "label": "C: Extract Result",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "code": "try {\r\n    let response = ci.httprequest;\r\n\r\n    if (response.statusCode != 200) {\r\n        throw new Error(`Fetching user failed ${JSON.stringify(response)}`);\r\n    }\r\n\r\n    let content = response.result.result;\r\n\r\n    // One user was found\r\n    if (content.length == 1) {\r\n        let user = content[0];\r\n        let userObject = {\r\n            \"name\": user[\"name\"],\r\n            \"firstName\": user[\"first_name\"],\r\n            \"lastName\": user[\"last_name\"],\r\n            \"id\": user[\"sys_id\"],\r\n            \"mobile\": user[\"mobile_number\"],\r\n            \"phone\": user[\"phone\"],\r\n            \"email\": user[\"email\"],\r\n            \r\n        };\r\n\r\n        //Save relevant user data in context\r\n        cc.sessionInfo.user = userObject;\r\n\r\n    }\r\n} catch (err) {\r\n    api.log(\"error\", `Fetching user by mobile failed: ${err}`)\r\n}",
+                "hasError": false,
+                "transpiled": "try {\n    let response = ci.httprequest;\n    if (response.statusCode != 200) {\n        throw new Error(`Fetching user failed ${JSON.stringify(response)}`);\n    }\n    let content = response.result.result;\n    if (content.length == 1) {\n        let user = content[0];\n        let userObject = {\n            \"name\": user[\"name\"],\n            \"firstName\": user[\"first_name\"],\n            \"lastName\": user[\"last_name\"],\n            \"id\": user[\"sys_id\"],\n            \"mobile\": user[\"mobile_number\"],\n            \"phone\": user[\"phone\"],\n            \"email\": user[\"email\"],\n        };\n        cc.sessionInfo.user = userObject;\n    }\n}\ncatch (err) {\n    api.log(\"error\", `Fetching user by mobile failed: ${err}`);\n}\n"
+            },
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818449",
+        "children": [
+            "69061f6345fdac4d5c81844a",
+            "69061f6345fdac4d5c81844b"
+        ],
+        "next": "69061f6345fdac4d5c81843b",
+        "_id": "69061f6345fdac4d5c81844c",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818449",
+            "referenceId": "d51e7824-d69e-4b19-833f-678a4c83481e",
+            "type": "if",
+            "extension": "@cognigy/basic-nodes",
+            "label": "User found?",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "condition": {
+                    "type": "condition",
+                    "rule": {
+                        "left": "1",
+                        "operand": "eq",
+                        "right": "1"
+                    },
+                    "condition": "cc.sessionInfo?.user?.id\r"
+                }
+            },
+            "preview": {
+                "type": "condition",
+                "rule": {
+                    "left": "1",
+                    "operand": "eq",
+                    "right": "1"
+                },
+                "condition": "cc.sessionInfo?.user?.id\r"
+            },
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81844a",
+        "children": [],
+        "next": "69061f6345fdac4d5c81844d",
+        "_id": "69061f6345fdac4d5c81844e",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81844a",
+            "referenceId": "36b27383-c8b3-4690-bbb3-1a3495714e46",
+            "type": "then",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Then",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81844b",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c81844f",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81844b",
+            "referenceId": "a53ab94b-3c23-432a-8a03-40f8ab64dc81",
+            "type": "else",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Else",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81844d",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c818450",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81844d",
+            "referenceId": "6312e529-69e9-451c-a18d-39a61a57c974",
+            "type": "addToContext",
+            "extension": "@cognigy/basic-nodes",
+            "label": "AC: shortTermMemory",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "key": "sessionInfo.aiAgent.shortTermMemory.userProfile",
+                "value": "{{cc.sessionInfo.user}}",
+                "mode": "simple"
+            },
+            "preview": "sessionInfo.aiAgent.shortTermMemory.userProfile",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818441",
+        "children": [
+            "69061f6345fdac4d5c818451",
+            "69061f6345fdac4d5c818452"
+        ],
+        "next": "69061f6345fdac4d5c818449",
+        "_id": "69061f6345fdac4d5c818453",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818441",
+            "referenceId": "a1ccadc6-1e24-4518-bbbe-9921cbf63892",
+            "type": "if",
+            "extension": "@cognigy/basic-nodes",
+            "label": "User Identification Tool?",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "condition": {
+                    "type": "condition",
+                    "rule": {
+                        "left": "1",
+                        "operand": "eq",
+                        "right": "1"
+                    },
+                    "condition": "cc.sessionInfo.userIdentification"
+                }
+            },
+            "preview": {
+                "type": "condition",
+                "rule": {
+                    "left": "1",
+                    "operand": "eq",
+                    "right": "1"
+                },
+                "condition": "cc.sessionInfo.userIdentification"
+            },
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818451",
+        "children": [],
+        "next": "69061f6345fdac4d5c818454",
+        "_id": "69061f6345fdac4d5c818455",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818451",
+            "referenceId": "38f9ec7c-6bca-48f7-82d7-735d6d4869bd",
+            "type": "then",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Then",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818452",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c818456",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818452",
+            "referenceId": "3c5e78c3-8584-4782-a71b-c4feeb0f7400",
+            "type": "else",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Else",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818457",
+        "children": [],
+        "next": "69061f6345fdac4d5c818458",
+        "_id": "69061f6345fdac4d5c818459",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818457",
+            "referenceId": "1c59a65b-9e56-45e9-b981-969fcfe102ca",
+            "type": "httpRequest",
+            "extension": "@cognigy/basic-nodes",
+            "label": "HTTP: Retrieve department",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": true,
+            "config": {
+                "type": "GET",
+                "url": "{{context.constants.serviceNowApi.baseUrls.departments}}?sysparm_query=nameSTARTSWITH{{cc.sessionInfo.userIdentification.department}}",
+                "headers": "{}",
+                "payloadType": "json",
+                "payloadText": "",
+                "payloadJSON": "{}",
+                "payloadFormData": "{}",
+                "storeLocation": "input",
+                "inputKey": "httprequest",
+                "contextKey": "httprequest",
+                "authType": "basic",
+                "basicConnection": "b2582db9-2bd7-4a35-94a3-fbbade0a581d",
+                "apiKeyAuthKeyConnection": "",
+                "apiKeyXKeyConnection": "",
+                "oAuth2Connection": "",
+                "async": false,
+                "cache": false,
+                "cacheExpiry": 0,
+                "timeout": 8000,
+                "retryAttempts": 0,
+                "storeResponseHeaders": false,
+                "allowSelfSigned": false,
+                "errorLogging": "full",
+                "debugLogging": "full",
+                "abortOnError": false,
+                "logWarning": ""
+            },
+            "preview": "{{context.constants.serviceNowApi.baseUrls.departments}}?sysparm_query=nameSTARTSWITH{{cc.sessionInfo.userIdentification.department}}",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81845a",
+        "children": [],
+        "next": "69061f6345fdac4d5c81845b",
+        "_id": "69061f6345fdac4d5c81845c",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81845a",
+            "referenceId": "cd8cdcff-8c45-4162-9e0c-bee1cef5cddc",
+            "type": "then",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Then",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81845d",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c81845e",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81845d",
+            "referenceId": "3d63c0f1-7cc0-4d62-b231-0b3b59cfdf67",
+            "type": "else",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Else",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81845f",
+        "children": [
+            "69061f6345fdac4d5c818460",
+            "69061f6345fdac4d5c818461"
+        ],
+        "next": null,
+        "_id": "69061f6345fdac4d5c818462",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81845f",
+            "referenceId": "c1a28dec-b8a4-4fa4-8bbb-f055bc0d0b71",
+            "type": "if",
+            "extension": "@cognigy/basic-nodes",
+            "label": "One Department Found?",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": true,
+            "config": {
+                "condition": {
+                    "type": "condition",
+                    "rule": {
+                        "left": "1",
+                        "operand": "eq",
+                        "right": "1"
+                    },
+                    "condition": "cc.sessionInfo.userIdentification.foundDepartment"
+                }
+            },
+            "preview": {
+                "type": "condition",
+                "rule": {
+                    "left": "1",
+                    "operand": "eq",
+                    "right": "1"
+                },
+                "condition": "cc.sessionInfo.userIdentification.foundDepartment"
+            },
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818460",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c818463",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818460",
+            "referenceId": "bef796b8-217b-48e0-b1f0-16efc847eab5",
+            "type": "then",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Then",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": true,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818461",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c818464",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818461",
+            "referenceId": "f9dbef62-52f8-46d0-9495-e4ad7dfc4314",
+            "type": "else",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Else",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": true,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818465",
+        "children": [],
+        "next": "69061f6345fdac4d5c818466",
+        "_id": "69061f6345fdac4d5c818467",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818465",
+            "referenceId": "f6b12b5a-8ee1-40cb-8da7-62af38fbd553",
+            "type": "code",
+            "extension": "@cognigy/basic-nodes",
+            "label": "C: Extract Department",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": true,
+            "config": {
+                "code": "try {\r\n    let response = ci.httprequest;\r\n\r\n    if (response.statusCode != 200) {\r\n        throw new Error(`Fetching user failed ${JSON.stringify(response)}`);\r\n    }\r\n\r\n    let content = response.result.result;\r\n    cc.sessionInfo.userIdentification.departmentFound = false;\r\n\r\n    if (content.length > 0) {\r\n        cc.sessionInfo.userIdentification.departmentFound = true;\r\n        // Extract users\r\n        let filteredDepartments = [];\r\n        \r\n        for (let department of content) {\r\n\r\n            let userObject = {\r\n                \"name\": department[\"name\"],\r\n                \"id\": department[\"sys_id\"]                \r\n            };\r\n\r\n            filteredDepartments.push(userObject);\r\n        }\r\n\r\n        if (filteredDepartments.length == 1) {\r\n            cc.sessionInfo.userIdentification.foundDepartment = filteredDepartments[0];\r\n        } else {\r\n            cc.sessionInfo.allUsers = filteredDepartments;\r\n            cc.sessionInfo.userIdentification.resolvePrompt = `You have retrieved multiple departments, clarify with the user which department he really means.\r\n            You found the following departements: ${filteredDepartments}`;\r\n        }\r\n    } else {\r\n        cc.sessionInfo.userIdentification.resolvePrompt = `You did not find any departments. Clarify with the user if you understood him correctly and try again.`\r\n    }\r\n} catch (err) {\r\n    api.log(\"error\", `Fetching user by mobile failed: ${err}`)\r\n}",
+                "hasError": false,
+                "transpiled": "try {\n    let response = ci.httprequest;\n    if (response.statusCode != 200) {\n        throw new Error(`Fetching user failed ${JSON.stringify(response)}`);\n    }\n    let content = response.result.result;\n    cc.sessionInfo.userIdentification.departmentFound = false;\n    if (content.length > 0) {\n        cc.sessionInfo.userIdentification.departmentFound = true;\n        let filteredDepartments = [];\n        for (let department of content) {\n            let userObject = {\n                \"name\": department[\"name\"],\n                \"id\": department[\"sys_id\"]\n            };\n            filteredDepartments.push(userObject);\n        }\n        if (filteredDepartments.length == 1) {\n            cc.sessionInfo.userIdentification.foundDepartment = filteredDepartments[0];\n        }\n        else {\n            cc.sessionInfo.allUsers = filteredDepartments;\n            cc.sessionInfo.userIdentification.resolvePrompt = `You have retrieved multiple departments, clarify with the user which department he really means.\r\n            You found the following departements: ${filteredDepartments}`;\n        }\n    }\n    else {\n        cc.sessionInfo.userIdentification.resolvePrompt = `You did not find any departments. Clarify with the user if you understood him correctly and try again.`;\n    }\n}\ncatch (err) {\n    api.log(\"error\", `Fetching user by mobile failed: ${err}`);\n}\n"
+            },
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81845b",
+        "children": [],
+        "next": "69061f6345fdac4d5c818468",
+        "_id": "69061f6345fdac4d5c818469",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81845b",
+            "referenceId": "ec073e5e-64d7-4080-8a19-ddcd8df3bebe",
+            "type": "completeText",
+            "extension": "@cognigy/basic-nodes",
+            "label": "LLM Prompt (legacy)",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "llmProviderReferenceId": "ba60d008-271f-43f0-9bf3-7e8f3c6f370f",
+                "prompt": "You are an expert in matching user names that were transcribed by an STT engine against a list of persons and returning the closest matching person. \nYou have to consider that STT engines oftentimes have problems transcribing names correctly. Look for a semantic and similar sounding relationship more than a character based matching.\nIf you find a match you have to return the complete json object of the matching user, aswell as a \"confidence\" value indicating how confident you are the name is matching the user. The confidence value has to be between 0 and 1. If no name seems to be close then you return that there was no match. Return a json object with the \"noMatch\" key for that and set it to false. Do not return anything else.\n\n\n\n\nName to match: \"{{cc.sessionInfo.userIdentification.fullName}}\"\n\nMatch against this given list:\n\n{{JSON.stringify(cc.sessionInfo.userIdentification.allUsers)}}",
+                "chatTranscriptSteps": 3,
+                "useChatMode": false,
+                "samplingMethod": "temperature",
+                "temperature": 0.7,
+                "topP": 1,
+                "maxTokens": 1000,
+                "frequencyPenalty": 0,
+                "presencePenalty": 0,
+                "useStop": false,
+                "stop": "",
+                "timeout": 5000,
+                "storeLocation": "context",
+                "immediateOutput": false,
+                "inputKey": "promptResult",
+                "contextKey": "sessionInfo.userIdentification.nameMatching",
+                "streamStopTokens": [
+                    ".",
+                    "!",
+                    "?",
+                    "\\n"
+                ],
+                "streamStopTokenOverrides": [
+                    "d+."
+                ],
+                "streamDescription": "",
+                "streamStoreCopyInInput": false,
+                "debugLogTokenCount": false,
+                "debugLogRequestAndCompletion": false,
+                "debugDescription": "",
+                "responseFormat": "json_object",
+                "detailedResults": false,
+                "seed": "",
+                "jsonStreamWarning": "",
+                "customModelOptions": {},
+                "customRequestOptions": {},
+                "logErrorToSystem": true,
+                "errorHandling": "continue",
+                "errorMessage": "",
+                "errorHandlingGotoTarget": ""
+            },
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818468",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c81846a",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818468",
+            "referenceId": "9f341e72-e069-4690-b924-1a67ac22be94",
+            "type": "code",
+            "extension": "@cognigy/basic-nodes",
+            "label": "C: Extract Match",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "code": "try {\r\n    \r\n    function extractUsermatch(nameMatch) {\r\n        if (nameMatch?.noMatch) {\r\n            return `No matching user was found for the users name. Try to disambiguate with the user if you misunderstood his name. The found users were: ${JSON.stringify(context.sessionInfo.userIdentification.allUsers)}`\r\n        } else if (nameMatch?.confidence > 0.7) {\r\n            cc.sessionInfo.user = context.sessionInfo.userIdentification.nameMatching;\r\n            delete cc.sessionInfo.user.confidence;\r\n            return `The user was found in your database. You can go on with the task the user requested. The user is: ${JSON.stringify(cc.sessionInfo.user)}`\r\n        } else {\r\n            return `A user was found but the name seems to not completly match with the name you understood from the user. Try to get the name again. The user is: ${JSON.stringify(context.sessionInfo.userIdentification.nameMatching)}`\r\n        }\r\n    }\r\n\r\n    let nameMatch = context.sessionInfo.userIdentification.nameMatching;\r\n    cc.sessionInfo.userIdentification.resolvePrompt = extractUsermatch(nameMatch);\r\n\r\n} catch (err) {\r\n    api.log(\"error\", `Error in extracting LLM matched name. Error was: ${err.toString()}`)\r\n}",
+                "hasError": false,
+                "transpiled": "try {\n    function extractUsermatch(nameMatch) {\n        if (nameMatch === null || nameMatch === void 0 ? void 0 : nameMatch.noMatch) {\n            return `No matching user was found for the users name. Try to disambiguate with the user if you misunderstood his name. The found users were: ${JSON.stringify(context.sessionInfo.userIdentification.allUsers)}`;\n        }\n        else if ((nameMatch === null || nameMatch === void 0 ? void 0 : nameMatch.confidence) > 0.7) {\n            cc.sessionInfo.user = context.sessionInfo.userIdentification.nameMatching;\n            delete cc.sessionInfo.user.confidence;\n            return `The user was found in your database. You can go on with the task the user requested. The user is: ${JSON.stringify(cc.sessionInfo.user)}`;\n        }\n        else {\n            return `A user was found but the name seems to not completly match with the name you understood from the user. Try to get the name again. The user is: ${JSON.stringify(context.sessionInfo.userIdentification.nameMatching)}`;\n        }\n    }\n    let nameMatch = context.sessionInfo.userIdentification.nameMatching;\n    cc.sessionInfo.userIdentification.resolvePrompt = extractUsermatch(nameMatch);\n}\ncatch (err) {\n    api.log(\"error\", `Error in extracting LLM matched name. Error was: ${err.toString()}`);\n}\n"
+            },
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818454",
+        "children": [],
+        "next": "69061f6345fdac4d5c818457",
+        "_id": "69061f6345fdac4d5c81846b",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818454",
+            "referenceId": "7df7634b-9675-42a1-b913-fe563d73cca4",
+            "type": "httpRequest",
+            "extension": "@cognigy/basic-nodes",
+            "label": "HTTP: Retrieve department (2)",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "type": "GET",
+                "url": "{{context.constants.serviceNowApi.baseUrls.users}}?sysparm_query=department.nameSTARTSWITH{{cc.sessionInfo.userIdentification.department}}&sysparm_display_value=true&sysparm_exclude_reference_link=true&sys_parmlimit=10",
+                "headers": "{}",
+                "payloadType": "json",
+                "payloadText": "",
+                "payloadJSON": "{}",
+                "payloadFormData": "{}",
+                "storeLocation": "input",
+                "inputKey": "httprequest",
+                "contextKey": "httprequest",
+                "authType": "basic",
+                "basicConnection": "b2582db9-2bd7-4a35-94a3-fbbade0a581d",
+                "apiKeyAuthKeyConnection": "",
+                "apiKeyXKeyConnection": "",
+                "oAuth2Connection": "",
+                "async": false,
+                "cache": false,
+                "cacheExpiry": 0,
+                "timeout": 8000,
+                "retryAttempts": 0,
+                "storeResponseHeaders": false,
+                "allowSelfSigned": false,
+                "errorLogging": "full",
+                "debugLogging": "full",
+                "abortOnError": false,
+                "logWarning": ""
+            },
+            "preview": "{{context.constants.serviceNowApi.baseUrls.users}}?sysparm_query=department.nameSTARTSWITH{{cc.sessionInfo.userIdentification.department}}&sysparm_display_value=true&sysparm_exclude_reference_link=true&sys_parmlimit=10",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818458",
+        "children": [],
+        "next": "69061f6345fdac4d5c818465",
+        "_id": "69061f6345fdac4d5c81846c",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818458",
+            "referenceId": "aa901ef4-aa74-4b14-ad4f-0d05e837909c",
+            "type": "code",
+            "extension": "@cognigy/basic-nodes",
+            "label": "C: Extract Result",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "code": "try {\r\n    let response = ci.httprequest;\r\n\r\n    if (response.statusCode != 200) {\r\n        throw new Error(`Fetching user failed ${JSON.stringify(response)}`);\r\n    }\r\n\r\n    let content = response.result.result;\r\n    cc.sessionInfo.user.userFound = false;\r\n\r\n    if (content.length > 0) {\r\n        // Extract users\r\n        let filteredUsers = []\r\n        \r\n        for (let user of content) {\r\n\r\n            let userObject = {\r\n                \"name\": user[\"name\"],\r\n                \"id\": user[\"sys_id\"],\r\n                \"mobile\": user[\"mobile_number\"],\r\n                \"phone\": user[\"phone\"],\r\n                \"email\": user[\"email\"],\r\n                \r\n            };\r\n\r\n            filteredUsers.push(userObject)\r\n        }\r\n\r\n        if (filteredUsers.length > 15) {\r\n            //Some sort of filtering alg\r\n        } else {\r\n            cc.sessionInfo.userIdentification.allUsers = filteredUsers;\r\n        }\r\n    }\r\n} catch (err) {\r\n    api.log(\"error\", `Fetching user by mobile failed: ${err}`)\r\n}",
+                "hasError": false,
+                "transpiled": "try {\n    let response = ci.httprequest;\n    if (response.statusCode != 200) {\n        throw new Error(`Fetching user failed ${JSON.stringify(response)}`);\n    }\n    let content = response.result.result;\n    cc.sessionInfo.user.userFound = false;\n    if (content.length > 0) {\n        let filteredUsers = [];\n        for (let user of content) {\n            let userObject = {\n                \"name\": user[\"name\"],\n                \"id\": user[\"sys_id\"],\n                \"mobile\": user[\"mobile_number\"],\n                \"phone\": user[\"phone\"],\n                \"email\": user[\"email\"],\n            };\n            filteredUsers.push(userObject);\n        }\n        if (filteredUsers.length > 15) {\n        }\n        else {\n            cc.sessionInfo.userIdentification.allUsers = filteredUsers;\n        }\n    }\n}\ncatch (err) {\n    api.log(\"error\", `Fetching user by mobile failed: ${err}`);\n}\n"
+            },
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818466",
+        "children": [
+            "69061f6345fdac4d5c81845a",
+            "69061f6345fdac4d5c81845d"
+        ],
+        "next": "69061f6345fdac4d5c81845f",
+        "_id": "69061f6345fdac4d5c81846d",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818466",
+            "referenceId": "7bc0a189-5f24-40f1-8112-3884726f64c0",
+            "type": "if",
+            "extension": "@cognigy/basic-nodes",
+            "label": "User List found?",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "condition": {
+                    "type": "condition",
+                    "rule": {
+                        "left": "1",
+                        "operand": "eq",
+                        "right": "1"
+                    },
+                    "condition": "cc.sessionInfo.userIdentification.allUsers"
+                }
+            },
+            "preview": {
+                "type": "condition",
+                "rule": {
+                    "left": "1",
+                    "operand": "eq",
+                    "right": "1"
+                },
+                "condition": "cc.sessionInfo.userIdentification.allUsers"
+            },
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    }
+]

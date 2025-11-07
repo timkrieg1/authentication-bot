@@ -1,0 +1,14 @@
+{
+    "default": {
+        "_id": "69061f6345fdac4d5c81836e",
+        "name": "default",
+        "referenceId": "cdfe4069-ad77-4836-919b-28b6883cfb67",
+        "type": "blacklist",
+        "isDefault": true,
+        "createdAt": 1752918323,
+        "lastChanged": 1762008931,
+        "createdBy": "65605bbcde1bccb4b9af6114",
+        "lastChangedBy": "65605bbcde1bccb4b9af6114",
+        "intentIds": []
+    }
+}

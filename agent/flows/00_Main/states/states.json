@@ -1,0 +1,26 @@
+{
+    "test": {
+        "_id": "68e912615de540482b12156c",
+        "name": "test",
+        "referenceId": "80b137f8-99f3-4060-98c4-7291fd41d8a8",
+        "type": "blacklist",
+        "isDefault": false,
+        "createdAt": 1760104966,
+        "lastChanged": 1760105057,
+        "createdBy": "65605bbcde1bccb4b9af6114",
+        "lastChangedBy": "65605bbcde1bccb4b9af6114",
+        "intentIds": []
+    },
+    "default": {
+        "_id": "68e912615de540482b12156b",
+        "name": "default",
+        "referenceId": "584dd251-ebe7-493b-a690-670a8f557998",
+        "type": "blacklist",
+        "isDefault": true,
+        "createdAt": 1733947766,
+        "lastChanged": 1760105057,
+        "createdBy": "65605bbcde1bccb4b9af6114",
+        "lastChangedBy": "65605bbcde1bccb4b9af6114",
+        "intentIds": []
+    }
+}
