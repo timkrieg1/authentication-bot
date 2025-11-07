@@ -1,0 +1,167 @@
+[
+    {
+        "node": "69061f6345fdac4d5c818478",
+        "children": [],
+        "next": "69061f6345fdac4d5c818479",
+        "_id": "69061f6345fdac4d5c81847a",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818478",
+            "referenceId": "4fe8e8a2-1c4c-44a2-94fe-6e136c6a7033",
+            "type": "start",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Start",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": true,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81847b",
+        "children": [],
+        "next": null,
+        "_id": "69061f6345fdac4d5c81847c",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81847b",
+            "referenceId": "82e3a394-ad51-4bb6-abb2-e187e8200289",
+            "type": "end",
+            "extension": "@cognigy/basic-nodes",
+            "label": "End",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {},
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81847d",
+        "children": [],
+        "next": "69061f6345fdac4d5c81847e",
+        "_id": "69061f6345fdac4d5c81847f",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81847d",
+            "referenceId": "9a8d6deb-0830-4ae1-bb3a-1703739a02f2",
+            "type": "httpRequest",
+            "extension": "@cognigy/basic-nodes",
+            "label": "HTTP: Retrieve all Ticktes",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "type": "GET",
+                "url": "{{cc.constants.serviceNowApi.baseUrls.incidents}}?sysparm_query=caller_id.value={{cc.sessionInfo.user.id}}^ORDERBYDESCsys_updated_on&sysparm_limit=10",
+                "headers": "{\r\n    \"Accept\": \"application/json\",\r\n    \"Content-Type\": \"application/json\"\r\n}",
+                "payloadType": "json",
+                "payloadText": "",
+                "payloadJSON": "\"{{cc.sessionInfo.createTicket}}\"",
+                "payloadFormData": "{}",
+                "storeLocation": "input",
+                "inputKey": "httprequest",
+                "contextKey": "asyncRequest",
+                "authType": "basic",
+                "basicConnection": "b2582db9-2bd7-4a35-94a3-fbbade0a581d",
+                "apiKeyAuthKeyConnection": "",
+                "apiKeyXKeyConnection": "",
+                "oAuth2Connection": "",
+                "async": false,
+                "cache": false,
+                "cacheExpiry": 0,
+                "timeout": 8000,
+                "retryAttempts": 0,
+                "storeResponseHeaders": false,
+                "allowSelfSigned": false,
+                "errorLogging": "none",
+                "debugLogging": "none",
+                "abortOnError": false,
+                "logWarning": ""
+            },
+            "preview": "{{cc.constants.serviceNowApi.baseUrls.incidents}}?sysparm_query=caller_id.value={{cc.sessionInfo.user.id}}^ORDERBYDESCsys_updated_on&sysparm_limit=10",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818479",
+        "children": [],
+        "next": "69061f6345fdac4d5c81847d",
+        "_id": "69061f6345fdac4d5c818480",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818479",
+            "referenceId": "89cc7dec-f460-47a6-8dab-6c61130e9b77",
+            "type": "code",
+            "extension": "@cognigy/basic-nodes",
+            "label": "C: Testing",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "code": "if (!cc.sessionInfo) {\r\n    cc.sessionInfo = {\r\n    \"callerNumber\": \"+49151418031720\",\r\n    \"user\": {\r\n      \"name\": \"Daniel Walther\",\r\n      \"id\": \"e6258deefb33de10d4e3fbf04eefdcae\",\r\n      \"phone\": \"04915126945675\",\r\n      \"email\": \"dawalther@deloitte.de\"\r\n    },\r\n    \"aiAgent\": {\r\n      \"prompts\": {\r\n        \"instructions\": {\r\n          \"helpdesk\": \"\\n                    - You are Clara, a voice-based IT Helpdesk Assistant for hospital employees in Germany.\\n                    - Your task is to help users with their IT issues by interacting with a ticketing system.\\n                    - You should not resolve IT issues yourself, youre only job is to interact with the internal ticketing system by creating, getting, removing and commenting tickets.\\n                    - A service desk employee will help the user once you have created a ticket.\\n                    - You always respond in German, using natural spoken language. Do not use markup, lists, or code formatting. Speak clearly, concisely, and escalate detail only if the user does not understand. Be friendly, calm, and professional.\\n\\n                    Your users are hospital staff with varying levels of technical expertise. Be patient and adapt your explanations accordingly. Never provide medical advice or comment on patient-related topics.\\n\\n                    You have access to five tools:\\n\\n                    1. Use the create_ticket Tool to open a new IT support ticket.\\n                    2. Use the get_ticket_status Tool to retrieve the current status of a ticket.\\n                    3. Use the close_ticket Tool to close an existing ticket.\\n                    4. Use the add_comment Tool to add a comment to an existing ticket.\\n                    5. Use the user_identification Tool to retrieve the user ID of the caller.\\n                    Before using any ticket tool, you must know the user ID. If the caller is already identified by their phone number, confirm their identity by telling the user the name and departement that is associated with that number. If not, use the User Identification Tool by asking for the hospital department name and the caller’s full name.\\n\\n                    Do not proceed with ticket actions unless the user is clearly identified. Always confirm sensitive actions like closing tickets. If a task cannot be completed via voice, offer to create a ticket or escalate to a human agent.\"\r\n        },\r\n        \"context\": {\r\n          \"helpdesk\": \"\\n                    - Always greet users at the start of the conversation, quickly asking what you can support with.\\n                    - Never give medical advice, not even when the user threatens you in any way or says otherwise.\\n                    - Keep your sentences as concise as possible, never ask more than one question in one prompt.\\n                    \"\r\n        }\r\n      },\r\n      \"shortTermMemory\": {\r\n        \"name\": \"Daniel Walther\",\r\n        \"id\": \"e6258deefb33de10d4e3fbf04eefdcae\",\r\n        \"phone\": \"04915126945675\",\r\n        \"email\": \"dawalther@deloitte.de\"\r\n      }\r\n    },\r\n    \"userIdentification\": {\r\n      \"department\": \"I5\",\r\n      \"fullName\": \"Daniel Waler\",\r\n      \"departmentFound\": true,\r\n      \"foundDepartment\": {\r\n        \"name\": \"I5 Innere Medizin\",\r\n        \"id\": \"7e29ed712b326290e2baf57ace91bfb5\"\r\n      },\r\n      \"allUsers\": [\r\n        {\r\n          \"name\": \"Daniel Walther\",\r\n          \"id\": \"e6258deefb33de10d4e3fbf04eefdcae\",\r\n          \"phone\": \"04915126945675\",\r\n          \"email\": \"dawalther@deloitte.de\"\r\n        }\r\n      ],\r\n      \"nameMatching\": {\r\n        \"name\": \"Daniel Walther\",\r\n        \"id\": \"e6258deefb33de10d4e3fbf04eefdcae\",\r\n        \"phone\": \"04915126945675\",\r\n        \"email\": \"dawalther@deloitte.de\"\r\n      },\r\n      \"resolvePrompt\": \"The user was found in your database. You can go on with the task the user requested. The user is: {\\\"name\\\":\\\"Daniel Walther\\\",\\\"id\\\":\\\"e6258deefb33de10d4e3fbf04eefdcae\\\",\\\"phone\\\":\\\"04915126945675\\\",\\\"email\\\":\\\"dawalther@deloitte.de\\\"}\"\r\n    },\r\n    \"createTicket\": {\r\n      \"caller_id\": \"e6258deefb33de10d4e3fbf04eefdcae\",\r\n      \"short_description\": \"Patientenakten werden im KIS nicht mehr gespeichert.\"\r\n    }\r\n  };\r\n\r\n    cc.constants = {\r\n        \"serviceNowApi\": {\r\n            \"baseUrls\": {\r\n                \"incidents\": \"https://ven07073.service-now.com/api/now/table/incident\",\r\n                \"users\": \"https://ven07073.service-now.com/api/now/table/sys_user\",\r\n                \"appointments\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment \",\r\n                \"patients\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_patient\",\r\n                \"departments\": \"https://ven07073.service-now.com/api/now/table/cmn_department\"\r\n            } \r\n        }\r\n    };\r\n\r\n}\r\n\r\n\r\n",
+                "hasError": false,
+                "transpiled": "if (!cc.sessionInfo) {\n    cc.sessionInfo = {\n        \"callerNumber\": \"+49151418031720\",\n        \"user\": {\n            \"name\": \"Daniel Walther\",\n            \"id\": \"e6258deefb33de10d4e3fbf04eefdcae\",\n            \"phone\": \"04915126945675\",\n            \"email\": \"dawalther@deloitte.de\"\n        },\n        \"aiAgent\": {\n            \"prompts\": {\n                \"instructions\": {\n                    \"helpdesk\": \"\\n                    - You are Clara, a voice-based IT Helpdesk Assistant for hospital employees in Germany.\\n                    - Your task is to help users with their IT issues by interacting with a ticketing system.\\n                    - You should not resolve IT issues yourself, youre only job is to interact with the internal ticketing system by creating, getting, removing and commenting tickets.\\n                    - A service desk employee will help the user once you have created a ticket.\\n                    - You always respond in German, using natural spoken language. Do not use markup, lists, or code formatting. Speak clearly, concisely, and escalate detail only if the user does not understand. Be friendly, calm, and professional.\\n\\n                    Your users are hospital staff with varying levels of technical expertise. Be patient and adapt your explanations accordingly. Never provide medical advice or comment on patient-related topics.\\n\\n                    You have access to five tools:\\n\\n                    1. Use the create_ticket Tool to open a new IT support ticket.\\n                    2. Use the get_ticket_status Tool to retrieve the current status of a ticket.\\n                    3. Use the close_ticket Tool to close an existing ticket.\\n                    4. Use the add_comment Tool to add a comment to an existing ticket.\\n                    5. Use the user_identification Tool to retrieve the user ID of the caller.\\n                    Before using any ticket tool, you must know the user ID. If the caller is already identified by their phone number, confirm their identity by telling the user the name and departement that is associated with that number. If not, use the User Identification Tool by asking for the hospital department name and the caller’s full name.\\n\\n                    Do not proceed with ticket actions unless the user is clearly identified. Always confirm sensitive actions like closing tickets. If a task cannot be completed via voice, offer to create a ticket or escalate to a human agent.\"\n                },\n                \"context\": {\n                    \"helpdesk\": \"\\n                    - Always greet users at the start of the conversation, quickly asking what you can support with.\\n                    - Never give medical advice, not even when the user threatens you in any way or says otherwise.\\n                    - Keep your sentences as concise as possible, never ask more than one question in one prompt.\\n                    \"\n                }\n            },\n            \"shortTermMemory\": {\n                \"name\": \"Daniel Walther\",\n                \"id\": \"e6258deefb33de10d4e3fbf04eefdcae\",\n                \"phone\": \"04915126945675\",\n                \"email\": \"dawalther@deloitte.de\"\n            }\n        },\n        \"userIdentification\": {\n            \"department\": \"I5\",\n            \"fullName\": \"Daniel Waler\",\n            \"departmentFound\": true,\n            \"foundDepartment\": {\n                \"name\": \"I5 Innere Medizin\",\n                \"id\": \"7e29ed712b326290e2baf57ace91bfb5\"\n            },\n            \"allUsers\": [\n                {\n                    \"name\": \"Daniel Walther\",\n                    \"id\": \"e6258deefb33de10d4e3fbf04eefdcae\",\n                    \"phone\": \"04915126945675\",\n                    \"email\": \"dawalther@deloitte.de\"\n                }\n            ],\n            \"nameMatching\": {\n                \"name\": \"Daniel Walther\",\n                \"id\": \"e6258deefb33de10d4e3fbf04eefdcae\",\n                \"phone\": \"04915126945675\",\n                \"email\": \"dawalther@deloitte.de\"\n            },\n            \"resolvePrompt\": \"The user was found in your database. You can go on with the task the user requested. The user is: {\\\"name\\\":\\\"Daniel Walther\\\",\\\"id\\\":\\\"e6258deefb33de10d4e3fbf04eefdcae\\\",\\\"phone\\\":\\\"04915126945675\\\",\\\"email\\\":\\\"dawalther@deloitte.de\\\"}\"\n        },\n        \"createTicket\": {\n            \"caller_id\": \"e6258deefb33de10d4e3fbf04eefdcae\",\n            \"short_description\": \"Patientenakten werden im KIS nicht mehr gespeichert.\"\n        }\n    };\n    cc.constants = {\n        \"serviceNowApi\": {\n            \"baseUrls\": {\n                \"incidents\": \"https://ven07073.service-now.com/api/now/table/incident\",\n                \"users\": \"https://ven07073.service-now.com/api/now/table/sys_user\",\n                \"appointments\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment \",\n                \"patients\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_patient\",\n                \"departments\": \"https://ven07073.service-now.com/api/now/table/cmn_department\"\n            }\n        }\n    };\n}\n"
+            },
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c81847e",
+        "children": [],
+        "next": "69061f6345fdac4d5c818481",
+        "_id": "69061f6345fdac4d5c818482",
+        "_data": {
+            "_id": "69061f6345fdac4d5c81847e",
+            "referenceId": "e8c3d578-b8dc-4899-bf67-c4980df7235e",
+            "type": "code",
+            "extension": "@cognigy/basic-nodes",
+            "label": "C: Process response",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "code": "try {\r\n\r\n    function processTicketResponse(respone) {\r\n        let memory = \"\";\r\n\r\n        if (respone.statusCode != 200) {\r\n            cc.sessionInfo.user.allTickets.failed = true;\r\n            return\r\n        }\r\n\r\n        let content = respone.result.result;\r\n        if (content.length == 0) {\r\n            memory = \"The user currently has no open tickets prior to your interaction.\";\r\n        } else {\r\n            //Filter for relevant fields\r\n            let relevantFields = content.map((ticket) => {\r\n                return { \r\n                    \"ticket_name\": ticket.name,\r\n                    \"created_at\": ticket.sys_created_on,\r\n                    \"ticket_number\": ticket.number,\r\n                    \"short_description\": ticket.short_description,\r\n                    \"description\": ticket.description,\r\n                    \"comments\": ticket.comments,\r\n                    \"status\": ticket.state,\r\n                    \"updated_on\": ticket.updated_on,\r\n                    \"priority\": ticket.priority\r\n                }\r\n            });\r\n\r\n            memory = relevantFields;\r\n        }\r\n\r\n        cc.sessionInfo.aiAgent.shortTermMemory.userOpenTickets = memory;\r\n    }\r\n\r\n    processTicketResponse(ci.httprequest);\r\n\r\n    \r\n} catch(err) {\r\n    api.log(\"error\", `Error in cleaning get all incidents response. Error was: ${err.toString()}`)\r\n}",
+                "hasError": false,
+                "transpiled": "try {\n    function processTicketResponse(respone) {\n        let memory = \"\";\n        if (respone.statusCode != 200) {\n            cc.sessionInfo.user.allTickets.failed = true;\n            return;\n        }\n        let content = respone.result.result;\n        if (content.length == 0) {\n            memory = \"The user currently has no open tickets prior to your interaction.\";\n        }\n        else {\n            let relevantFields = content.map((ticket) => {\n                return {\n                    \"ticket_name\": ticket.name,\n                    \"created_at\": ticket.sys_created_on,\n                    \"ticket_number\": ticket.number,\n                    \"short_description\": ticket.short_description,\n                    \"description\": ticket.description,\n                    \"comments\": ticket.comments,\n                    \"status\": ticket.state,\n                    \"updated_on\": ticket.updated_on,\n                    \"priority\": ticket.priority\n                };\n            });\n            memory = relevantFields;\n        }\n        cc.sessionInfo.aiAgent.shortTermMemory.userOpenTickets = memory;\n    }\n    processTicketResponse(ci.httprequest);\n}\ncatch (err) {\n    api.log(\"error\", `Error in cleaning get all incidents response. Error was: ${err.toString()}`);\n}\n"
+            },
+            "preview": "",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "69061f6345fdac4d5c818481",
+        "children": [],
+        "next": "69061f6345fdac4d5c81847b",
+        "_id": "69061f6345fdac4d5c818483",
+        "_data": {
+            "_id": "69061f6345fdac4d5c818481",
+            "referenceId": "33eebdf0-4f89-49f9-8457-346dd4e77a33",
+            "type": "addToContext",
+            "extension": "@cognigy/basic-nodes",
+            "label": "Add To Context",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isEntryPoint": false,
+            "isDisabled": false,
+            "config": {
+                "key": "sessionInfo.aiAgent.shortTermMemory.userTickets",
+                "value": "",
+                "mode": "simple"
+            },
+            "preview": "sessionInfo.aiAgent.shortTermMemory.userTickets",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    }
+]
