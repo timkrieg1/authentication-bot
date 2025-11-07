@@ -141,7 +141,8 @@
             "69061f6345fdac4d5c818406",
             "69061f6345fdac4d5c818407",
             "69061f6345fdac4d5c818408",
-            "69061f6345fdac4d5c818409"
+            "69061f6345fdac4d5c818409",
+            "690641097cd357de59fb8671"
         ],
         "next": "69061f6345fdac4d5c8183f7",
         "_id": "69061f6345fdac4d5c81840a",
@@ -1012,7 +1013,7 @@
                 "toolId": "end_call",
                 "description": "This tool ends the call with the customer. Call this tool at the end of the conversation when the customer does not need any more support.",
                 "useParameters": true,
-                "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"goodbye_message\": {\n      \"type\": \"string\",\n      \"description\": \"A short goodbye message to the caller.\"\n    }\n  },\n  \"required\": [\n    \"goodbye_message\"\n  ],\n  \"additionalProperties\": false\n}",
+                "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"goodbye_message\": {\n      \"type\": \"string\",\n      \"description\": \"A short goodbye message to the caller.\"\n    },\n    \"hang_up_reason\": {\n      \"type\": \"string\",\n      \"description\": \"The reason why the caller hangs up\"\n    }\n  },\n  \"required\": [\n    \"goodbye_message\",\n    \"hang_up_reason\"\n  ],\n  \"additionalProperties\": false\n}",
                 "debugMessage": true,
                 "condition": ""
             },
@@ -1094,6 +1095,58 @@
                 "hangupImmediately": false
             },
             "preview": "Bot ended the call",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "690641097cd357de59fb8671",
+        "children": [],
+        "next": "6906410945fdac4d5c81dd0a",
+        "_id": "690641097cd357de59fb8674",
+        "_data": {
+            "_id": "690641097cd357de59fb8671",
+            "referenceId": "f3ebcc1d-4687-4023-9ef8-72ea369d9f8a",
+            "type": "aiAgentJobTool",
+            "label": "Tool",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "toolId": "test_tool",
+                "description": "This tool unlocks a locked user account.",
+                "useParameters": true,
+                "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"test_param\": {\n      \"type\": \"string\",\n      \"description\": \"User's login email for their account.\"\n    }\n  },\n  \"required\": [\n    \"test_param\"\n  ],\n  \"additionalProperties\": false\n}",
+                "debugMessage": true,
+                "condition": ""
+            },
+            "preview": "test_tool",
+            "localeReference": "6873f7f242ec168c188334ee"
+        }
+    },
+    {
+        "node": "6906410945fdac4d5c81dd0a",
+        "children": [],
+        "next": null,
+        "_id": "6906410945fdac4d5c81dd0d",
+        "_data": {
+            "_id": "6906410945fdac4d5c81dd0a",
+            "referenceId": "9f77377a-193b-4f87-a284-ffd5476e66bb",
+            "type": "aiAgentToolAnswer",
+            "label": "Resolve Tool Action",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "answer": "",
+                "debugToolAnswer": false
+            },
+            "preview": "",
             "localeReference": "6873f7f242ec168c188334ee"
         }
     }
