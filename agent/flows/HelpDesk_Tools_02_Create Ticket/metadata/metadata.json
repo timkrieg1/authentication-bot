@@ -1,0 +1,20 @@
+{
+    "_id": "69061f6345fdac4d5c81835f",
+    "referenceId": "1c41f02f-cf5d-4d5c-b926-e4b8b3f2e02e",
+    "name": "HelpDesk_Tools_02_Create Ticket",
+    "description": "",
+    "context": {},
+    "attachedFlows": [],
+    "img": "",
+    "chartReference": "69061f6345fdac4d5c818360",
+    "projectReference": "6873f7f242ec168c188334ec",
+    "organisationReference": "5f08b3f6619dfb1779da18f9",
+    "createdAt": 1752918323,
+    "lastChanged": 1762008931,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "attachedLexicons": [],
+    "localeReference": "6873f7f242ec168c188334ee",
+    "intentTrainGroupReference": "69061f6345fdac4d5c8184e1",
+    "isTrainingOutOfDate": true
+}
