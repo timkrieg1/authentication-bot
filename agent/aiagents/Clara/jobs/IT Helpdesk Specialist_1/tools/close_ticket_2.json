@@ -1,0 +1,20 @@
+{
+    "_id": "69061f6345fdac4d5c818406",
+    "referenceId": "85dbe07e-8cfe-4fdb-a2e4-015c5a83915d",
+    "type": "aiAgentJobTool",
+    "label": "Tool",
+    "comment": "",
+    "commentColor": "",
+    "analyticsLabel": null,
+    "isDisabled": true,
+    "isEntryPoint": false,
+    "extension": "@cognigy/basic-nodes",
+    "config": {
+        "toolId": "close_ticket",
+        "description": "Use this tool to close an existing ticket. Always confirm with the user before closing a ticket. You need the ticket ID and the user ID.",
+        "useParameters": true,
+        "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"ticket_id\": {\n      \"type\": \"string\",\n      \"description\": \"The ticket ID of the ticket to close.\"\n    }\n  },\n  \"required\": [\n    \"ticket_id\"\n  ],\n  \"additionalProperties\": false\n}",
+        "debugMessage": true,
+        "condition": ""
+    }
+}

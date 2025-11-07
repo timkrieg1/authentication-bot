@@ -1,0 +1,40 @@
+{
+    "_id": "68e912615de540482b121570",
+    "positiveConfirmationWords": [
+        "Ja"
+    ],
+    "negativeConfirmationWords": null,
+    "intentThreshold": {
+        "lower": 0.7,
+        "upper": 0.8
+    },
+    "systemSlots": {
+        "useDateSlots": null,
+        "useNumberSlots": null,
+        "useDurationSlots": null,
+        "useTemperatureSlots": null,
+        "useAgeSlots": null,
+        "usePercentageSlots": null,
+        "useEmailSlots": null,
+        "useURLSlots": null,
+        "useMoneySlots": null,
+        "useDistanceSlots": null
+    },
+    "learnNewExampleSentences": null,
+    "learnNewExampleSentencesThreshold": null,
+    "yesNoLogic": "confirmationWords",
+    "yesNoIntentThreshold": null,
+    "continueExecutionAfterAttachedFlow": false,
+    "continueExecutionAfterDefaultReply": false,
+    "continueExecutionAfterNegativeConfirmation": false,
+    "passDefaultRepliesIntoFlow": false,
+    "flowIntentMappingOrder": "joint",
+    "useAttachedFlowThresholds": true,
+    "useAttachedFlowContinueAfterDefaultReply": true,
+    "useAttachedFlowPassDefaultRepliesIntoFlow": true,
+    "implicitSlotParsing": "disabled",
+    "useAttachedFlowImplicitSlotParsing": false,
+    "useIntentDefaultRepliesAsExamples": true,
+    "lexiconSlotsWithSubMatches": false,
+    "localeSettings": []
+}
