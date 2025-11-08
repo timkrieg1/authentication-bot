@@ -1,12 +1,12 @@
 {
     "default": {
-        "_id": "69061f6345fdac4d5c818373",
+        "_id": "690f3f1c4cc8affe01ce1aa4",
         "name": "default",
-        "referenceId": "3136e333-6ab6-45bd-a4d7-be6207b4cea6",
         "type": "blacklist",
         "isDefault": true,
-        "createdAt": 1753124951,
-        "lastChanged": 1762008931,
+        "referenceId": "3136e333-6ab6-45bd-a4d7-be6207b4cea6",
+        "createdAt": 1762606827,
+        "lastChanged": 1762606876,
         "createdBy": "65605bbcde1bccb4b9af6114",
         "lastChangedBy": "65605bbcde1bccb4b9af6114",
         "intentIds": []

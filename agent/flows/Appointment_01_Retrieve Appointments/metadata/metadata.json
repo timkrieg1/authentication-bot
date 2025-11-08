@@ -1,20 +1,20 @@
 {
-    "_id": "69061f6345fdac4d5c818355",
+    "_id": "690f3f1c4cc8affe01ce1a89",
     "referenceId": "3b195289-a467-432d-884b-c6d1aa2892aa",
     "name": "Appointment_01_Retrieve Appointments",
     "description": "",
     "context": {},
     "attachedFlows": [],
     "img": "",
-    "chartReference": "69061f6345fdac4d5c818356",
     "projectReference": "6873f7f242ec168c188334ec",
     "organisationReference": "5f08b3f6619dfb1779da18f9",
-    "createdAt": 1753124951,
-    "lastChanged": 1762008931,
+    "createdAt": 1762606827,
+    "lastChanged": 1762606876,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "chartReference": "690f3f1c4cc8affe01ce1a8a",
     "attachedLexicons": [],
-    "localeReference": "6873f7f242ec168c188334ee",
-    "intentTrainGroupReference": "69061f6345fdac4d5c8184e6",
-    "isTrainingOutOfDate": true
+    "localeReference": "690f3f1c4cc8affe01ce1a81",
+    "intentTrainGroupReference": "690f3f1c4cc8affe01ce1bf5",
+    "isTrainingOutOfDate": null
 }
