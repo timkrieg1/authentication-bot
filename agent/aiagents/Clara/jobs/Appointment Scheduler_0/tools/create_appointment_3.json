@@ -1,0 +1,20 @@
+{
+    "_id": "690f3f1c4cc8affe01ce1b7a",
+    "referenceId": "90300c26-2750-4345-99c1-8d222def9b0f",
+    "type": "aiAgentJobTool",
+    "label": "Tool",
+    "comment": "",
+    "commentColor": "",
+    "analyticsLabel": null,
+    "isDisabled": false,
+    "isEntryPoint": false,
+    "extension": "@cognigy/basic-nodes",
+    "config": {
+        "toolId": "create_appointment",
+        "description": "This tool creates a new appointment.",
+        "useParameters": true,
+        "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"appointment_time\": {\n      \"type\": \"string\",\n      \"description\": \"The appointment time the user wished in the following format:\\nhh:mm\\n\\n- German Format with 24 hours\"\n    },\n    \"name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the patient.\"\n    },\n    \"purpose\": {\n      \"type\": \"string\",\n      \"description\": \"A short description of the appointments purpose.\"\n    },\n    \"insurance_status\": {\n      \"type\": \"string\",\n      \"description\": \"Ask the user if he is publicly insured or is privately insured.\"\n    },\n    \"appointment_date\": {\n      \"type\": \"string\",\n      \"description\": \"The appointment date in the following format:\\nyyyy-mm-dd\"\n    }\n  },\n  \"required\": [\n    \"appointment_time\",\n    \"name\",\n    \"purpose\",\n    \"insurance_status\",\n    \"appointment_date\"\n  ],\n  \"additionalProperties\": false\n}",
+        "debugMessage": true,
+        "condition": ""
+    }
+}
