@@ -2,10 +2,11 @@ name: Extract Feature Branch Agent/Reusable
 
 on:
     pull_request:
-      types: [opened, synchronize]
+      types: [opened]
 
 jobs:
   call-reusable-workflow:
+    if: ${{ github.actor != 'github-actions' }}
     permissions:
       contents: write
       pull-requests: write
