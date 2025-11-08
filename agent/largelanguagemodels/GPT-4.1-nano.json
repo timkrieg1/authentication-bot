@@ -1,5 +1,5 @@
 {
-    "_id": "690f3f1c4cc8affe01ce1c79",
+    "_id": "690fa569498e124c7cb77730",
     "referenceId": "5ab91d43-eac2-456a-bfba-f4aba24be6f3",
     "name": "GPT-4.1-nano",
     "modelType": "gpt-4.1-nano",
@@ -12,8 +12,8 @@
     },
     "googleVertexAI": {},
     "fallbacks": [],
-    "createdAt": 1762606827,
-    "lastChanged": 1762606876,
+    "createdAt": 1762633064,
+    "lastChanged": 1762633065,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
     "resourceLevel": "project",

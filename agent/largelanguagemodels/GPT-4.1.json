@@ -1,5 +1,5 @@
 {
-    "_id": "690f3f1c4cc8affe01ce1c77",
+    "_id": "690fa569498e124c7cb7772e",
     "referenceId": "ba60d008-271f-43f0-9bf3-7e8f3c6f370f",
     "name": "GPT-4.1",
     "modelType": "gpt-4.1",
@@ -12,8 +12,8 @@
     },
     "googleVertexAI": {},
     "fallbacks": [],
-    "createdAt": 1762606827,
-    "lastChanged": 1762606876,
+    "createdAt": 1762633064,
+    "lastChanged": 1762633065,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
     "resourceLevel": "project",

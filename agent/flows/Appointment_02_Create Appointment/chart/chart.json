@@ -1,11 +1,11 @@
 [
     {
-        "node": "690f3f1c4cc8affe01ce1bab",
+        "node": "690fa569498e124c7cb77670",
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1bac",
-        "_id": "690f3f1c4cc8affe01ce1bad",
+        "next": "690fa569498e124c7cb77671",
+        "_id": "690fa569498e124c7cb77672",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bab",
+            "_id": "690fa569498e124c7cb77670",
             "referenceId": "4b6296b8-15f8-488d-addc-3c45e1f21077",
             "type": "start",
             "label": "Start",
@@ -17,16 +17,16 @@
             "extension": "@cognigy/basic-nodes",
             "config": {},
             "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bae",
+        "node": "690fa569498e124c7cb77673",
         "children": [],
         "next": null,
-        "_id": "690f3f1c4cc8affe01ce1baf",
+        "_id": "690fa569498e124c7cb77674",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bae",
+            "_id": "690fa569498e124c7cb77673",
             "referenceId": "c3d7f4cc-1069-483a-be52-a4b5c1e22210",
             "type": "end",
             "label": "End",
@@ -38,16 +38,16 @@
             "extension": "@cognigy/basic-nodes",
             "config": {},
             "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bac",
+        "node": "690fa569498e124c7cb77671",
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1bb0",
-        "_id": "690f3f1c4cc8affe01ce1bb1",
+        "next": "690fa569498e124c7cb77675",
+        "_id": "690fa569498e124c7cb77676",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bac",
+            "_id": "690fa569498e124c7cb77671",
             "referenceId": "fa7b5964-b7c6-420b-af87-632f2be88468",
             "type": "code",
             "label": "C: Testing",
@@ -63,16 +63,16 @@
                 "transpiled": "if (!(cc === null || cc === void 0 ? void 0 : cc.sessionInfo)) {\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\");\n}\n"
             },
             "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bb0",
+        "node": "690fa569498e124c7cb77675",
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1bb2",
-        "_id": "690f3f1c4cc8affe01ce1bb3",
+        "next": "690fa569498e124c7cb77677",
+        "_id": "690fa569498e124c7cb77678",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bb0",
+            "_id": "690fa569498e124c7cb77675",
             "referenceId": "fb9f8554-236d-43de-a16a-cede6216f976",
             "type": "executeFlow",
             "label": "Execute Flow",
@@ -95,19 +95,19 @@
                 "flow": "817faca8-f573-4fcb-a4f9-f095d0b506a9",
                 "node": "0b083e7a-2f05-4f94-ad27-04d3932411c5"
             },
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bb2",
+        "node": "690fa569498e124c7cb77677",
         "children": [
-            "690f3f1c4cc8affe01ce1bb4",
-            "690f3f1c4cc8affe01ce1bb5"
+            "690fa569498e124c7cb77679",
+            "690fa569498e124c7cb7767a"
         ],
-        "next": "690f3f1c4cc8affe01ce1bae",
-        "_id": "690f3f1c4cc8affe01ce1bb6",
+        "next": "690fa569498e124c7cb77673",
+        "_id": "690fa569498e124c7cb7767b",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bb2",
+            "_id": "690fa569498e124c7cb77677",
             "referenceId": "5397d00c-730f-46ad-b447-2ffe1556613a",
             "type": "if",
             "label": "Patient found?",
@@ -137,16 +137,16 @@
                 },
                 "condition": "cc.sessionInfo?.patient?.sysId"
             },
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bb4",
+        "node": "690fa569498e124c7cb77679",
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1bb7",
-        "_id": "690f3f1c4cc8affe01ce1bb8",
+        "next": "690fa569498e124c7cb7767c",
+        "_id": "690fa569498e124c7cb7767d",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bb4",
+            "_id": "690fa569498e124c7cb77679",
             "referenceId": "cbb5cf2b-b455-4b59-a2eb-6c016b840fad",
             "type": "then",
             "label": "Then",
@@ -158,16 +158,16 @@
             "extension": "@cognigy/basic-nodes",
             "config": {},
             "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bb5",
+        "node": "690fa569498e124c7cb7767a",
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1bb9",
-        "_id": "690f3f1c4cc8affe01ce1bba",
+        "next": "690fa569498e124c7cb7767e",
+        "_id": "690fa569498e124c7cb7767f",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bb5",
+            "_id": "690fa569498e124c7cb7767a",
             "referenceId": "d942f7c7-459a-41b2-a3b4-bd6a64e44316",
             "type": "else",
             "label": "Else",
@@ -179,16 +179,16 @@
             "extension": "@cognigy/basic-nodes",
             "config": {},
             "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bb7",
+        "node": "690fa569498e124c7cb7767c",
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1bbb",
-        "_id": "690f3f1c4cc8affe01ce1bbc",
+        "next": "690fa569498e124c7cb77680",
+        "_id": "690fa569498e124c7cb77681",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bb7",
+            "_id": "690fa569498e124c7cb7767c",
             "referenceId": "1001d174-fcdf-4109-aaae-ebe2ac118778",
             "type": "code",
             "label": "C: Set Post Body",
@@ -204,16 +204,16 @@
                 "transpiled": "cc.sessionInfo.appointments.newAppointment = {\n    \"patient\": cc.sessionInfo.patient.sysId,\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\n};\n"
             },
             "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bbb",
+        "node": "690fa569498e124c7cb77680",
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1bbd",
-        "_id": "690f3f1c4cc8affe01ce1bbe",
+        "next": "690fa569498e124c7cb77682",
+        "_id": "690fa569498e124c7cb77683",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bbb",
+            "_id": "690fa569498e124c7cb77680",
             "referenceId": "5d995006-9279-498f-9925-1fc82c4be6d4",
             "type": "httpRequest",
             "label": "HTTP: Retrieve Appointments by Phone",
@@ -252,16 +252,16 @@
                 "logWarning": ""
             },
             "preview": "{{cc.constants.serviceNowApi.baseUrls.appointments}}",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bbd",
+        "node": "690fa569498e124c7cb77682",
         "children": [],
         "next": null,
-        "_id": "690f3f1c4cc8affe01ce1bbf",
+        "_id": "690fa569498e124c7cb77684",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bbd",
+            "_id": "690fa569498e124c7cb77682",
             "referenceId": "a0e66ed4-b29b-4c7b-9db8-2373a1dac9c6",
             "type": "addToContext",
             "label": "AC: rtaText",
@@ -277,16 +277,16 @@
                 "mode": "simple"
             },
             "preview": "sessionInfo.appointments.newAppointment.rtaText",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bb9",
+        "node": "690fa569498e124c7cb7767e",
         "children": [],
         "next": null,
-        "_id": "690f3f1c4cc8affe01ce1bc0",
+        "_id": "690fa569498e124c7cb77685",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1bb9",
+            "_id": "690fa569498e124c7cb7767e",
             "referenceId": "2bc2f3a6-5773-4055-be73-3abfe622e5b8",
             "type": "addToContext",
             "label": "AC: rtaText (2)",
@@ -302,7 +302,7 @@
                 "mode": "simple"
             },
             "preview": "sessionInfo.appointments.newAppointment.rtaText",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "localeReference": "690fa569498e124c7cb7760e"
         }
     }
 ]
