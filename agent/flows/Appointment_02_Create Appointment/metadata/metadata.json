@@ -16,5 +16,5 @@
     "attachedLexicons": [],
     "localeReference": "690f3f1c4cc8affe01ce1a81",
     "intentTrainGroupReference": "690f3f1c4cc8affe01ce1bf6",
-    "isTrainingOutOfDate": null
+    "isTrainingOutOfDate": true
 }
