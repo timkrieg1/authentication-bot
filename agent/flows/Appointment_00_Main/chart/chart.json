@@ -203,10 +203,10 @@
                 "knowledgeSearchTags": "",
                 "knowledgeSearchTagsFilterOp": "and",
                 "knowledgeSearchAiAgentKnowledge": true,
-                "knowledgeSearchJobKnowledge": false,
+                "knowledgeSearchJobKnowledge": true,
                 "knowledgeSearchGenerateSearchPrompt": true,
                 "knowledgeSearchTopK": 3,
-                "knowledgeSearchJobStore": "",
+                "knowledgeSearchJobStore": "bcf9877a-fb6b-4dc7-853f-8097a3e5ed0c",
                 "apiVersion": "1.0",
                 "timeoutInMs": 8000,
                 "maxTokens": 4000,
@@ -241,7 +241,13 @@
                 "ttsModel": "",
                 "ttsVoice": "",
                 "ttsLabel": "",
-                "ttsDisableCache": false
+                "ttsDisableCache": false,
+                "advancedLogging": false,
+                "conditionForLogging": "",
+                "loggingCustomData": "",
+                "loggingHeaders": "",
+                "loggingWebhookUrl": "",
+                "useTextAlternativeForLLM": false
             },
             "preview": {
                 "keyValue": "Appointment Scheduler",
