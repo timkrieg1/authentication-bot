@@ -14,6 +14,7 @@ jobs:
       REPOSITORY: ${{ github.repository }}
       BOT_NAME: ${{ vars.BOT_NAME }}
       COGNIGY_BASE_URL_DEV: ${{ vars.COGNIGY_BASE_URL_DEV }}
+      BRANCH_NAME: ${{ github.head_ref }}
     secrets:
       PAT_TOKEN: ${{ secrets.PAT }}
       COGNIGY_API_KEY_DEV: ${{ secrets.COGNIGY_API_KEY_DEV }}
