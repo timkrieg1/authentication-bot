@@ -1,0 +1,44 @@
+[
+    {
+        "node": "690fac5114e2032d8fd83fd6",
+        "children": [],
+        "next": "690fac5114e2032d8fd83fe1",
+        "_id": "690fac5114e2032d8fd83fd7",
+        "_data": {
+            "_id": "690fac5114e2032d8fd83fd6",
+            "referenceId": "7a52d5c1-019b-49b6-b903-cf7045f7a824",
+            "type": "start",
+            "label": "Start",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": true,
+            "extension": "@cognigy/basic-nodes",
+            "config": {},
+            "preview": "",
+            "localeReference": "690fac15498e124c7cb78da1"
+        }
+    },
+    {
+        "node": "690fac5114e2032d8fd83fe1",
+        "children": [],
+        "next": null,
+        "_id": "690fac5114e2032d8fd83fe4",
+        "_data": {
+            "_id": "690fac5114e2032d8fd83fe1",
+            "referenceId": "caf842e3-ec51-4c18-b016-281d4a7e1e39",
+            "type": "end",
+            "label": "End",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {},
+            "preview": "",
+            "localeReference": "690fac15498e124c7cb78da1"
+        }
+    }
+]

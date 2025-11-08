@@ -1,0 +1,20 @@
+{
+    "_id": "690fac5114e2032d8fd83fcb",
+    "referenceId": "0f4a605d-3d7b-4ad5-b0db-287d35993a88",
+    "name": "Test",
+    "description": "",
+    "context": {},
+    "attachedFlows": [],
+    "img": "",
+    "projectReference": "690fac1114e2032d8fd83ce7",
+    "organisationReference": "5f08b3f6619dfb1779da18f9",
+    "createdAt": 1762634833,
+    "lastChanged": 1762634833,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "chartReference": "690fac5114e2032d8fd83fd0",
+    "attachedLexicons": [],
+    "localeReference": "690fac15498e124c7cb78da1",
+    "intentTrainGroupReference": "690fac5114e2032d8fd83ff6",
+    "isTrainingOutOfDate": null
+}

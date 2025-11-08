@@ -1,0 +1,21 @@
+{
+    "_id": "690fac15498e124c7cb78ec3",
+    "referenceId": "5ab91d43-eac2-456a-bfba-f4aba24be6f3",
+    "name": "GPT-4.1-nano",
+    "modelType": "gpt-4.1-nano",
+    "modelGroup": "chat",
+    "isCustomModel": false,
+    "provider": "azureOpenAI",
+    "isDefault": false,
+    "azureOpenAI": {
+        "baseCustomUrl": "https://azure-openai-sweden-intelligent-automation.openai.azure.com/openai/deployments/gpt-4.1-nano/chat/completions?api-version=2025-01-01-preview"
+    },
+    "googleVertexAI": {},
+    "fallbacks": [],
+    "createdAt": 1762634772,
+    "lastChanged": 1762634773,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "resourceLevel": "project",
+    "connectionId": "6c9380bd-8d6c-45cf-9d8a-0a590c9c988e"
+}
