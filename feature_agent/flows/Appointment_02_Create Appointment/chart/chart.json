@@ -1,10 +1,10 @@
 [
     {
         "children": [],
-        "next": "69120cfd498e124c7cc01c1b",
-        "_id": "69120cfd498e124c7cc01c1a",
+        "next": "690f3f1c4cc8affe01ce1bac",
+        "_id": "690f3f1c4cc8affe01ce1bab",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c1a",
+            "_id": "690f3f1c4cc8affe01ce1bab",
             "referenceId": "4b6296b8-15f8-488d-addc-3c45e1f21077",
             "type": "start",
             "label": "Start",
@@ -16,15 +16,15 @@
             "extension": "@cognigy/basic-nodes",
             "config": {},
             "preview": "",
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     },
     {
         "children": [],
         "next": null,
-        "_id": "69120cfd498e124c7cc01c1d",
+        "_id": "690f3f1c4cc8affe01ce1bae",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c1d",
+            "_id": "690f3f1c4cc8affe01ce1bae",
             "referenceId": "c3d7f4cc-1069-483a-be52-a4b5c1e22210",
             "type": "end",
             "label": "End",
@@ -36,15 +36,15 @@
             "extension": "@cognigy/basic-nodes",
             "config": {},
             "preview": "",
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     },
     {
         "children": [],
-        "next": "69120cfd498e124c7cc01c1f",
-        "_id": "69120cfd498e124c7cc01c1b",
+        "next": "690f3f1c4cc8affe01ce1bb0",
+        "_id": "690f3f1c4cc8affe01ce1bac",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c1b",
+            "_id": "690f3f1c4cc8affe01ce1bac",
             "referenceId": "fa7b5964-b7c6-420b-af87-632f2be88468",
             "type": "code",
             "label": "C: Testing",
@@ -60,15 +60,15 @@
                 "transpiled": "if (!(cc === null || cc === void 0 ? void 0 : cc.sessionInfo)) {\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\");\n}\n"
             },
             "preview": "",
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     },
     {
         "children": [],
-        "next": "69120cfd498e124c7cc01c21",
-        "_id": "69120cfd498e124c7cc01c1f",
+        "next": "690f3f1c4cc8affe01ce1bb2",
+        "_id": "690f3f1c4cc8affe01ce1bb0",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c1f",
+            "_id": "690f3f1c4cc8affe01ce1bb0",
             "referenceId": "fb9f8554-236d-43de-a16a-cede6216f976",
             "type": "executeFlow",
             "label": "Execute Flow",
@@ -91,7 +91,7 @@
                 "flow": "817faca8-f573-4fcb-a4f9-f095d0b506a9",
                 "node": "0b083e7a-2f05-4f94-ad27-04d3932411c5"
             },
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     },
     {
@@ -99,10 +99,10 @@
             "69120cfd498e124c7cc01c23",
             "69120cfd498e124c7cc01c24"
         ],
-        "next": "69120cfd498e124c7cc01c1d",
-        "_id": "69120cfd498e124c7cc01c21",
+        "next": "690f3f1c4cc8affe01ce1bae",
+        "_id": "690f3f1c4cc8affe01ce1bb2",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c21",
+            "_id": "690f3f1c4cc8affe01ce1bb2",
             "referenceId": "5397d00c-730f-46ad-b447-2ffe1556613a",
             "type": "if",
             "label": "Patient found?",
@@ -132,15 +132,15 @@
                 },
                 "condition": "cc.sessionInfo?.patient?.sysId"
             },
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     },
     {
         "children": [],
-        "next": "69120cfd498e124c7cc01c26",
-        "_id": "69120cfd498e124c7cc01c23",
+        "next": "690f3f1c4cc8affe01ce1bb7",
+        "_id": "690f3f1c4cc8affe01ce1bb4",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c23",
+            "_id": "690f3f1c4cc8affe01ce1bb4",
             "referenceId": "cbb5cf2b-b455-4b59-a2eb-6c016b840fad",
             "type": "then",
             "label": "Then",
@@ -152,15 +152,15 @@
             "extension": "@cognigy/basic-nodes",
             "config": {},
             "preview": "",
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     },
     {
         "children": [],
-        "next": "69120cfd498e124c7cc01c28",
-        "_id": "69120cfd498e124c7cc01c24",
+        "next": "690f3f1c4cc8affe01ce1bb9",
+        "_id": "690f3f1c4cc8affe01ce1bb5",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c24",
+            "_id": "690f3f1c4cc8affe01ce1bb5",
             "referenceId": "d942f7c7-459a-41b2-a3b4-bd6a64e44316",
             "type": "else",
             "label": "Else",
@@ -172,15 +172,15 @@
             "extension": "@cognigy/basic-nodes",
             "config": {},
             "preview": "",
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     },
     {
         "children": [],
-        "next": "69120cfd498e124c7cc01c2a",
-        "_id": "69120cfd498e124c7cc01c26",
+        "next": "690f3f1c4cc8affe01ce1bbb",
+        "_id": "690f3f1c4cc8affe01ce1bb7",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c26",
+            "_id": "690f3f1c4cc8affe01ce1bb7",
             "referenceId": "1001d174-fcdf-4109-aaae-ebe2ac118778",
             "type": "code",
             "label": "C: Set Post Body",
@@ -196,15 +196,15 @@
                 "transpiled": "cc.sessionInfo.appointments.newAppointment = {\n    \"patient\": cc.sessionInfo.patient.sysId,\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\n};\n"
             },
             "preview": "",
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     },
     {
         "children": [],
-        "next": "69120cfd498e124c7cc01c2c",
-        "_id": "69120cfd498e124c7cc01c2a",
+        "next": "690f3f1c4cc8affe01ce1bbd",
+        "_id": "690f3f1c4cc8affe01ce1bbb",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c2a",
+            "_id": "690f3f1c4cc8affe01ce1bbb",
             "referenceId": "5d995006-9279-498f-9925-1fc82c4be6d4",
             "type": "httpRequest",
             "label": "HTTP: Retrieve Appointments by Phone",
@@ -243,15 +243,15 @@
                 "logWarning": ""
             },
             "preview": "{{cc.constants.serviceNowApi.baseUrls.appointments}}",
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     },
     {
         "children": [],
         "next": null,
-        "_id": "69120cfd498e124c7cc01c2c",
+        "_id": "690f3f1c4cc8affe01ce1bbd",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c2c",
+            "_id": "690f3f1c4cc8affe01ce1bbd",
             "referenceId": "a0e66ed4-b29b-4c7b-9db8-2373a1dac9c6",
             "type": "addToContext",
             "label": "AC: rtaText",
@@ -267,15 +267,15 @@
                 "mode": "simple"
             },
             "preview": "sessionInfo.appointments.newAppointment.rtaText",
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     },
     {
         "children": [],
         "next": null,
-        "_id": "69120cfd498e124c7cc01c28",
+        "_id": "690f3f1c4cc8affe01ce1bb9",
         "_data": {
-            "_id": "69120cfd498e124c7cc01c28",
+            "_id": "690f3f1c4cc8affe01ce1bb9",
             "referenceId": "2bc2f3a6-5773-4055-be73-3abfe622e5b8",
             "type": "addToContext",
             "label": "AC: rtaText (2)",
@@ -291,7 +291,7 @@
                 "mode": "simple"
             },
             "preview": "sessionInfo.appointments.newAppointment.rtaText",
-            "localeReference": "69120cfd498e124c7cc01bb8"
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
         }
     }
 ]
