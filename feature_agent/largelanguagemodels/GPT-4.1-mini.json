@@ -1,0 +1,21 @@
+{
+    "_id": "69120cfd498e124c7cc01cd9",
+    "referenceId": "c34345e8-6856-4cf1-8874-7ac61fed7235",
+    "name": "GPT-4.1-mini",
+    "modelType": "gpt-4.1-mini",
+    "modelGroup": "chat",
+    "isCustomModel": false,
+    "provider": "azureOpenAI",
+    "isDefault": false,
+    "azureOpenAI": {
+        "baseCustomUrl": "https://azure-openai-sweden-intelligent-automation.openai.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2025-01-01-preview"
+    },
+    "googleVertexAI": {},
+    "fallbacks": [],
+    "createdAt": 1762790652,
+    "lastChanged": 1762790653,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "resourceLevel": "project",
+    "connectionId": "6c9380bd-8d6c-45cf-9d8a-0a590c9c988e"
+}

@@ -1,0 +1,20 @@
+{
+    "_id": "69120cfd498e124c7cc01bc0",
+    "referenceId": "3b195289-a467-432d-884b-c6d1aa2892aa",
+    "name": "Appointment_01_Retrieve Appointments",
+    "description": "",
+    "context": {},
+    "attachedFlows": [],
+    "img": "",
+    "projectReference": "69120cfa498e124c7cc018e3",
+    "organisationReference": "5f08b3f6619dfb1779da18f9",
+    "createdAt": 1762790652,
+    "lastChanged": 1762790653,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "chartReference": "69120cfd498e124c7cc01bc1",
+    "attachedLexicons": [],
+    "localeReference": "69120cfd498e124c7cc01bb8",
+    "intentTrainGroupReference": "69120cfd498e124c7cc01c57",
+    "isTrainingOutOfDate": true
+}
