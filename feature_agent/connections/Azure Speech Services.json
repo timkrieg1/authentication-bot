@@ -1,0 +1,17 @@
+{
+    "_id": "690f3f1c4cc8affe01ce1c6a",
+    "referenceId": "c7068c0f-3bcc-405c-a79c-e313fe9f864f",
+    "name": "Azure Speech Services",
+    "fields": {
+        "apiKey": "****************",
+        "region": "****************"
+    },
+    "extension": "@cognigy/audio-preview-provider",
+    "type": "MicrosoftSpeechProvider",
+    "resourceLevel": "project",
+    "createdAt": 1762863086,
+    "lastChanged": 1762863087,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "isDeprecated": false
+}
