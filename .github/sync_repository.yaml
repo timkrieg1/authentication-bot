@@ -1,0 +1,44 @@
+name: Sync Repository with Cognigy Agent/Reusable
+
+on:
+  workflow_dispatch:
+    inputs:
+      createPullRequest:
+        description: 'Create pull request automatically'
+        required: true
+        type: boolean
+        default: true
+
+jobs:
+  prepare-data:
+    runs-on: ubuntu-latest
+    outputs:
+      bot-mapping-b64: ${{ steps.encode_bot_mapping.outputs.BOT_MAPPING_B64 }}
+    steps:
+      # Checkout this repo to access bot_mapping.json
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      # Read and base64 encode bot_mapping.json
+      - name: Encode bot_mapping.json
+        id: encode_bot_mapping
+        run: |
+          BOT_MAPPING_B64=$(base64 -w 0 bot_mapping.json)
+          echo "BOT_MAPPING_B64=$BOT_MAPPING_B64" >> $GITHUB_OUTPUT
+
+  call-reusable-workflow:
+    needs: prepare-data
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/sync_repository.yaml@main
+    with:
+      REPOSITORY: ${{ github.repository }}
+      BOT_MAPPING_BASE64: ${{ needs.prepare-data.outputs.bot-mapping-b64 }}
+      BOT_NAME: ${{ vars.BOT_NAME }}
+      CREATE_PULL_REQUEST: ${{ github.event.inputs.createPullRequest }}
+      COGNIGY_BASE_URL_DEV: ${{ vars.COGNIGY_BASE_URL_DEV }}
+      MAX_SNAPSHOTS: ${{ vars.MAX_SNAPSHOTS }}
+    secrets:
+      PAT_TOKEN: ${{ secrets.PAT }}
+      COGNIGY_API_KEY_DEV: ${{ secrets.COGNIGY_API_KEY_DEV }}
