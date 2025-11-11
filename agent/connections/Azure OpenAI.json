@@ -8,8 +8,8 @@
     "extension": "@cognigy/generative-ai-provider",
     "type": "AzureOpenAIProviderV2",
     "resourceLevel": "project",
-    "createdAt": 1762606827,
-    "lastChanged": 1762606876,
+    "createdAt": 1762863086,
+    "lastChanged": 1762863087,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
     "isDeprecated": false
