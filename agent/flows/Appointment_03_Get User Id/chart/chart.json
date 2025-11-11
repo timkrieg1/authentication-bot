@@ -1,9 +1,8 @@
 [
     {
-        "node": "690f3f1c4cc8affe01ce1bc1",
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1bc2",
-        "_id": "690f3f1c4cc8affe01ce1bc3",
+        "next": "690f422314e2032d8fd6f0a4",
+        "_id": "690f3f1c4cc8affe01ce1bc1",
         "_data": {
             "_id": "690f3f1c4cc8affe01ce1bc1",
             "referenceId": "0b083e7a-2f05-4f94-ad27-04d3932411c5",
@@ -21,10 +20,9 @@
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bc4",
         "children": [],
         "next": null,
-        "_id": "690f3f1c4cc8affe01ce1bc5",
+        "_id": "690f3f1c4cc8affe01ce1bc4",
         "_data": {
             "_id": "690f3f1c4cc8affe01ce1bc4",
             "referenceId": "16155712-7e7a-4262-8608-9956af75b70e",
@@ -42,13 +40,12 @@
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bc2",
         "children": [
             "690f3f1c4cc8affe01ce1bc6",
             "690f3f1c4cc8affe01ce1bc7"
         ],
         "next": "690f3f1c4cc8affe01ce1bc8",
-        "_id": "690f3f1c4cc8affe01ce1bc9",
+        "_id": "690f3f1c4cc8affe01ce1bc2",
         "_data": {
             "_id": "690f3f1c4cc8affe01ce1bc2",
             "referenceId": "41448e94-0003-44ff-9457-f4e94f572059",
@@ -66,10 +63,9 @@
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bc6",
         "children": [],
         "next": "690f3f1c4cc8affe01ce1bca",
-        "_id": "690f3f1c4cc8affe01ce1bcb",
+        "_id": "690f3f1c4cc8affe01ce1bc6",
         "_data": {
             "_id": "690f3f1c4cc8affe01ce1bc6",
             "referenceId": "ecbdfe21-85f5-496b-b2cc-b82aec3212f8",
@@ -87,10 +83,9 @@
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bca",
         "children": [],
         "next": null,
-        "_id": "690f3f1c4cc8affe01ce1bcc",
+        "_id": "690f3f1c4cc8affe01ce1bca",
         "_data": {
             "_id": "690f3f1c4cc8affe01ce1bca",
             "referenceId": "28ad0947-227f-40aa-8326-cd17d1cf20d0",
@@ -135,10 +130,9 @@
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bc7",
         "children": [],
         "next": "690f3f1c4cc8affe01ce1bcd",
-        "_id": "690f3f1c4cc8affe01ce1bce",
+        "_id": "690f3f1c4cc8affe01ce1bc7",
         "_data": {
             "_id": "690f3f1c4cc8affe01ce1bc7",
             "referenceId": "f695df37-5733-46c1-af36-f2c8758a7fe3",
@@ -156,10 +150,9 @@
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bcd",
         "children": [],
         "next": null,
-        "_id": "690f3f1c4cc8affe01ce1bcf",
+        "_id": "690f3f1c4cc8affe01ce1bcd",
         "_data": {
             "_id": "690f3f1c4cc8affe01ce1bcd",
             "referenceId": "093ef2b7-89db-44ec-b76d-96fdcecb246e",
@@ -204,10 +197,9 @@
         }
     },
     {
-        "node": "690f3f1c4cc8affe01ce1bc8",
         "children": [],
         "next": "690f3f1c4cc8affe01ce1bc4",
-        "_id": "690f3f1c4cc8affe01ce1bd0",
+        "_id": "690f3f1c4cc8affe01ce1bc8",
         "_data": {
             "_id": "690f3f1c4cc8affe01ce1bc8",
             "referenceId": "550dcb9f-96b9-47cd-95cc-80080c37f0f0",
@@ -223,6 +215,29 @@
                 "code": "try {\r\n\r\n    function processPatientResponse(respone) {\r\n        let memory = \"\";\r\n        let rtaText = \"\";\r\n\r\n        if (respone.statusCode != 200) {\r\n            cc.sessionInfo.patient.failed = true;\r\n            rtaText = \"Getting the patient failed. Try again once more.\"\r\n            return\r\n        }\r\n\r\n        let content = respone.result.result;\r\n        if (content.length == 1) {\r\n            cc.sessionInfo.patient = {\r\n                ...cc.sessionInfo.patient,\r\n                \"sysId\": content[0].sys_id,\r\n                \"name\": content[0].name\r\n            };\r\n            \r\n        } else if (content.length > 1) {\r\n            rtaText = \"You have found more than one user with that name. Disambiguate with the caller which patient he is.\"\r\n        } else {\r\n            rtaText = \"You have found no patient with that name in the database. Ask the caller for his name again.\"\r\n        }\r\n\r\n        cc.sessionInfo.appointments.rtaText = rtaText;\r\n    }\r\n\r\n    processPatientResponse(ci.httprequest);\r\n\r\n    \r\n} catch(err) {\r\n    api.log(\"error\", `Error in cleaning get all incidents response. Error was: ${err.toString()}`)\r\n}",
                 "hasError": false,
                 "transpiled": "try {\n    function processPatientResponse(respone) {\n        let memory = \"\";\n        let rtaText = \"\";\n        if (respone.statusCode != 200) {\n            cc.sessionInfo.patient.failed = true;\n            rtaText = \"Getting the patient failed. Try again once more.\";\n            return;\n        }\n        let content = respone.result.result;\n        if (content.length == 1) {\n            cc.sessionInfo.patient = Object.assign(Object.assign({}, cc.sessionInfo.patient), { \"sysId\": content[0].sys_id, \"name\": content[0].name });\n        }\n        else if (content.length > 1) {\n            rtaText = \"You have found more than one user with that name. Disambiguate with the caller which patient he is.\";\n        }\n        else {\n            rtaText = \"You have found no patient with that name in the database. Ask the caller for his name again.\";\n        }\n        cc.sessionInfo.appointments.rtaText = rtaText;\n    }\n    processPatientResponse(ci.httprequest);\n}\ncatch (err) {\n    api.log(\"error\", `Error in cleaning get all incidents response. Error was: ${err.toString()}`);\n}\n"
+            },
+            "preview": "",
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        }
+    },
+    {
+        "children": [],
+        "next": "690f3f1c4cc8affe01ce1bc2",
+        "_id": "690f422314e2032d8fd6f0a4",
+        "_data": {
+            "_id": "690f422314e2032d8fd6f0a4",
+            "referenceId": "0037e58b-eac8-4936-bd35-6eeca9b3d82b",
+            "type": "placeholder",
+            "label": "Placeholder",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "text": "",
+                "data": ""
             },
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
