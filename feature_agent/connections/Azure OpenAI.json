@@ -1,0 +1,16 @@
+{
+    "_id": "690f3f1c4cc8affe01ce1c69",
+    "referenceId": "6c9380bd-8d6c-45cf-9d8a-0a590c9c988e",
+    "name": "Azure OpenAI",
+    "fields": {
+        "apiKey": "****************"
+    },
+    "extension": "@cognigy/generative-ai-provider",
+    "type": "AzureOpenAIProviderV2",
+    "resourceLevel": "project",
+    "createdAt": 1762863086,
+    "lastChanged": 1762863087,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "isDeprecated": false
+}
