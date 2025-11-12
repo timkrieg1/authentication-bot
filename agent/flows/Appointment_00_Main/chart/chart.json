@@ -17,7 +17,8 @@
             "config": {},
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "5ed5d5e0-83d6-4a73-86db-6ccea8e0ce76"
     },
     {
         "children": [],
@@ -37,7 +38,8 @@
             "config": {},
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "edc9d1ee-72c1-4221-9ab9-097cce7b65b5"
     },
     {
         "children": [
@@ -60,7 +62,8 @@
             "config": {},
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "95b731d4-2c33-4a48-9c50-70ba7f8857f9"
     },
     {
         "children": [],
@@ -80,7 +83,8 @@
             "config": {},
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "4a41c0c7-534a-4139-ad53-21028497d597"
     },
     {
         "children": [],
@@ -100,7 +104,8 @@
             "config": {},
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "b528911a-ca32-410a-9d11-b825239400fa"
     },
     {
         "children": [],
@@ -124,7 +129,8 @@
             },
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "194afe3a-84bd-4f3c-924f-e3b83722c340"
     },
     {
         "children": [],
@@ -155,7 +161,8 @@
                 "node": "192e88ad-69ed-44af-9224-2c879fe5ce07"
             },
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "f5fa1f44-d9a1-4803-99e9-a06c14f3900a"
     },
     {
         "children": [
@@ -248,7 +255,8 @@
                 "aiAgentImageOptimizedFormat": true
             },
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "f29ead2a-e42f-4422-9b9a-8806c4941ff2"
     },
     {
         "children": [],
@@ -268,7 +276,8 @@
             "config": {},
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "7dec40dc-0735-4342-bb54-17b680d39547"
     },
     {
         "children": [],
@@ -295,7 +304,8 @@
             },
             "preview": "get_appointments",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "c27a64ab-13f3-4c65-9db7-47ee69d7b58f"
     },
     {
         "children": [],
@@ -318,7 +328,8 @@
             },
             "preview": "{{ cc.sessionInfo.appointments.rtaText }}",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "61322aeb-82c7-482b-b857-a36c6b601ddb"
     },
     {
         "children": [],
@@ -349,7 +360,8 @@
                 "node": "192e88ad-69ed-44af-9224-2c879fe5ce07"
             },
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "4ccc5aba-edc6-4a41-ba2c-2d49e2352456"
     },
     {
         "children": [],
@@ -376,7 +388,8 @@
             },
             "preview": "validate_appointment",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "7965b490-de77-4dfa-b8c3-8e235b98bb93"
     },
     {
         "children": [],
@@ -399,7 +412,8 @@
             },
             "preview": "{{ cc.sessionInfo.appointments.rta }}",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "2e7f7fa1-1316-4715-af44-1c9e7660db6b"
     },
     {
         "children": [],
@@ -423,7 +437,8 @@
             },
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "517c16da-b69c-4ea1-a526-184ff7b351e6"
     },
     {
         "children": [],
@@ -450,7 +465,8 @@
             },
             "preview": "reschedule_appointment",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "23052ab3-2e3d-4d56-9aa4-ec7331fd5f36"
     },
     {
         "children": [],
@@ -473,7 +489,8 @@
             },
             "preview": "The appointment was successfully rescheduled.",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "cce2a3d4-93f6-4acc-a3db-e9160fcca392"
     },
     {
         "children": [],
@@ -500,7 +517,8 @@
             },
             "preview": "create_appointment",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "90300c26-2750-4345-99c1-8d222def9b0f"
     },
     {
         "children": [],
@@ -523,7 +541,8 @@
             },
             "preview": "{{cc.sessionInfo.appointments.newAppointment.rtaText}}",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "bec7a729-ba30-427c-87d9-b30ef3da0cf2"
     },
     {
         "children": [],
@@ -550,7 +569,8 @@
             },
             "preview": "end_call",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "cf9db529-52e8-47d5-87ab-2d329ddef19a"
     },
     {
         "children": [],
@@ -573,7 +593,8 @@
             },
             "preview": "Bot ended the call",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "c1f7ffb1-7887-4807-b609-d6b1245ed68e"
     },
     {
         "children": [],
@@ -625,7 +646,8 @@
                 }
             },
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "7b29b4e6-4876-4eb2-942c-64dde12326a3"
     },
     {
         "children": [],
@@ -712,7 +734,8 @@
             },
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "72912631-4d49-49d5-b268-e2172aee5951"
     },
     {
         "children": [],
@@ -743,7 +766,8 @@
                 "node": "4b6296b8-15f8-488d-addc-3c45e1f21077"
             },
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "abbf812b-5b4f-4da8-925e-e0080ebc1404"
     },
     {
         "children": [],
@@ -830,7 +854,8 @@
             },
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "9158ae85-ab58-42ab-8760-357dd78fca5c"
     },
     {
         "children": [],
@@ -872,6 +897,7 @@
                 "_cognigy": {}
             },
             "localeReference": "690f3f1c4cc8affe01ce1a81"
-        }
+        },
+        "referenceId": "c4614a48-9aa5-4f2d-ba42-25f530bcfa1d"
     }
 ]
