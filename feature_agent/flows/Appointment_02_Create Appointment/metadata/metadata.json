@@ -1,0 +1,20 @@
+{
+    "_id": "690f3f1c4cc8affe01ce1a8b",
+    "referenceId": "31233506-afc1-4ef5-8846-27e1bc700d2b",
+    "name": "Appointment_02_Create Appointment",
+    "description": "",
+    "context": {},
+    "attachedFlows": [],
+    "img": "",
+    "projectReference": "6873f7f242ec168c188334ec",
+    "organisationReference": "5f08b3f6619dfb1779da18f9",
+    "createdAt": 1763214536,
+    "lastChanged": 1763214536,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "chartReference": "691884c836bda2b14168b3a9",
+    "attachedLexicons": [],
+    "localeReference": "690f3f1c4cc8affe01ce1a81",
+    "intentTrainGroupReference": "691884c936bda2b14168b43e",
+    "isTrainingOutOfDate": true
+}
