@@ -1,12 +1,12 @@
 {
     "default": {
-        "_id": "690f3f1c4cc8affe01ce1aa3",
+        "_id": "69187faac96ba152b00342dc",
         "name": "default",
         "type": "blacklist",
         "isDefault": true,
         "referenceId": "792f0af4-d238-490a-a9f3-5227cf752f71",
-        "createdAt": 1762606827,
-        "lastChanged": 1762606876,
+        "createdAt": 1763213225,
+        "lastChanged": 1763213226,
         "createdBy": "65605bbcde1bccb4b9af6114",
         "lastChangedBy": "65605bbcde1bccb4b9af6114",
         "intentIds": []
