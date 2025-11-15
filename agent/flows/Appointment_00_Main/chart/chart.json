@@ -494,7 +494,7 @@
     },
     {
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1b8b",
+        "next": "6918a91dc96ba152b003abe8",
         "_id": "690f3f1c4cc8affe01ce1b7a",
         "_data": {
             "_id": "690f3f1c4cc8affe01ce1b7a",
@@ -739,7 +739,7 @@
     },
     {
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1b8d",
+        "next": "6918a99cd9f6039d0efe6b6b",
         "_id": "690f3f1c4cc8affe01ce1b8b",
         "_data": {
             "_id": "690f3f1c4cc8affe01ce1b8b",
@@ -899,5 +899,71 @@
             "localeReference": "690f3f1c4cc8affe01ce1a81"
         },
         "referenceId": "c4614a48-9aa5-4f2d-ba42-25f530bcfa1d"
+    },
+    {
+        "children": [],
+        "next": "690f3f1c4cc8affe01ce1b8b",
+        "_id": "6918a91dc96ba152b003abe8",
+        "_data": {
+            "_id": "6918a91dc96ba152b003abe8",
+            "referenceId": "24b39bd5-e8a8-4d6e-a475-0caf04339210",
+            "type": "trackGoal",
+            "label": "Track Goal",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "goal": {
+                    "goalReferenceId": "e05e6d02-fdff-4b20-af1f-2d9a9d35f64e",
+                    "stepIds": [
+                        "6918a910c96ba152b003ab98"
+                    ]
+                }
+            },
+            "preview": {
+                "goalReferenceId": "e05e6d02-fdff-4b20-af1f-2d9a9d35f64e",
+                "stepIds": [
+                    "6918a910c96ba152b003ab98"
+                ]
+            },
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "24b39bd5-e8a8-4d6e-a475-0caf04339210"
+    },
+    {
+        "children": [],
+        "next": "690f3f1c4cc8affe01ce1b8d",
+        "_id": "6918a99cd9f6039d0efe6b6b",
+        "_data": {
+            "_id": "6918a99cd9f6039d0efe6b6b",
+            "referenceId": "bc2561a2-957d-4518-9f91-276553641676",
+            "type": "trackGoal",
+            "label": "Track Goal (2)",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "goal": {
+                    "goalReferenceId": "e05e6d02-fdff-4b20-af1f-2d9a9d35f64e",
+                    "stepIds": [
+                        "6918a910c96ba152b003ab99"
+                    ]
+                }
+            },
+            "preview": {
+                "goalReferenceId": "e05e6d02-fdff-4b20-af1f-2d9a9d35f64e",
+                "stepIds": [
+                    "6918a910c96ba152b003ab99"
+                ]
+            },
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "bc2561a2-957d-4518-9f91-276553641676"
     }
 ]
