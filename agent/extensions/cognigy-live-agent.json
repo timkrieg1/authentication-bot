@@ -1,0 +1,282 @@
+{
+    "_id": "691a50b2e0c380c7aa8af66c",
+    "name": "cognigy-live-agent",
+    "version": "4.0.0",
+    "imageUrlToken": "https://api-trial.cognigy.ai/new/v2.0/files/40994991b11da87822969d2badf825e1afe0920559574358490cb6ccc9b96a9e",
+    "description": "Helper functions for the Cognigy Live Agent workspace",
+    "label": "Cognigy Live Agent",
+    "readme": "﻿# Cognigy Live Agent\n\nThis Extension provides custom helper functions for the Cognigy Live Agent software.\n\n## Connection\n\n- apiKey\n  - The access token of the Live Agent profile that can be found in the Profile Settings inside of Live Agent\n- baseUrl\n  - The base URL of the Live Agent installation, e.g. https://liveagent-trial.cognigy.ai/api/v1\n- accountId\n  - The ID of the account that is configured in Cognigy.AI for the Live Agent. One can find it in the URL of the Live Agent instance: https://liveagent-trial.cognigy.ai/app/accounts/  **99**  /dashboard\n\n## Node: Check Live Agent Availability\n\nThis Flow Node checks if there is at least one agent in the Live Agent instance that has the status \"online\". If this is the case, the list of available agents will be returned and stored in the Input or Context object. If not, the \"On Offline\" Child Node will be used as path:\n\n<img src=\"./docs/checkLiveAgentAvailabilityFlowNodeExample.png\" width=\"400\" />",
+    "tags": [
+        "Live Chat",
+        "Live Agent",
+        "Support"
+    ],
+    "author": "Cognigy GmbH",
+    "extensionType": "nodes",
+    "knowledge": [],
+    "createdAt": 1763332279,
+    "lastChanged": 1763332279,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "nodes": [
+        {
+            "type": "checkLiveAgentAvailability",
+            "parentType": null,
+            "defaultLabel": {
+                "default": "Check Agent Availability",
+                "deDE": "Überprüfe Agenten Verfügbarkeit",
+                "esES": "Verificar la disponibilidad del agente"
+            },
+            "summary": {
+                "default": "Checks if an agent is available in Live Agent",
+                "deDE": "Überprüft ob ein Agent in Live Agent verfügbar ist",
+                "esES": "Comprueba si hay un agente disponible en Live Agent"
+            },
+            "appearance": {
+                "color": "#3D9FFF",
+                "textColor": "black",
+                "showIcon": true,
+                "variant": "regular"
+            },
+            "behavior": {
+                "stopping": false,
+                "entrypoint": false
+            },
+            "constraints": {
+                "editable": true,
+                "deletable": true,
+                "creatable": true,
+                "collapsable": false,
+                "childFlowCreatable": false,
+                "movable": true,
+                "placement": {
+                    "predecessor": {},
+                    "successor": {},
+                    "children": {
+                        "whitelist": []
+                    }
+                }
+            },
+            "dependencies": {
+                "children": [
+                    "onAgentAvailable",
+                    "onNoAgentAvailable"
+                ]
+            },
+            "fields": [
+                {
+                    "type": "connection",
+                    "key": "connection",
+                    "label": {
+                        "default": "Live Agent Connection",
+                        "deDE": "Live Agent Verbindung",
+                        "esES": "Live Agent Conexión"
+                    },
+                    "params": {
+                        "connectionType": "cognigy-live-agent-access-token",
+                        "required": true
+                    }
+                },
+                {
+                    "type": "select",
+                    "key": "storeLocation",
+                    "label": {
+                        "default": "Where to store the result",
+                        "deDE": "Wo das Ergebnis gespeichert werden soll",
+                        "esES": "Dónde almacenar el resultado"
+                    },
+                    "defaultValue": "input",
+                    "params": {
+                        "options": [
+                            {
+                                "label": "Input",
+                                "value": "input"
+                            },
+                            {
+                                "label": "Context",
+                                "value": "context"
+                            }
+                        ],
+                        "required": true
+                    }
+                },
+                {
+                    "type": "cognigyText",
+                    "key": "inputKey",
+                    "label": {
+                        "default": "Input Key to store result",
+                        "deDE": "Input Key zum Speichern des Ergebnisses",
+                        "esES": "Input Key para almacenar el resultado"
+                    },
+                    "condition": {
+                        "key": "storeLocation",
+                        "value": "input"
+                    },
+                    "defaultValue": "agentsAvailable"
+                },
+                {
+                    "type": "cognigyText",
+                    "key": "contextKey",
+                    "label": {
+                        "default": "Context Key to store result",
+                        "deDE": "Context Key zum Speichern des Ergebnisses",
+                        "esES": "Context Key para almacenar el resultado"
+                    },
+                    "condition": {
+                        "key": "storeLocation",
+                        "value": "context"
+                    },
+                    "defaultValue": "agentsAvailable"
+                }
+            ],
+            "function": null,
+            "tags": [],
+            "tokens": [],
+            "sections": [
+                {
+                    "key": "storage",
+                    "label": {
+                        "default": "Storage Option",
+                        "deDE": "Speicheroption",
+                        "esES": "Opción de almacenamiento"
+                    },
+                    "defaultCollapsed": true,
+                    "fields": [
+                        "storeLocation",
+                        "inputKey",
+                        "contextKey"
+                    ]
+                }
+            ],
+            "form": [
+                {
+                    "key": "connection",
+                    "type": "field"
+                },
+                {
+                    "key": "storage",
+                    "type": "section"
+                }
+            ],
+            "_id": "691a50b7d9f6039d0e00d5d5"
+        },
+        {
+            "type": "onAgentAvailable",
+            "parentType": "checkLiveAgentAvailability",
+            "defaultLabel": {
+                "default": "On Online",
+                "deDE": "Ist Online",
+                "esES": "Está en línea"
+            },
+            "summary": "",
+            "appearance": {
+                "color": "#61d188",
+                "textColor": "white",
+                "showIcon": true,
+                "variant": "mini"
+            },
+            "behavior": {
+                "stopping": false,
+                "entrypoint": false
+            },
+            "constraints": {
+                "editable": false,
+                "deletable": false,
+                "creatable": false,
+                "collapsable": false,
+                "childFlowCreatable": false,
+                "movable": false,
+                "placement": {
+                    "predecessor": {
+                        "whitelist": []
+                    },
+                    "successor": {},
+                    "children": {
+                        "whitelist": []
+                    }
+                }
+            },
+            "dependencies": {
+                "children": []
+            },
+            "fields": [],
+            "function": null,
+            "tags": [],
+            "tokens": [],
+            "sections": [],
+            "form": [],
+            "_id": "691a50b7d9f6039d0e00d5d6"
+        },
+        {
+            "type": "onNoAgentAvailable",
+            "parentType": "checkLiveAgentAvailability",
+            "defaultLabel": {
+                "default": "On Offline",
+                "deDE": "Ist Offline",
+                "esES": "Está desconectado"
+            },
+            "summary": "",
+            "appearance": {
+                "color": "#61d188",
+                "textColor": "white",
+                "showIcon": true,
+                "variant": "mini"
+            },
+            "behavior": {
+                "stopping": false,
+                "entrypoint": false
+            },
+            "constraints": {
+                "editable": false,
+                "deletable": false,
+                "creatable": false,
+                "collapsable": false,
+                "childFlowCreatable": false,
+                "movable": false,
+                "placement": {
+                    "predecessor": {
+                        "whitelist": []
+                    },
+                    "successor": {},
+                    "children": {
+                        "whitelist": []
+                    }
+                }
+            },
+            "dependencies": {
+                "children": []
+            },
+            "fields": [],
+            "function": null,
+            "tags": [],
+            "tokens": [],
+            "sections": [],
+            "form": [],
+            "_id": "691a50b7d9f6039d0e00d5d7"
+        }
+    ],
+    "trustedCode": false,
+    "connections": [
+        {
+            "type": "cognigy-live-agent-access-token",
+            "label": "Live Agent Access Token",
+            "fields": [
+                {
+                    "fieldName": "apiKey",
+                    "required": true,
+                    "_id": "691a50b7d9f6039d0e00d5da"
+                },
+                {
+                    "fieldName": "baseUrl",
+                    "required": true,
+                    "_id": "691a50b7d9f6039d0e00d5db"
+                },
+                {
+                    "fieldName": "accountId",
+                    "required": true,
+                    "_id": "691a50b7d9f6039d0e00d5dc"
+                }
+            ]
+        }
+    ]
+}
