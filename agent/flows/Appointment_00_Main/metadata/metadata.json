@@ -9,12 +9,14 @@
     "projectReference": "6873f7f242ec168c188334ec",
     "organisationReference": "5f08b3f6619dfb1779da18f9",
     "createdAt": 1762606827,
-    "lastChanged": 1763223970,
+    "lastChanged": 1763328267,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
     "chartReference": "690f3f1c4cc8affe01ce1a88",
-    "attachedLexicons": [],
+    "attachedLexicons": [
+        "6918a8cc36bda2b14168f402"
+    ],
     "localeReference": "690f3f1c4cc8affe01ce1a81",
     "intentTrainGroupReference": "690f3f1c4cc8affe01ce1bf4",
-    "isTrainingOutOfDate": true
+    "isTrainingOutOfDate": null
 }
