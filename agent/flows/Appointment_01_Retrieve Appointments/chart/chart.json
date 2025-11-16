@@ -4,8 +4,6 @@
         "next": "690f3f1c4cc8affe01ce1b9a",
         "_id": "690f3f1c4cc8affe01ce1b99",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1b99",
-            "referenceId": "192e88ad-69ed-44af-9224-2c879fe5ce07",
             "type": "start",
             "label": "Start",
             "comment": "",
@@ -25,8 +23,6 @@
         "next": null,
         "_id": "690f3f1c4cc8affe01ce1b9c",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1b9c",
-            "referenceId": "86127315-cfe3-40ac-b4d3-7da21ec50600",
             "type": "end",
             "label": "End",
             "comment": "",
@@ -46,8 +42,6 @@
         "next": "690f3f1c4cc8affe01ce1b9e",
         "_id": "690f3f1c4cc8affe01ce1b9a",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1b9a",
-            "referenceId": "3a707532-7a1e-4252-a28d-f35a3a9248e3",
             "type": "code",
             "label": "C: Testing",
             "comment": "",
@@ -71,8 +65,6 @@
         "next": "690f3f1c4cc8affe01ce1ba1",
         "_id": "690f3f1c4cc8affe01ce1ba0",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1ba0",
-            "referenceId": "8f063692-fac1-4aa4-9745-e6391377d04f",
             "type": "then",
             "label": "Then",
             "comment": "",
@@ -92,8 +84,6 @@
         "next": null,
         "_id": "690f3f1c4cc8affe01ce1ba3",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1ba3",
-            "referenceId": "3eb21947-9b27-48bc-8b83-46dfecfb33a1",
             "type": "else",
             "label": "Else",
             "comment": "",
@@ -116,8 +106,6 @@
         "next": "690f3f1c4cc8affe01ce1b9c",
         "_id": "690f3f1c4cc8affe01ce1ba5",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1ba5",
-            "referenceId": "cd0f447c-1ac1-4b60-a0bd-2a525469e25b",
             "type": "if",
             "label": "Patient found?",
             "comment": "",
@@ -155,8 +143,6 @@
         "next": "690f3f1c4cc8affe01ce1ba7",
         "_id": "690f3f1c4cc8affe01ce1ba1",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1ba1",
-            "referenceId": "1e886abe-8ec9-42c1-bbb2-576d44ae3023",
             "type": "httpRequest",
             "label": "HTTP: Retrieve Appointments by Phone (2)",
             "comment": "",
@@ -203,8 +189,6 @@
         "next": null,
         "_id": "690f3f1c4cc8affe01ce1ba7",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1ba7",
-            "referenceId": "6bbb6f3d-517b-48d5-801c-2fa98b26d773",
             "type": "code",
             "label": "C: Process response (2)",
             "comment": "",
@@ -228,8 +212,6 @@
         "next": "690f3f1c4cc8affe01ce1ba5",
         "_id": "690f3f1c4cc8affe01ce1b9e",
         "_data": {
-            "_id": "690f3f1c4cc8affe01ce1b9e",
-            "referenceId": "9703d62f-455b-4c93-8835-fcd5ac70be4b",
             "type": "executeFlow",
             "label": "EX: Get Use Id",
             "comment": "",
