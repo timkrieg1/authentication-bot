@@ -3,14 +3,14 @@
     "name": "Test Lexicon",
     "description": "",
     "referenceId": "8da8d814-8189-40df-9a19-d1c7a9c6a16f",
-    "createdAt": 1763223756,
-    "lastChanged": 1763223765,
+    "createdAt": 1763312569,
+    "lastChanged": 1763312597,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
     "isPackedForDownload": false,
     "values": [
         {
-            "_id": "6918a8cfc96ba152b003ab06",
+            "_id": "691a03d5d9f6039d0e00424b",
             "tags": [
                 "test_slot"
             ],
