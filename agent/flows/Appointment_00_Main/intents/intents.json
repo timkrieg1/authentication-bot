@@ -17,8 +17,8 @@
                 "referenceId": "6e63fd8c-f8f5-43ff-94b2-804311c4eb5e",
                 "text": "Test Intent Sentence",
                 "localeReference": "690f3f1c4cc8affe01ce1a81",
-                "createdAt": 1763328253,
-                "lastChanged": 1763328267,
+                "createdAt": 1763370332,
+                "lastChanged": 1763370360,
                 "createdBy": "65605bbcde1bccb4b9af6114",
                 "lastChangedBy": "65605bbcde1bccb4b9af6114",
                 "slots": [
@@ -27,7 +27,7 @@
                         "name": "test_slot",
                         "start": 0,
                         "end": 4,
-                        "_id": "691a410b36bda2b1416b621e"
+                        "_id": "691ae57836bda2b1416dbcba"
                     }
                 ]
             }

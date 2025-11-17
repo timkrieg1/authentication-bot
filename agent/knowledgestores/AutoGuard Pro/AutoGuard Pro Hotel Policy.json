@@ -15,23 +15,23 @@
     "createdBy": "65605bbcde1bccb4b9af6114",
     "createdAt": 1749410046,
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
-    "lastChanged": 1763223757,
+    "lastChanged": 1763370335,
     "chunks": [
         {
-            "_id": "6918a8c8c96ba152b003aadd",
-            "referenceId": "ceb2bc1f-2860-4eea-b98e-c8021982195f",
-            "order": 4,
-            "text": "To request reimbursement, policyholders must submit the following within 14 days of the incident:\n\nDescription of the breakdown (with time and location).\n\nOriginal hotel invoice with guest name and nightly rate.\n\nProof of distance (e.g., roadside assistance report or GPS data).\n\nIf the hotel was not booked through NovaSure’s partners, a short written explanation may be required.\n\nIn cases where the initial breakdown assistance was handled through NovaSure’s digital assistant Lina, customers may submit their reimbursement claim within 7 calendar days via Lina. No additional data expect for the invoice needed in that case, as Lina has already saved all information.",
+            "_id": "6918a8c8c96ba152b003aadb",
+            "referenceId": "6f9f3465-6474-43a9-b490-2af791734405",
+            "order": 5,
+            "text": "Reimbursement claims may be denied under the following conditions:\n\nPolicy activated less than 48 hours prior to the incident.\n\nIncident occurred within 100km of the policyholder’s home.\n\nEvidence of fraud, misuse, or non-emergency use of service.\n\nReasonable travel alternatives were available at the time.",
             "disabled": false,
             "data": {
-                "header": "Required Documentation for Claims"
+                "headers": "Exclusions and Denials"
             },
             "sourceReference": "6918a8c8c96ba152b003aad3",
             "storeReference": "6918a8c8c96ba152b003aad0",
             "projectReference": "6873f7f242ec168c188334ec",
             "organisationReference": "5f08b3f6619dfb1779da18f9",
             "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749410124,
+            "createdAt": 1749410280,
             "lastChangedBy": "65605bbcde1bccb4b9af6114",
             "lastChanged": 1763223752
         },
@@ -54,20 +54,20 @@
             "lastChanged": 1763223752
         },
         {
-            "_id": "6918a8c8c96ba152b003aadb",
-            "referenceId": "6f9f3465-6474-43a9-b490-2af791734405",
-            "order": 5,
-            "text": "Reimbursement claims may be denied under the following conditions:\n\nPolicy activated less than 48 hours prior to the incident.\n\nIncident occurred within 100km of the policyholder’s home.\n\nEvidence of fraud, misuse, or non-emergency use of service.\n\nReasonable travel alternatives were available at the time.",
+            "_id": "6918a8c8c96ba152b003aadd",
+            "referenceId": "ceb2bc1f-2860-4eea-b98e-c8021982195f",
+            "order": 4,
+            "text": "To request reimbursement, policyholders must submit the following within 14 days of the incident:\n\nDescription of the breakdown (with time and location).\n\nOriginal hotel invoice with guest name and nightly rate.\n\nProof of distance (e.g., roadside assistance report or GPS data).\n\nIf the hotel was not booked through NovaSure’s partners, a short written explanation may be required.\n\nIn cases where the initial breakdown assistance was handled through NovaSure’s digital assistant Lina, customers may submit their reimbursement claim within 7 calendar days via Lina. No additional data expect for the invoice needed in that case, as Lina has already saved all information.",
             "disabled": false,
             "data": {
-                "headers": "Exclusions and Denials"
+                "header": "Required Documentation for Claims"
             },
             "sourceReference": "6918a8c8c96ba152b003aad3",
             "storeReference": "6918a8c8c96ba152b003aad0",
             "projectReference": "6873f7f242ec168c188334ec",
             "organisationReference": "5f08b3f6619dfb1779da18f9",
             "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749410280,
+            "createdAt": 1749410124,
             "lastChangedBy": "65605bbcde1bccb4b9af6114",
             "lastChanged": 1763223752
         },

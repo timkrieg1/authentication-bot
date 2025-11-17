@@ -19,7 +19,7 @@
     "createdBy": "65605bbcde1bccb4b9af6114",
     "createdAt": 1749224510,
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
-    "lastChanged": 1763223757,
+    "lastChanged": 1763370335,
     "chunks": [
         {
             "_id": "6918a8c8c96ba152b003aaea",
@@ -54,6 +54,24 @@
             "organisationReference": "5f08b3f6619dfb1779da18f9",
             "createdBy": "65605bbcde1bccb4b9af6114",
             "createdAt": 1749224519,
+            "lastChangedBy": "65605bbcde1bccb4b9af6114",
+            "lastChanged": 1763223752
+        },
+        {
+            "_id": "6918a8c8c96ba152b003aae4",
+            "referenceId": "9f0eee10-ed74-4eab-bd42-e8c99732e71c",
+            "order": 5,
+            "text": "If the insured vehicle runs out of fuel, Nova Insurance will dispatch a technician to deliver a small quantity of fuel sufficient to allow the vehicle to reach the nearest gas station. Up to two fuel deliveries per year are included in the plan. Each delivery includes up to two gallons of regular gasoline or diesel. Specialty fuels, such as premium fuel, ethanol blends, or compressed natural gas, are not provided. Customers with electric vehicles are not eligible for fuel delivery, but in some cases, towing to the nearest charging station may be arranged under towing coverage terms.",
+            "disabled": false,
+            "data": {
+                "header": "Fuel Delivery"
+            },
+            "sourceReference": "6918a8c8c96ba152b003aad4",
+            "storeReference": "6918a8c8c96ba152b003aad0",
+            "projectReference": "6873f7f242ec168c188334ec",
+            "organisationReference": "5f08b3f6619dfb1779da18f9",
+            "createdBy": "65605bbcde1bccb4b9af6114",
+            "createdAt": 1749224517,
             "lastChangedBy": "65605bbcde1bccb4b9af6114",
             "lastChanged": 1763223752
         },
@@ -130,20 +148,20 @@
             "lastChanged": 1763223752
         },
         {
-            "_id": "6918a8c8c96ba152b003aae4",
-            "referenceId": "9f0eee10-ed74-4eab-bd42-e8c99732e71c",
-            "order": 5,
-            "text": "If the insured vehicle runs out of fuel, Nova Insurance will dispatch a technician to deliver a small quantity of fuel sufficient to allow the vehicle to reach the nearest gas station. Up to two fuel deliveries per year are included in the plan. Each delivery includes up to two gallons of regular gasoline or diesel. Specialty fuels, such as premium fuel, ethanol blends, or compressed natural gas, are not provided. Customers with electric vehicles are not eligible for fuel delivery, but in some cases, towing to the nearest charging station may be arranged under towing coverage terms.",
+            "_id": "6918a8c8c96ba152b003aadf",
+            "referenceId": "c0531b1e-6495-4d22-be69-fa25d6aababa",
+            "order": 3,
+            "text": "The Auto Guard plan includes emergency battery jump-starts for vehicles that fail to start due to battery depletion. The plan covers up to two battery-related service calls per policy year. In the event that the battery is found to be defective or incapable of holding a charge, the cost of a replacement battery is not covered by the plan. If the customer chooses to have the vehicle towed to a garage for battery replacement, standard towing rules and coverage limits apply.",
             "disabled": false,
             "data": {
-                "header": "Fuel Delivery"
+                "header": "Battery-Related Support"
             },
             "sourceReference": "6918a8c8c96ba152b003aad4",
             "storeReference": "6918a8c8c96ba152b003aad0",
             "projectReference": "6873f7f242ec168c188334ec",
             "organisationReference": "5f08b3f6619dfb1779da18f9",
             "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224517,
+            "createdAt": 1749224516,
             "lastChangedBy": "65605bbcde1bccb4b9af6114",
             "lastChanged": 1763223752
         },
@@ -191,24 +209,6 @@
             "disabled": false,
             "data": {
                 "header": "Flat Tire and Tire-Related Assistance"
-            },
-            "sourceReference": "6918a8c8c96ba152b003aad4",
-            "storeReference": "6918a8c8c96ba152b003aad0",
-            "projectReference": "6873f7f242ec168c188334ec",
-            "organisationReference": "5f08b3f6619dfb1779da18f9",
-            "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224516,
-            "lastChangedBy": "65605bbcde1bccb4b9af6114",
-            "lastChanged": 1763223752
-        },
-        {
-            "_id": "6918a8c8c96ba152b003aadf",
-            "referenceId": "c0531b1e-6495-4d22-be69-fa25d6aababa",
-            "order": 3,
-            "text": "The Auto Guard plan includes emergency battery jump-starts for vehicles that fail to start due to battery depletion. The plan covers up to two battery-related service calls per policy year. In the event that the battery is found to be defective or incapable of holding a charge, the cost of a replacement battery is not covered by the plan. If the customer chooses to have the vehicle towed to a garage for battery replacement, standard towing rules and coverage limits apply.",
-            "disabled": false,
-            "data": {
-                "header": "Battery-Related Support"
             },
             "sourceReference": "6918a8c8c96ba152b003aad4",
             "storeReference": "6918a8c8c96ba152b003aad0",
