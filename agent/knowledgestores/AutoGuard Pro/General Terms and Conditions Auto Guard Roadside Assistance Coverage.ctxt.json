@@ -22,128 +22,20 @@
     "lastChanged": 1763223757,
     "chunks": [
         {
-            "_id": "6918a8c8c96ba152b003aaea",
-            "referenceId": "b7399fef-4a66-4c40-9c19-993a9e9c5cc8",
-            "order": 10,
-            "text": "To receive reimbursement for eligible roadside expenses not arranged directly through Nova Insurance, the customer must submit all original service invoices along with a description of the event within 14 days of the incident. The Claims Department aims to resolve reimbursement claims within seven business days, though delays may occur during high-demand periods.",
+            "_id": "6918a8c8c96ba152b003aade",
+            "referenceId": "30ab3881-1824-4089-b588-72bf5be8c4e9",
+            "order": 0,
+            "text": "This document outlines the general terms and conditions applicable to all Nova Insurance customers enrolled in the Auto Guard roadside assistance plan. The plan is designed to offer emergency support for a wide range of common roadside incidents, including mechanical breakdowns, tire damage, battery failure, fuel depletion, and vehicle lockouts. It also defines the responsibilities of the customer and the scope of services covered by Nova Insurance.\nNova Insurance offers two primary levels of roadside assistance coverage: Auto Guard Plus and Auto Guard Premium. Coverage scope may vary slightly between these two product tiers, but the general principles described herein apply to both.",
             "disabled": false,
             "data": {
-                "headers": "Reimbursement Claims"
+                "header": "Nova Insurance – General Terms and Conditions for Auto Guard Roadside Assistance Coverage"
             },
             "sourceReference": "6918a8c8c96ba152b003aad4",
             "storeReference": "6918a8c8c96ba152b003aad0",
             "projectReference": "6873f7f242ec168c188334ec",
             "organisationReference": "5f08b3f6619dfb1779da18f9",
             "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224518,
-            "lastChangedBy": "65605bbcde1bccb4b9af6114",
-            "lastChanged": 1763223752
-        },
-        {
-            "_id": "6918a8c8c96ba152b003aae9",
-            "referenceId": "79769635-a0f5-42c1-a783-553ad4ac00b3",
-            "order": 11,
-            "text": "Roadside assistance services are accessible 24 hours a day through Nova Insurance’s emergency hotline or via the Nova Assist mobile app. The Claims Department can be contacted by email for follow-up inquiries and reimbursement submissions.",
-            "disabled": false,
-            "data": {
-                "headers": "Contact Channels"
-            },
-            "sourceReference": "6918a8c8c96ba152b003aad4",
-            "storeReference": "6918a8c8c96ba152b003aad0",
-            "projectReference": "6873f7f242ec168c188334ec",
-            "organisationReference": "5f08b3f6619dfb1779da18f9",
-            "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224519,
-            "lastChangedBy": "65605bbcde1bccb4b9af6114",
-            "lastChanged": 1763223752
-        },
-        {
-            "_id": "6918a8c8c96ba152b003aae8",
-            "referenceId": "526a3879-df73-4689-ad89-089f1c20411c",
-            "order": 6,
-            "text": "A temporary replacement vehicle may be provided to customers when the insured vehicle is rendered undriveable due to a covered breakdown or collision and when the estimated repair time exceeds 24 hours. The replacement vehicle is typically provided through Nova Insurance’s preferred rental partners and is covered for a maximum of three consecutive days. The type of vehicle provided will be based on availability and does not necessarily match the size or class of the customer’s original vehicle. In the case of total vehicle loss, a replacement vehicle may be granted for up to seven days while the claim is being processed. If the accident is determined to be the fault of the customer, Nova Insurance may only subsidize part of the replacement vehicle cost, for example by covering 50 percent of a two-day rental. Replacement vehicles are not provided for maintenance-related repairs, wear-and-tear issues, or elective service appointments.",
-            "disabled": false,
-            "data": {
-                "header": "Replacement Vehicle Provision"
-            },
-            "sourceReference": "6918a8c8c96ba152b003aad4",
-            "storeReference": "6918a8c8c96ba152b003aad0",
-            "projectReference": "6873f7f242ec168c188334ec",
-            "organisationReference": "5f08b3f6619dfb1779da18f9",
-            "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224517,
-            "lastChangedBy": "65605bbcde1bccb4b9af6114",
-            "lastChanged": 1763223752
-        },
-        {
-            "_id": "6918a8c8c96ba152b003aae7",
-            "referenceId": "2912a892-f651-41c0-b03b-be79e51fdfbb",
-            "order": 8,
-            "text": "Nova Insurance reserves the right to deny roadside assistance in specific circumstances. These include service requests for vehicles located outside of covered geographic areas, requests made during the first 48 hours of policy activation, and repeated calls for the same issue without evidence of corrective action. Service is not available for vehicles that are not listed on the policy, such as trailers, recreational vehicles, or motorcycles, unless specifically added as a policy endorsement. Roadside assistance will not be provided for vehicles involved in criminal activities or for customers found to be misusing or abusing the service.",
-            "disabled": false,
-            "data": {
-                "header": "Limitations and Exclusions"
-            },
-            "sourceReference": "6918a8c8c96ba152b003aad4",
-            "storeReference": "6918a8c8c96ba152b003aad0",
-            "projectReference": "6873f7f242ec168c188334ec",
-            "organisationReference": "5f08b3f6619dfb1779da18f9",
-            "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224518,
-            "lastChangedBy": "65605bbcde1bccb4b9af6114",
-            "lastChanged": 1763223752
-        },
-        {
-            "_id": "6918a8c8c96ba152b003aae6",
-            "referenceId": "3c958967-1553-4d8d-8535-c0a06e18d1e8",
-            "order": 7,
-            "text": "Roadside technicians dispatched by Nova Insurance may attempt simple mechanical interventions at the scene of a breakdown. These interventions may include reconnecting a loose battery cable, tightening a drive belt, replacing fuses, or addressing overheating issues caused by coolant loss. Such mechanical assistance is limited to basic tasks that can be completed safely on-site and does not guarantee the vehicle will be roadworthy. If on-site repair is unsuccessful, standard towing coverage applies.",
-            "disabled": false,
-            "data": {
-                "header": "On-Site Mechanical First Aid"
-            },
-            "sourceReference": "6918a8c8c96ba152b003aad4",
-            "storeReference": "6918a8c8c96ba152b003aad0",
-            "projectReference": "6873f7f242ec168c188334ec",
-            "organisationReference": "5f08b3f6619dfb1779da18f9",
-            "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224517,
-            "lastChangedBy": "65605bbcde1bccb4b9af6114",
-            "lastChanged": 1763223752
-        },
-        {
-            "_id": "6918a8c8c96ba152b003aae5",
-            "referenceId": "2420f90b-24ff-4308-8e10-e1ea994d5d5f",
-            "order": 9,
-            "text": "It is the responsibility of the policyholder to maintain accurate and current policy information and to ensure that their vehicle is in legal and operable condition. Customers are expected to remain with their vehicle while waiting for roadside service unless remaining on-site poses a safety risk. If a customer independently contracts a third-party provider for emergency assistance, reimbursement may be possible only if Nova Insurance is notified within 12 hours of the incident and appropriate documentation is submitted.",
-            "disabled": false,
-            "data": {
-                "headers": "Customer Responsibilities"
-            },
-            "sourceReference": "6918a8c8c96ba152b003aad4",
-            "storeReference": "6918a8c8c96ba152b003aad0",
-            "projectReference": "6873f7f242ec168c188334ec",
-            "organisationReference": "5f08b3f6619dfb1779da18f9",
-            "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224518,
-            "lastChangedBy": "65605bbcde1bccb4b9af6114",
-            "lastChanged": 1763223752
-        },
-        {
-            "_id": "6918a8c8c96ba152b003aae4",
-            "referenceId": "9f0eee10-ed74-4eab-bd42-e8c99732e71c",
-            "order": 5,
-            "text": "If the insured vehicle runs out of fuel, Nova Insurance will dispatch a technician to deliver a small quantity of fuel sufficient to allow the vehicle to reach the nearest gas station. Up to two fuel deliveries per year are included in the plan. Each delivery includes up to two gallons of regular gasoline or diesel. Specialty fuels, such as premium fuel, ethanol blends, or compressed natural gas, are not provided. Customers with electric vehicles are not eligible for fuel delivery, but in some cases, towing to the nearest charging station may be arranged under towing coverage terms.",
-            "disabled": false,
-            "data": {
-                "header": "Fuel Delivery"
-            },
-            "sourceReference": "6918a8c8c96ba152b003aad4",
-            "storeReference": "6918a8c8c96ba152b003aad0",
-            "projectReference": "6873f7f242ec168c188334ec",
-            "organisationReference": "5f08b3f6619dfb1779da18f9",
-            "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224517,
+            "createdAt": 1749224514,
             "lastChangedBy": "65605bbcde1bccb4b9af6114",
             "lastChanged": 1763223752
         },
@@ -162,24 +54,6 @@
             "organisationReference": "5f08b3f6619dfb1779da18f9",
             "createdBy": "65605bbcde1bccb4b9af6114",
             "createdAt": 1749224515,
-            "lastChangedBy": "65605bbcde1bccb4b9af6114",
-            "lastChanged": 1763223752
-        },
-        {
-            "_id": "6918a8c8c96ba152b003aae2",
-            "referenceId": "7be87507-31f8-4a9b-9701-fc4bd1b971b8",
-            "order": 4,
-            "text": "In cases where the customer is locked out of their vehicle, Nova Insurance will dispatch a locksmith or technician to provide access. This service includes door unlocking and trunk unlocking when access is mechanical and not electronic. The cost of replacing lost keys, programming transponder chips, or dealing with key fobs is not covered. If the cost of the lockout assistance exceeds the standard benefit cap of $100, the customer is responsible for the remaining balance.",
-            "disabled": false,
-            "data": {
-                "header": "Lockout Assistance"
-            },
-            "sourceReference": "6918a8c8c96ba152b003aad4",
-            "storeReference": "6918a8c8c96ba152b003aad0",
-            "projectReference": "6873f7f242ec168c188334ec",
-            "organisationReference": "5f08b3f6619dfb1779da18f9",
-            "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224516,
             "lastChangedBy": "65605bbcde1bccb4b9af6114",
             "lastChanged": 1763223752
         },
@@ -220,20 +94,146 @@
             "lastChanged": 1763223752
         },
         {
-            "_id": "6918a8c8c96ba152b003aade",
-            "referenceId": "30ab3881-1824-4089-b588-72bf5be8c4e9",
-            "order": 0,
-            "text": "This document outlines the general terms and conditions applicable to all Nova Insurance customers enrolled in the Auto Guard roadside assistance plan. The plan is designed to offer emergency support for a wide range of common roadside incidents, including mechanical breakdowns, tire damage, battery failure, fuel depletion, and vehicle lockouts. It also defines the responsibilities of the customer and the scope of services covered by Nova Insurance.\nNova Insurance offers two primary levels of roadside assistance coverage: Auto Guard Plus and Auto Guard Premium. Coverage scope may vary slightly between these two product tiers, but the general principles described herein apply to both.",
+            "_id": "6918a8c8c96ba152b003aae2",
+            "referenceId": "7be87507-31f8-4a9b-9701-fc4bd1b971b8",
+            "order": 4,
+            "text": "In cases where the customer is locked out of their vehicle, Nova Insurance will dispatch a locksmith or technician to provide access. This service includes door unlocking and trunk unlocking when access is mechanical and not electronic. The cost of replacing lost keys, programming transponder chips, or dealing with key fobs is not covered. If the cost of the lockout assistance exceeds the standard benefit cap of $100, the customer is responsible for the remaining balance.",
             "disabled": false,
             "data": {
-                "header": "Nova Insurance – General Terms and Conditions for Auto Guard Roadside Assistance Coverage"
+                "header": "Lockout Assistance"
             },
             "sourceReference": "6918a8c8c96ba152b003aad4",
             "storeReference": "6918a8c8c96ba152b003aad0",
             "projectReference": "6873f7f242ec168c188334ec",
             "organisationReference": "5f08b3f6619dfb1779da18f9",
             "createdBy": "65605bbcde1bccb4b9af6114",
-            "createdAt": 1749224514,
+            "createdAt": 1749224516,
+            "lastChangedBy": "65605bbcde1bccb4b9af6114",
+            "lastChanged": 1763223752
+        },
+        {
+            "_id": "6918a8c8c96ba152b003aae4",
+            "referenceId": "9f0eee10-ed74-4eab-bd42-e8c99732e71c",
+            "order": 5,
+            "text": "If the insured vehicle runs out of fuel, Nova Insurance will dispatch a technician to deliver a small quantity of fuel sufficient to allow the vehicle to reach the nearest gas station. Up to two fuel deliveries per year are included in the plan. Each delivery includes up to two gallons of regular gasoline or diesel. Specialty fuels, such as premium fuel, ethanol blends, or compressed natural gas, are not provided. Customers with electric vehicles are not eligible for fuel delivery, but in some cases, towing to the nearest charging station may be arranged under towing coverage terms.",
+            "disabled": false,
+            "data": {
+                "header": "Fuel Delivery"
+            },
+            "sourceReference": "6918a8c8c96ba152b003aad4",
+            "storeReference": "6918a8c8c96ba152b003aad0",
+            "projectReference": "6873f7f242ec168c188334ec",
+            "organisationReference": "5f08b3f6619dfb1779da18f9",
+            "createdBy": "65605bbcde1bccb4b9af6114",
+            "createdAt": 1749224517,
+            "lastChangedBy": "65605bbcde1bccb4b9af6114",
+            "lastChanged": 1763223752
+        },
+        {
+            "_id": "6918a8c8c96ba152b003aae8",
+            "referenceId": "526a3879-df73-4689-ad89-089f1c20411c",
+            "order": 6,
+            "text": "A temporary replacement vehicle may be provided to customers when the insured vehicle is rendered undriveable due to a covered breakdown or collision and when the estimated repair time exceeds 24 hours. The replacement vehicle is typically provided through Nova Insurance’s preferred rental partners and is covered for a maximum of three consecutive days. The type of vehicle provided will be based on availability and does not necessarily match the size or class of the customer’s original vehicle. In the case of total vehicle loss, a replacement vehicle may be granted for up to seven days while the claim is being processed. If the accident is determined to be the fault of the customer, Nova Insurance may only subsidize part of the replacement vehicle cost, for example by covering 50 percent of a two-day rental. Replacement vehicles are not provided for maintenance-related repairs, wear-and-tear issues, or elective service appointments.",
+            "disabled": false,
+            "data": {
+                "header": "Replacement Vehicle Provision"
+            },
+            "sourceReference": "6918a8c8c96ba152b003aad4",
+            "storeReference": "6918a8c8c96ba152b003aad0",
+            "projectReference": "6873f7f242ec168c188334ec",
+            "organisationReference": "5f08b3f6619dfb1779da18f9",
+            "createdBy": "65605bbcde1bccb4b9af6114",
+            "createdAt": 1749224517,
+            "lastChangedBy": "65605bbcde1bccb4b9af6114",
+            "lastChanged": 1763223752
+        },
+        {
+            "_id": "6918a8c8c96ba152b003aae6",
+            "referenceId": "3c958967-1553-4d8d-8535-c0a06e18d1e8",
+            "order": 7,
+            "text": "Roadside technicians dispatched by Nova Insurance may attempt simple mechanical interventions at the scene of a breakdown. These interventions may include reconnecting a loose battery cable, tightening a drive belt, replacing fuses, or addressing overheating issues caused by coolant loss. Such mechanical assistance is limited to basic tasks that can be completed safely on-site and does not guarantee the vehicle will be roadworthy. If on-site repair is unsuccessful, standard towing coverage applies.",
+            "disabled": false,
+            "data": {
+                "header": "On-Site Mechanical First Aid"
+            },
+            "sourceReference": "6918a8c8c96ba152b003aad4",
+            "storeReference": "6918a8c8c96ba152b003aad0",
+            "projectReference": "6873f7f242ec168c188334ec",
+            "organisationReference": "5f08b3f6619dfb1779da18f9",
+            "createdBy": "65605bbcde1bccb4b9af6114",
+            "createdAt": 1749224517,
+            "lastChangedBy": "65605bbcde1bccb4b9af6114",
+            "lastChanged": 1763223752
+        },
+        {
+            "_id": "6918a8c8c96ba152b003aae7",
+            "referenceId": "2912a892-f651-41c0-b03b-be79e51fdfbb",
+            "order": 8,
+            "text": "Nova Insurance reserves the right to deny roadside assistance in specific circumstances. These include service requests for vehicles located outside of covered geographic areas, requests made during the first 48 hours of policy activation, and repeated calls for the same issue without evidence of corrective action. Service is not available for vehicles that are not listed on the policy, such as trailers, recreational vehicles, or motorcycles, unless specifically added as a policy endorsement. Roadside assistance will not be provided for vehicles involved in criminal activities or for customers found to be misusing or abusing the service.",
+            "disabled": false,
+            "data": {
+                "header": "Limitations and Exclusions"
+            },
+            "sourceReference": "6918a8c8c96ba152b003aad4",
+            "storeReference": "6918a8c8c96ba152b003aad0",
+            "projectReference": "6873f7f242ec168c188334ec",
+            "organisationReference": "5f08b3f6619dfb1779da18f9",
+            "createdBy": "65605bbcde1bccb4b9af6114",
+            "createdAt": 1749224518,
+            "lastChangedBy": "65605bbcde1bccb4b9af6114",
+            "lastChanged": 1763223752
+        },
+        {
+            "_id": "6918a8c8c96ba152b003aae5",
+            "referenceId": "2420f90b-24ff-4308-8e10-e1ea994d5d5f",
+            "order": 9,
+            "text": "It is the responsibility of the policyholder to maintain accurate and current policy information and to ensure that their vehicle is in legal and operable condition. Customers are expected to remain with their vehicle while waiting for roadside service unless remaining on-site poses a safety risk. If a customer independently contracts a third-party provider for emergency assistance, reimbursement may be possible only if Nova Insurance is notified within 12 hours of the incident and appropriate documentation is submitted.",
+            "disabled": false,
+            "data": {
+                "headers": "Customer Responsibilities"
+            },
+            "sourceReference": "6918a8c8c96ba152b003aad4",
+            "storeReference": "6918a8c8c96ba152b003aad0",
+            "projectReference": "6873f7f242ec168c188334ec",
+            "organisationReference": "5f08b3f6619dfb1779da18f9",
+            "createdBy": "65605bbcde1bccb4b9af6114",
+            "createdAt": 1749224518,
+            "lastChangedBy": "65605bbcde1bccb4b9af6114",
+            "lastChanged": 1763223752
+        },
+        {
+            "_id": "6918a8c8c96ba152b003aaea",
+            "referenceId": "b7399fef-4a66-4c40-9c19-993a9e9c5cc8",
+            "order": 10,
+            "text": "To receive reimbursement for eligible roadside expenses not arranged directly through Nova Insurance, the customer must submit all original service invoices along with a description of the event within 14 days of the incident. The Claims Department aims to resolve reimbursement claims within seven business days, though delays may occur during high-demand periods.",
+            "disabled": false,
+            "data": {
+                "headers": "Reimbursement Claims"
+            },
+            "sourceReference": "6918a8c8c96ba152b003aad4",
+            "storeReference": "6918a8c8c96ba152b003aad0",
+            "projectReference": "6873f7f242ec168c188334ec",
+            "organisationReference": "5f08b3f6619dfb1779da18f9",
+            "createdBy": "65605bbcde1bccb4b9af6114",
+            "createdAt": 1749224518,
+            "lastChangedBy": "65605bbcde1bccb4b9af6114",
+            "lastChanged": 1763223752
+        },
+        {
+            "_id": "6918a8c8c96ba152b003aae9",
+            "referenceId": "79769635-a0f5-42c1-a783-553ad4ac00b3",
+            "order": 11,
+            "text": "Roadside assistance services are accessible 24 hours a day through Nova Insurance’s emergency hotline or via the Nova Assist mobile app. The Claims Department can be contacted by email for follow-up inquiries and reimbursement submissions.",
+            "disabled": false,
+            "data": {
+                "headers": "Contact Channels"
+            },
+            "sourceReference": "6918a8c8c96ba152b003aad4",
+            "storeReference": "6918a8c8c96ba152b003aad0",
+            "projectReference": "6873f7f242ec168c188334ec",
+            "organisationReference": "5f08b3f6619dfb1779da18f9",
+            "createdBy": "65605bbcde1bccb4b9af6114",
+            "createdAt": 1749224519,
             "lastChangedBy": "65605bbcde1bccb4b9af6114",
             "lastChanged": 1763223752
         }
