@@ -8,13 +8,13 @@
     "img": "",
     "projectReference": "6873f7f242ec168c188334ec",
     "organisationReference": "5f08b3f6619dfb1779da18f9",
-    "createdAt": 1762606827,
-    "lastChanged": 1762607651,
+    "createdAt": 1763398958,
+    "lastChanged": 1763398987,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
-    "chartReference": "690f3f1c4cc8affe01ce1a8e",
+    "chartReference": "691b554bc96ba152b00ca54d",
     "attachedLexicons": [],
     "localeReference": "690f3f1c4cc8affe01ce1a81",
-    "intentTrainGroupReference": "690f3f1c4cc8affe01ce1bf8",
+    "intentTrainGroupReference": "691b554bc96ba152b00ca5e7",
     "isTrainingOutOfDate": true
 }

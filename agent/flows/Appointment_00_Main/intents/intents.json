@@ -17,8 +17,8 @@
                 "referenceId": "8a1aaec1-f7c6-4104-965a-f6ca78ac39b7",
                 "text": "Third Sentence",
                 "localeReference": "690f3f1c4cc8affe01ce1a81",
-                "createdAt": 1763397150,
-                "lastChanged": 1763397150,
+                "createdAt": 1763398958,
+                "lastChanged": 1763398987,
                 "createdBy": "65605bbcde1bccb4b9af6114",
                 "lastChangedBy": "65605bbcde1bccb4b9af6114",
                 "slots": []
@@ -28,8 +28,8 @@
                 "referenceId": "0e8c6feb-3eb8-4a2b-8c09-10dc21d236d4",
                 "text": "Second Test Sentence",
                 "localeReference": "690f3f1c4cc8affe01ce1a81",
-                "createdAt": 1763397150,
-                "lastChanged": 1763397150,
+                "createdAt": 1763398958,
+                "lastChanged": 1763398987,
                 "createdBy": "65605bbcde1bccb4b9af6114",
                 "lastChangedBy": "65605bbcde1bccb4b9af6114",
                 "slots": [
@@ -47,8 +47,8 @@
                 "referenceId": "6e63fd8c-f8f5-43ff-94b2-804311c4eb5e",
                 "text": "Test Intent Sentence",
                 "localeReference": "690f3f1c4cc8affe01ce1a81",
-                "createdAt": 1763328253,
-                "lastChanged": 1763328267,
+                "createdAt": 1763398958,
+                "lastChanged": 1763398987,
                 "createdBy": "65605bbcde1bccb4b9af6114",
                 "lastChangedBy": "65605bbcde1bccb4b9af6114",
                 "slots": [
