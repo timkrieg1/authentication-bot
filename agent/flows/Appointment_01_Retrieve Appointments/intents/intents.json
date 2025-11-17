@@ -1,1 +1,36 @@
-{}
+{
+    "Test2": {
+        "metadata": {
+            "_id": "691b57ee7fac9cd833d51878",
+            "name": "Test2",
+            "description": "",
+            "referenceId": "aaac741b-d517-450d-841e-f726b7dc5127",
+            "tags": [],
+            "isDisabled": false,
+            "localeReference": "690f3f1c4cc8affe01ce1a81",
+            "biasTowardsParentOrChildIntents": "parents",
+            "parentIntentId": null
+        },
+        "training_sentences": [
+            {
+                "_id": "691b57f6c96ba152b00cc1a6",
+                "referenceId": "66f3d342-0349-40b4-9688-c95f0ffae030",
+                "text": "Second Test 2",
+                "localeReference": "690f3f1c4cc8affe01ce1a81",
+                "createdAt": 1763399670,
+                "lastChanged": 1763399670,
+                "createdBy": "65605bbcde1bccb4b9af6114",
+                "lastChangedBy": "65605bbcde1bccb4b9af6114",
+                "slots": [
+                    {
+                        "type": "systemSlot",
+                        "dimension": "NUMBER",
+                        "start": 12,
+                        "end": 13,
+                        "_id": "691b57f6c96ba152b00cc1a7"
+                    }
+                ]
+            }
+        ]
+    }
+}

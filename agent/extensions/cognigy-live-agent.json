@@ -1,8 +1,8 @@
 {
-    "_id": "691a50b2e0c380c7aa8af66c",
+    "_id": "691b57c3d9f6039d0e077b0a",
     "name": "cognigy-live-agent",
     "version": "4.0.0",
-    "imageUrlToken": "https://api-trial.cognigy.ai/new/v2.0/files/40994991b11da87822969d2badf825e1afe0920559574358490cb6ccc9b96a9e",
+    "imageUrlToken": "https://api-trial.cognigy.ai/new/v2.0/files/7d640b1a780c1c9a4db9319e23020dd2a7d4a399f4de215aaf06b41c71806a1f",
     "description": "Helper functions for the Cognigy Live Agent workspace",
     "label": "Cognigy Live Agent",
     "readme": "﻿# Cognigy Live Agent\n\nThis Extension provides custom helper functions for the Cognigy Live Agent software.\n\n## Connection\n\n- apiKey\n  - The access token of the Live Agent profile that can be found in the Profile Settings inside of Live Agent\n- baseUrl\n  - The base URL of the Live Agent installation, e.g. https://liveagent-trial.cognigy.ai/api/v1\n- accountId\n  - The ID of the account that is configured in Cognigy.AI for the Live Agent. One can find it in the URL of the Live Agent instance: https://liveagent-trial.cognigy.ai/app/accounts/  **99**  /dashboard\n\n## Node: Check Live Agent Availability\n\nThis Flow Node checks if there is at least one agent in the Live Agent instance that has the status \"online\". If this is the case, the list of available agents will be returned and stored in the Input or Context object. If not, the \"On Offline\" Child Node will be used as path:\n\n<img src=\"./docs/checkLiveAgentAvailabilityFlowNodeExample.png\" width=\"400\" />",
@@ -14,8 +14,8 @@
     "author": "Cognigy GmbH",
     "extensionType": "nodes",
     "knowledge": [],
-    "createdAt": 1763332279,
-    "lastChanged": 1763332279,
+    "createdAt": 1763399592,
+    "lastChanged": 1763399619,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
     "nodes": [
@@ -158,7 +158,7 @@
                     "type": "section"
                 }
             ],
-            "_id": "691a50b7d9f6039d0e00d5d5"
+            "_id": "691b57c3d9f6039d0e077b18"
         },
         {
             "type": "onAgentAvailable",
@@ -205,7 +205,7 @@
             "tokens": [],
             "sections": [],
             "form": [],
-            "_id": "691a50b7d9f6039d0e00d5d6"
+            "_id": "691b57c3d9f6039d0e077b19"
         },
         {
             "type": "onNoAgentAvailable",
@@ -252,7 +252,7 @@
             "tokens": [],
             "sections": [],
             "form": [],
-            "_id": "691a50b7d9f6039d0e00d5d7"
+            "_id": "691b57c3d9f6039d0e077b1a"
         }
     ],
     "trustedCode": false,
@@ -264,17 +264,17 @@
                 {
                     "fieldName": "apiKey",
                     "required": true,
-                    "_id": "691a50b7d9f6039d0e00d5da"
+                    "_id": "691b57c3d9f6039d0e077b12"
                 },
                 {
                     "fieldName": "baseUrl",
                     "required": true,
-                    "_id": "691a50b7d9f6039d0e00d5db"
+                    "_id": "691b57c3d9f6039d0e077b13"
                 },
                 {
                     "fieldName": "accountId",
                     "required": true,
-                    "_id": "691a50b7d9f6039d0e00d5dc"
+                    "_id": "691b57c3d9f6039d0e077b14"
                 }
             ]
         }
