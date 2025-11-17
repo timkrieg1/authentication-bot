@@ -1,8 +1,8 @@
 {
-    "_id": "6918cb32e0c380c7aa8af668",
+    "_id": "691b60ccd9f6039d0e07b6d8",
     "name": "twilio",
     "version": "4.0.0",
-    "imageUrlToken": "https://api-trial.cognigy.ai/new/v2.0/files/c24c4887a6317de056d8f566b94675b510dfe2ceb29272c8c090bbbc293ba2d7",
+    "imageUrlToken": "https://api-trial.cognigy.ai/new/v2.0/files/c43778ca6c48deaf8bf9c2a3530b9d9816c2a3568eeb4b9061f27f3fed0d2896",
     "description": "Exposes Twilio functionality to Cognigy.AI",
     "label": "Twilio",
     "readme": "﻿Integrates Cognigy.AI with Twilio (https://www.twilio.com)\r\n\r\nThis Extension is based on twilio (https://www.npmjs.com/package/twilio)\r\n\r\n### Connection\r\nThis Extension needs a Connection to be defined and passed to the Nodes. The Connection must have the following keys:\r\n\r\n- Sid\r\n  - key: **accountSid**\r\n  - value: Your Twilio Account SID\r\n- Auth Token\r\n  - key: **authToken**\r\n  - Your Auth Token\r\n\r\n# Node: sendSMS\r\n\r\n[Twilio Docs on sending SMS](https://www.twilio.com/docs/sms/send-messages#send-an-sms-with-twilios-api)\r\n\r\nYou need the `from` Sender SMS Number, the `to` Recipient SMS Number and the `to` SMS content (max. 1600 characters).\r\n\r\nThe Node will return the following information: \r\n\r\n```json\r\n{\r\n  \"account_sid\": \"ACfcf5c5de99cbde37e587b72ed8db458f\",\r\n  \"api_version\": \"2010-04-01\",\r\n  \"body\": \"Hello! 👍\",\r\n  \"date_created\": \"Thu, 30 Jul 2015 20:12:31 +0000\",\r\n  \"date_sent\": \"Thu, 30 Jul 2015 20:12:33 +0000\",\r\n  \"date_updated\": \"Thu, 30 Jul 2015 20:12:33 +0000\",\r\n  \"direction\": \"outbound-api\",\r\n  \"error_code\": null,\r\n  \"error_message\": null,\r\n  \"from\": \"+14155552345\",\r\n  \"messaging_service_sid\": \"MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\r\n  \"num_media\": \"0\",\r\n  \"num_segments\": \"1\",\r\n  \"price\": \"-0.00750\",\r\n  \"price_unit\": \"USD\",\r\n  \"sid\": \"MMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\r\n  \"status\": \"sent\",\r\n  \"subresource_uris\": {\r\n    \"media\": \"/2010-04-01/Accounts/ACfcf5c5de99cbde37e587b72ed8db458f/Messages/SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Media.json\"\r\n  },\r\n  \"to\": \"+14155552345\",\r\n  \"uri\": \"/2010-04-01/Accounts/ACfcf5c5de99cbde37e587b72ed8db458f/Messages/SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.json\"\r\n}\r\n```\r\n",
@@ -13,8 +13,8 @@
     "author": "Cognigy GmbH",
     "extensionType": "nodes",
     "knowledge": [],
-    "createdAt": 1763232590,
-    "lastChanged": 1763232590,
+    "createdAt": 1763401904,
+    "lastChanged": 1763401932,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
     "nodes": [
@@ -164,7 +164,7 @@
                     "type": "section"
                 }
             ],
-            "_id": "6918cb4dc96ba152b003ea24"
+            "_id": "691b60ccd9f6039d0e07b6e7"
         }
     ],
     "trustedCode": false,
@@ -176,12 +176,12 @@
                 {
                     "fieldName": "accountSid",
                     "required": true,
-                    "_id": "6918cb4ec96ba152b003ea27"
+                    "_id": "691b60ccd9f6039d0e07b6df"
                 },
                 {
                     "fieldName": "authToken",
                     "required": true,
-                    "_id": "6918cb4ec96ba152b003ea28"
+                    "_id": "691b60ccd9f6039d0e07b6e0"
                 }
             ]
         }
