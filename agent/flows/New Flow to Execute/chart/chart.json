@@ -1,0 +1,40 @@
+[
+    {
+        "children": [],
+        "next": "691c6c777fac9cd833da5612",
+        "_id": "691c6c777fac9cd833da5607",
+        "_data": {
+            "type": "start",
+            "label": "Start",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": true,
+            "extension": "@cognigy/basic-nodes",
+            "config": {},
+            "preview": "",
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "f0a924a0-8886-4994-8994-bd375942381d"
+    },
+    {
+        "children": [],
+        "next": null,
+        "_id": "691c6c777fac9cd833da5612",
+        "_data": {
+            "type": "end",
+            "label": "End",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {},
+            "preview": "",
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "a2a1353c-0a91-4593-b505-c49b274f1be2"
+    }
+]

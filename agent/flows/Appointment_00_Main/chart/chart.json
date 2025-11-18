@@ -157,7 +157,8 @@
             "690f3f1c4cc8affe01ce1b78",
             "690f3f1c4cc8affe01ce1b79",
             "690f3f1c4cc8affe01ce1b7a",
-            "690f3f1c4cc8affe01ce1b7b"
+            "690f3f1c4cc8affe01ce1b7b",
+            "691c6c827fac9cd833da56af"
         ],
         "next": "690f3f1c4cc8affe01ce1b68",
         "_id": "690f3f1c4cc8affe01ce1b75",
@@ -850,7 +851,7 @@
     },
     {
         "children": [],
-        "next": "690f3f1c4cc8affe01ce1b8b",
+        "next": "691c6caf7fac9cd833da5846",
         "_id": "6918a91dc96ba152b003abe8",
         "_data": {
             "type": "trackGoal",
@@ -909,5 +910,83 @@
             "localeReference": "690f3f1c4cc8affe01ce1a81"
         },
         "referenceId": "bc2561a2-957d-4518-9f91-276553641676"
+    },
+    {
+        "children": [],
+        "next": "691c6c82c96ba152b0121455",
+        "_id": "691c6c827fac9cd833da56af",
+        "_data": {
+            "type": "aiAgentJobTool",
+            "label": "Tool",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "toolId": "new_tool",
+                "description": "This tool unlocks a locked user account.",
+                "useParameters": true,
+                "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"new param\": {\n      \"type\": \"string\",\n      \"description\": \"A new param\"\n    }\n  },\n  \"required\": [\n    \"new param\"\n  ],\n  \"additionalProperties\": false\n}",
+                "debugMessage": true,
+                "condition": ""
+            },
+            "preview": "new_tool",
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "29723b6f-cadc-4d8a-9c57-e8ca152278be"
+    },
+    {
+        "children": [],
+        "next": null,
+        "_id": "691c6c82c96ba152b0121455",
+        "_data": {
+            "type": "aiAgentToolAnswer",
+            "label": "Resolve Tool Action",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "answer": "",
+                "debugToolAnswer": false
+            },
+            "preview": "",
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "a90f95b7-7ad7-4836-87b8-14ba83636b0a"
+    },
+    {
+        "children": [],
+        "next": "690f3f1c4cc8affe01ce1b8b",
+        "_id": "691c6caf7fac9cd833da5846",
+        "_data": {
+            "type": "executeFlow",
+            "label": "Execute Flow (4)",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "flowNode": {
+                    "flow": "aaefe5bb-44fb-4c4d-9cd8-c3d1b623aa99",
+                    "node": "f0a924a0-8886-4994-8994-bd375942381d"
+                },
+                "parseIntents": true,
+                "parseKeyphrases": true,
+                "absorbContext": ""
+            },
+            "preview": {
+                "flow": "aaefe5bb-44fb-4c4d-9cd8-c3d1b623aa99",
+                "node": "f0a924a0-8886-4994-8994-bd375942381d"
+            },
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "a3292c95-f5a2-486e-8eed-b51f54078044"
     }
 ]
