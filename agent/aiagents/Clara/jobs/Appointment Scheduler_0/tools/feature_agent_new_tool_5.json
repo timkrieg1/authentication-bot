@@ -1,0 +1,20 @@
+{
+    "_id": "691cd1b67fac9cd833dd6336",
+    "referenceId": "7c85be86-014d-4f5c-b85c-5b0b3aff0bd4",
+    "type": "aiAgentJobTool",
+    "label": "Tool",
+    "comment": "",
+    "commentColor": "",
+    "analyticsLabel": null,
+    "isDisabled": false,
+    "isEntryPoint": false,
+    "extension": "@cognigy/basic-nodes",
+    "config": {
+        "toolId": "feature_agent_new_tool",
+        "description": "This is the new tool for the Feature Branch\n",
+        "useParameters": false,
+        "parameters": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"description\": \"User's login email for their account.\"\n\t\t}\n\t},\n\t\"required\": [\"email\"],\n\t\"additionalProperties\": false\n}",
+        "debugMessage": true,
+        "condition": ""
+    }
+}
