@@ -1,0 +1,19 @@
+{
+    "_id": "691c6a09c96ba152b011fb09",
+    "name": "New LExicon",
+    "description": "",
+    "referenceId": "86dfb33c-4f44-4fea-8ee7-123b3c2e7039",
+    "createdAt": 1763469833,
+    "lastChanged": 1763469837,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "isPackedForDownload": false,
+    "values": [
+        {
+            "_id": "691c6a0dd9f6039d0e0c96e3",
+            "tags": [],
+            "synonyms": [],
+            "keyphrase": "New keyphrase"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "_id": "691c69bfd9f6039d0e0c92d4",
+    "referenceId": "01cbfdd8-82d9-406b-8237-4984d5997607",
+    "name": "Escalate to Agent",
+    "description": "",
+    "context": {},
+    "attachedFlows": [],
+    "img": "",
+    "projectReference": "6873f7f242ec168c188334ec",
+    "organisationReference": "5f08b3f6619dfb1779da18f9",
+    "createdAt": 1763469759,
+    "lastChanged": 1763469804,
+    "createdBy": "65605bbcde1bccb4b9af6114",
+    "lastChangedBy": "65605bbcde1bccb4b9af6114",
+    "chartReference": "691c69bfd9f6039d0e0c92d9",
+    "attachedLexicons": [],
+    "localeReference": "690f3f1c4cc8affe01ce1a81",
+    "intentTrainGroupReference": "691c69bfd9f6039d0e0c92ff",
+    "isTrainingOutOfDate": null
+}

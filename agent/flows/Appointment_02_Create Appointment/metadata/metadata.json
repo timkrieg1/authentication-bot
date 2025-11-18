@@ -4,17 +4,19 @@
     "name": "Appointment_02_Create Appointment",
     "description": "",
     "context": {},
-    "attachedFlows": [],
+    "attachedFlows": [
+        "691c69bfd9f6039d0e0c92d4"
+    ],
     "img": "",
     "projectReference": "6873f7f242ec168c188334ec",
     "organisationReference": "5f08b3f6619dfb1779da18f9",
     "createdAt": 1762606827,
-    "lastChanged": 1762606876,
+    "lastChanged": 1763469809,
     "createdBy": "65605bbcde1bccb4b9af6114",
     "lastChangedBy": "65605bbcde1bccb4b9af6114",
     "chartReference": "690f3f1c4cc8affe01ce1a8c",
     "attachedLexicons": [],
     "localeReference": "690f3f1c4cc8affe01ce1a81",
     "intentTrainGroupReference": "690f3f1c4cc8affe01ce1bf6",
-    "isTrainingOutOfDate": true
+    "isTrainingOutOfDate": null
 }

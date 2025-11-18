@@ -1,0 +1,91 @@
+[
+    {
+        "children": [],
+        "next": "691c69c2d9f6039d0e0c936b",
+        "_id": "691c69bfd9f6039d0e0c92df",
+        "_data": {
+            "type": "start",
+            "label": "Start",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": true,
+            "extension": "@cognigy/basic-nodes",
+            "config": {},
+            "preview": "",
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "d4b8fb05-1167-4013-9810-5a90a9a6cfe3"
+    },
+    {
+        "children": [],
+        "next": null,
+        "_id": "691c69bfd9f6039d0e0c92ea",
+        "_data": {
+            "type": "end",
+            "label": "End",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {},
+            "preview": "",
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "8822e4c9-181b-421f-beae-c36e9ccb7d85"
+    },
+    {
+        "children": [],
+        "next": "691c69bfd9f6039d0e0c92ea",
+        "_id": "691c69c2d9f6039d0e0c936b",
+        "_data": {
+            "type": "say",
+            "label": "Say",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "say": {
+                    "data": "",
+                    "linear": false,
+                    "loop": false,
+                    "text": [
+                        "Hallo und willkommen"
+                    ],
+                    "type": "text",
+                    "_cognigy": {},
+                    "_data": {
+                        "_cognigy": {}
+                    }
+                },
+                "handoverOutput": "userAndAgent",
+                "preventTranscript": false,
+                "generativeAI_rephraseOutputMode": "none",
+                "generativeAI_amountOfLastUserInputs": 5,
+                "generativeAI_customInputs": "",
+                "generativeAI_temperature": 0.7
+            },
+            "preview": {
+                "data": "",
+                "linear": false,
+                "loop": false,
+                "text": [
+                    "Hallo und willkommen"
+                ],
+                "type": "text",
+                "_cognigy": {},
+                "_data": {
+                    "_cognigy": {}
+                }
+            },
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "b91878d1-bb09-4c74-9aab-884a12dcfdc9"
+    }
+]
