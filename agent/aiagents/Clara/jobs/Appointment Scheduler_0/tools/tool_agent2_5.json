@@ -1,0 +1,20 @@
+{
+    "_id": "691cc9117fac9cd833dd4636",
+    "referenceId": "668789d9-ad59-4401-a2bb-ed3cb86546a1",
+    "type": "aiAgentJobTool",
+    "label": "Tool",
+    "comment": "",
+    "commentColor": "",
+    "analyticsLabel": null,
+    "isDisabled": false,
+    "isEntryPoint": false,
+    "extension": "@cognigy/basic-nodes",
+    "config": {
+        "toolId": "tool_agent2",
+        "description": "This is a new tool for agent 2",
+        "useParameters": false,
+        "parameters": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"description\": \"User's login email for their account.\"\n\t\t}\n\t},\n\t\"required\": [\"email\"],\n\t\"additionalProperties\": false\n}",
+        "debugMessage": true,
+        "condition": ""
+    }
+}
