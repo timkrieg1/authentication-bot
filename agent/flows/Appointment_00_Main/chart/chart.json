@@ -157,7 +157,8 @@
             "690f3f1c4cc8affe01ce1b78",
             "690f3f1c4cc8affe01ce1b79",
             "690f3f1c4cc8affe01ce1b7a",
-            "690f3f1c4cc8affe01ce1b7b"
+            "690f3f1c4cc8affe01ce1b7b",
+            "691cc8ead9f6039d0e0f8bb5"
         ],
         "next": "690f3f1c4cc8affe01ce1b68",
         "_id": "690f3f1c4cc8affe01ce1b75",
@@ -909,5 +910,53 @@
             "localeReference": "690f3f1c4cc8affe01ce1a81"
         },
         "referenceId": "bc2561a2-957d-4518-9f91-276553641676"
+    },
+    {
+        "children": [],
+        "next": "691cc8eac96ba152b01503bb",
+        "_id": "691cc8ead9f6039d0e0f8bb5",
+        "_data": {
+            "type": "aiAgentJobTool",
+            "label": "Tool",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "toolId": "new_tool_Agent1",
+                "description": "This is a new tool for Agent 1",
+                "useParameters": false,
+                "parameters": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"description\": \"User's login email for their account.\"\n\t\t}\n\t},\n\t\"required\": [\"email\"],\n\t\"additionalProperties\": false\n}",
+                "debugMessage": true,
+                "condition": ""
+            },
+            "preview": "new_tool_Agent1",
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "da39271e-dcb0-41b8-9aff-72680620ba7f"
+    },
+    {
+        "children": [],
+        "next": null,
+        "_id": "691cc8eac96ba152b01503bb",
+        "_data": {
+            "type": "aiAgentToolAnswer",
+            "label": "Resolve Tool Action",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "answer": "",
+                "debugToolAnswer": false
+            },
+            "preview": "",
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "74ff5825-e04c-467b-b341-f2b7689c859c"
     }
 ]
