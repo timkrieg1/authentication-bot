@@ -13,15 +13,11 @@ jobs:
           BASE_BRANCH="${{ github.event.pull_request.base.ref }}"
           HEAD_BRANCH="${{ github.event.pull_request.head.ref }}"
           
-          if [ "$BASE_BRANCH" = "test" ] && [ "$HEAD_BRANCH" != "dev" ]; then
-            echo "Only merges from 'dev' to 'test' are allowed."
-            exit 1
-          elif [ "$BASE_BRANCH" = "prod" ] && [ "$HEAD_BRANCH" != "test" ]; then
-            echo "Only merges from 'test' to 'prod' are allowed."
-            exit 1
-          elif [ "$BASE_BRANCH" != "test" ] && [ "$BASE_BRANCH" != "prod" ]; then
-            echo "Merges to '$BASE_BRANCH' are not allowed."
-            exit 1
+          if [ "$BASE_BRANCH" = "test" ] && [ "$HEAD_BRANCH" = "dev" ]; then
+            echo "PR is valid: 'dev' can merge into 'test'."
+          elif [ "$BASE_BRANCH" = "prod" ] && [ "$HEAD_BRANCH" = "test" ]; then
+            echo "PR is valid: 'test' can merge into 'prod'."
           else
-            echo "PR is valid."
+            echo "Invalid PR: Only 'dev' -> 'test' and 'test' -> 'prod' merges are allowed."
+            exit 1
           fi
