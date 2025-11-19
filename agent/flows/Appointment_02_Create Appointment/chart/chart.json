@@ -51,9 +51,9 @@
             "isEntryPoint": false,
             "extension": "@cognigy/basic-nodes",
             "config": {
-                "code": "if (!cc?.sessionInfo) {\r\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\")\r\n}",
+                "code": "if (!cc?.sessionInfo) {\r\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\")\r\n}\r\n\r\n\"This has changed\"",
                 "hasError": false,
-                "transpiled": "if (!(cc === null || cc === void 0 ? void 0 : cc.sessionInfo)) {\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\");\n}\n"
+                "transpiled": "if (!(cc === null || cc === void 0 ? void 0 : cc.sessionInfo)) {\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\");\n}\n\"This has changed\";\n"
             },
             "preview": "",
             "localeReference": "690f3f1c4cc8affe01ce1a81"
