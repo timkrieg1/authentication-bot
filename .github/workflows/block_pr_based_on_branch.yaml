@@ -1,0 +1,27 @@
+name: Block PR Based on Branch and Environment
+
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+
+jobs:
+  validate-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check base branch and environment
+        run: |
+          BASE_BRANCH="${{ github.event.pull_request.base.ref }}"
+          ENVIRONMENT="${{ github.event.pull_request.head.ref }}"
+          
+          if [ "$BASE_BRANCH" = "dev" ]; then
+            echo "Merges to 'dev' are blocked."
+            exit 1
+          elif [ "$BASE_BRANCH" = "test" ] && [ "$ENVIRONMENT" = "prod" ]; then
+            echo "Cannot merge 'prod' changes into 'test'."
+            exit 1
+          elif [ "$BASE_BRANCH" = "prod" ] && [ "$ENVIRONMENT" = "test" ]; then
+            echo "Cannot merge 'test' changes into 'prod'."
+            exit 1
+          else
+            echo "PR is valid."
+          fi
