@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - integration
-      - prod
+      - production
 
 jobs:
   call-reusable-workflow:
