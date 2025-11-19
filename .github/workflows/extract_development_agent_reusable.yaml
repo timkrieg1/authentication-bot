@@ -1,0 +1,60 @@
+name: Extract Development Agent/Reusable
+
+on:
+  workflow_dispatch:
+    inputs:
+      releaseDescription:
+        description: 'Description for the release'
+        required: true
+        type: string
+      runAutomatedTest:
+        description: 'Run automated tests'
+        required: true
+        type: boolean
+        default: true
+      createPullRequest:
+        description: 'Create pull request automatically'
+        required: true
+        type: boolean
+        default: true
+
+jobs:
+  prepare-data:
+    runs-on: ubuntu-latest
+    outputs:
+      bot-mapping-b64: ${{ steps.encode_bot_mapping.outputs.BOT_MAPPING_B64 }}
+    steps:
+      # Checkout this repo to access bot_mapping.json
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      # Read and base64 encode bot_mapping.json
+      - name: Encode bot_mapping.json
+        id: encode_bot_mapping
+        run: |
+          BOT_MAPPING_B64=$(base64 -w 0 bot_mapping.json)
+          echo "BOT_MAPPING_B64=$BOT_MAPPING_B64" >> $GITHUB_OUTPUT
+
+  call-reusable-workflow:
+    needs: prepare-data
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/extract_development_agent.yaml@main
+    with:
+      REPOSITORY: ${{ github.repository }}
+      BOT_MAPPING_BASE64: ${{ needs.prepare-data.outputs.bot-mapping-b64 }}
+      BOT_NAME: ${{ vars.BOT_NAME }}
+      RELEASE_DESCRIPTION: ${{ github.event.inputs.releaseDescription }}
+      RUN_AUTOMATED_TEST: ${{ github.event.inputs.runAutomatedTest }}
+      CREATE_PULL_REQUEST: ${{ github.event.inputs.createPullRequest }}
+      COGNIGY_BASE_URL_DEV: ${{ vars.COGNIGY_BASE_URL_DEV }}
+      COGNIGY_BASE_URL_TEST: ${{ vars.COGNIGY_BASE_URL_TEST }}
+      COGNIGY_BASE_URL_PROD: ${{ vars.COGNIGY_BASE_URL_PROD }}
+      MAX_SNAPSHOTS: ${{ vars.MAX_SNAPSHOTS }}
+      BRANCH_NAME: ${{ github.ref_name }}
+    secrets:
+      PAT_TOKEN: ${{ secrets.PAT }}
+      COGNIGY_API_KEY_DEV: ${{ secrets.COGNIGY_API_KEY_DEV }}
+      COGNIGY_API_KEY_TEST: ${{ secrets.COGNIGY_API_KEY_TEST }}
+      COGNIGY_API_KEY_PROD: ${{ secrets.COGNIGY_API_KEY_PROD }}
