@@ -1,4 +1,4 @@
-name: Prepare Release/Reusable
+name: Extract Development Agent/Reusable
 
 on:
   workflow_dispatch:
@@ -40,7 +40,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/prepare_release.yaml@main
+    uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/extract_development_agent.yaml@main
     with:
       REPOSITORY: ${{ github.repository }}
       BOT_MAPPING_BASE64: ${{ needs.prepare-data.outputs.bot-mapping-b64 }}
@@ -52,6 +52,7 @@ jobs:
       COGNIGY_BASE_URL_TEST: ${{ vars.COGNIGY_BASE_URL_TEST }}
       COGNIGY_BASE_URL_PROD: ${{ vars.COGNIGY_BASE_URL_PROD }}
       MAX_SNAPSHOTS: ${{ vars.MAX_SNAPSHOTS }}
+      BRANCH_NAME: ${{ github.ref_name }}
     secrets:
       PAT_TOKEN: ${{ secrets.PAT }}
       COGNIGY_API_KEY_DEV: ${{ secrets.COGNIGY_API_KEY_DEV }}
