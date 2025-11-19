@@ -1,0 +1,28 @@
+name: Trigger on Merge to Integration or Prod
+
+on:
+  push:
+    branches:
+      - integration
+      - prod
+
+jobs:
+  call-reusable-workflow:
+    permissions:
+        contents: write
+        pull-requests: write
+    uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/deploy_agent.yaml@main
+    with:
+      REPOSITORY: ${{ github.repository }}
+      BASE_BRANCH: ${{ github.event.ref }}
+      HEAD_BRANCH: ${{ github.event.before }}
+      BOT_NAME: ${{ vars.BOT_NAME }}
+      COGNIGY_BASE_URL_DEV: ${{ vars.COGNIGY_BASE_URL_DEV }}
+      COGNIGY_BASE_URL_TEST: ${{ vars.COGNIGY_BASE_URL_TEST }}
+      COGNIGY_BASE_URL_PROD: ${{ vars.COGNIGY_BASE_URL_PROD }}
+      MAX_SNAPSHOTS: ${{ vars.MAX_SNAPSHOTS }}
+    secrets:
+      PAT_TOKEN: ${{ secrets.PAT }}
+      COGNIGY_API_KEY_DEV: ${{ secrets.COGNIGY_API_KEY_DEV }}
+      COGNIGY_API_KEY_TEST: ${{ secrets.COGNIGY_API_KEY_TEST }}
+      COGNIGY_API_KEY_PROD: ${{ secrets.COGNIGY_API_KEY_PROD }}
