@@ -14,8 +14,8 @@ jobs:
     uses: timkrieg1/cognigy-ci-cd-pipeline/.github/workflows/deploy_agent.yaml@main
     with:
       REPOSITORY: ${{ github.repository }}
-      BASE_BRANCH: ${{ github.event.ref }}
-      HEAD_BRANCH: ${{ github.event.before }}
+      BASE_BRANCH: ${{ github.ref_name }}
+      HEAD_BRANCH: ${{ github.event.pusher.name }}
       BOT_NAME: ${{ vars.BOT_NAME }}
       COGNIGY_BASE_URL_DEV: ${{ vars.COGNIGY_BASE_URL_DEV }}
       COGNIGY_BASE_URL_TEST: ${{ vars.COGNIGY_BASE_URL_TEST }}
