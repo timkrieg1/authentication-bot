@@ -1,4 +1,4 @@
-name: Trigger on Merge to Integration or Prod
+name: Deploy Agent/Reusable
 
 on:
   push:
