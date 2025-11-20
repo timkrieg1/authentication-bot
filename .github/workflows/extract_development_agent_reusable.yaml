@@ -2,8 +2,6 @@ name: Extract Development Agent/Reusable
 
 on:
   workflow_dispatch:
-    branches:
-      - development
     inputs:
       releaseDescription:
         description: 'Description for the release'
