@@ -49,12 +49,8 @@ jobs:
       RUN_AUTOMATED_TEST: ${{ github.event.inputs.runAutomatedTest }}
       CREATE_PULL_REQUEST: ${{ github.event.inputs.createPullRequest }}
       COGNIGY_BASE_URL_DEV: ${{ vars.COGNIGY_BASE_URL_DEV }}
-      COGNIGY_BASE_URL_TEST: ${{ vars.COGNIGY_BASE_URL_TEST }}
-      COGNIGY_BASE_URL_PROD: ${{ vars.COGNIGY_BASE_URL_PROD }}
       MAX_SNAPSHOTS: ${{ vars.MAX_SNAPSHOTS }}
       BRANCH_NAME: ${{ github.ref_name }}
     secrets:
       PAT_TOKEN: ${{ secrets.PAT }}
       COGNIGY_API_KEY_DEV: ${{ secrets.COGNIGY_API_KEY_DEV }}
-      COGNIGY_API_KEY_TEST: ${{ secrets.COGNIGY_API_KEY_TEST }}
-      COGNIGY_API_KEY_PROD: ${{ secrets.COGNIGY_API_KEY_PROD }}
