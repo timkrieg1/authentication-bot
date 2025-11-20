@@ -15,7 +15,6 @@ jobs:
     with:
       REPOSITORY: ${{ github.repository }}
       BASE_BRANCH: ${{ github.ref_name }}
-      HEAD_BRANCH: ${{ github.head_ref }}
       BOT_NAME: ${{ vars.BOT_NAME }}
       COGNIGY_BASE_URL_DEV: ${{ vars.COGNIGY_BASE_URL_DEV }}
       COGNIGY_BASE_URL_TEST: ${{ vars.COGNIGY_BASE_URL_TEST }}
