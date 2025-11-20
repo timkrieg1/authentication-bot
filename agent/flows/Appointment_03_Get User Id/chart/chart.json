@@ -42,7 +42,7 @@
             "690f3f1c4cc8affe01ce1bc6",
             "690f3f1c4cc8affe01ce1bc7"
         ],
-        "next": "690f3f1c4cc8affe01ce1bc8",
+        "next": "691ec3167ced40e005b7f157",
         "_id": "690f3f1c4cc8affe01ce1bc2",
         "_data": {
             "type": "once",
@@ -233,5 +233,56 @@
             "localeReference": "690f3f1c4cc8affe01ce1a81"
         },
         "referenceId": "0037e58b-eac8-4936-bd35-6eeca9b3d82b"
+    },
+    {
+        "children": [],
+        "next": "690f3f1c4cc8affe01ce1bc8",
+        "_id": "691ec3167ced40e005b7f157",
+        "_data": {
+            "type": "say",
+            "label": "Say",
+            "comment": "",
+            "commentColor": "",
+            "analyticsLabel": null,
+            "isDisabled": false,
+            "isEntryPoint": false,
+            "extension": "@cognigy/basic-nodes",
+            "config": {
+                "say": {
+                    "data": "",
+                    "linear": false,
+                    "loop": false,
+                    "text": [
+                        "Do this instead"
+                    ],
+                    "type": "text",
+                    "_cognigy": {},
+                    "_data": {
+                        "_cognigy": {}
+                    }
+                },
+                "handoverOutput": "userAndAgent",
+                "preventTranscript": false,
+                "generativeAI_rephraseOutputMode": "none",
+                "generativeAI_amountOfLastUserInputs": 5,
+                "generativeAI_customInputs": "",
+                "generativeAI_temperature": 0.7
+            },
+            "preview": {
+                "data": "",
+                "linear": false,
+                "loop": false,
+                "text": [
+                    "Do this instead"
+                ],
+                "type": "text",
+                "_cognigy": {},
+                "_data": {
+                    "_cognigy": {}
+                }
+            },
+            "localeReference": "690f3f1c4cc8affe01ce1a81"
+        },
+        "referenceId": "215394d2-3f65-477f-a293-f1a91531b5b5"
     }
 ]
