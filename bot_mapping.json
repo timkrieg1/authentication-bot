@@ -3,7 +3,7 @@
   "test": "691e3c80b841a5ff4b62fe4e",
   "prod": "6873f5c4432d29bf054f6c68",
   "locales": {
-    "de-DE": "09cadae1-28b7-45d3-974c-91fe2d0b4175"
+    "de-DE": "7ee525d9-bb31-43a4-8f4b-8131e1db9917"
   },
   "playbook_prefixes": {
     "de-DE": ["AutomatedTesting"]
