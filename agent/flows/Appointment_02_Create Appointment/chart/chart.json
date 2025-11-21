@@ -1,113 +1,124 @@
-[
-    {
-        "children": [],
-        "next": "690f3f1c4cc8affe01ce1bac",
-        "_id": "690f3f1c4cc8affe01ce1bab",
-        "_data": {
-            "type": "start",
-            "label": "Start",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": true,
-            "extension": "@cognigy/basic-nodes",
-            "config": {},
-            "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
-        },
-        "referenceId": "4b6296b8-15f8-488d-addc-3c45e1f21077"
-    },
-    {
-        "children": [],
-        "next": null,
-        "_id": "690f3f1c4cc8affe01ce1bae",
-        "_data": {
-            "type": "end",
-            "label": "End",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {},
-            "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
-        },
-        "referenceId": "c3d7f4cc-1069-483a-be52-a4b5c1e22210"
-    },
-    {
-        "children": [],
-        "next": "690f3f1c4cc8affe01ce1bb0",
-        "_id": "690f3f1c4cc8affe01ce1bac",
-        "_data": {
-            "type": "code",
-            "label": "C: Testing",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {
-                "code": "if (!cc?.sessionInfo) {\r\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\")\r\n}\r\n\r\n\"This has changed\"",
-                "hasError": false,
-                "transpiled": "if (!(cc === null || cc === void 0 ? void 0 : cc.sessionInfo)) {\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\");\n}\n\"This has changed\";\n"
+{
+    "chart_data": [
+        {
+            "children": [],
+            "next": "690f3f1c4cc8affe01ce1bac",
+            "_id": "690f3f1c4cc8affe01ce1bab",
+            "_data": {
+                "type": "start",
+                "label": "Start",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": true,
+                "extension": "@cognigy/basic-nodes",
+                "config": {},
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
             },
-            "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "referenceId": "4b6296b8-15f8-488d-addc-3c45e1f21077"
         },
-        "referenceId": "fa7b5964-b7c6-420b-af87-632f2be88468"
-    },
-    {
-        "children": [],
-        "next": "690f3f1c4cc8affe01ce1bb2",
-        "_id": "690f3f1c4cc8affe01ce1bb0",
-        "_data": {
-            "type": "executeFlow",
-            "label": "Execute Flow",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {
-                "flowNode": {
+        {
+            "children": [],
+            "next": null,
+            "_id": "690f3f1c4cc8affe01ce1bae",
+            "_data": {
+                "type": "end",
+                "label": "End",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": false,
+                "extension": "@cognigy/basic-nodes",
+                "config": {},
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "c3d7f4cc-1069-483a-be52-a4b5c1e22210"
+        },
+        {
+            "children": [],
+            "next": "690f3f1c4cc8affe01ce1bb0",
+            "_id": "690f3f1c4cc8affe01ce1bac",
+            "_data": {
+                "type": "code",
+                "label": "C: Testing",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": false,
+                "extension": "@cognigy/basic-nodes",
+                "config": {
+                    "code": "if (!cc?.sessionInfo) {\r\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\")\r\n}\r\n\r\n\"This has changed\"",
+                    "hasError": false,
+                    "transpiled": "if (!(cc === null || cc === void 0 ? void 0 : cc.sessionInfo)) {\n    api.addToContext(\"constants.serviceNowApi.baseUrls.appointments\", \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\", \"simple\");\n}\n\"This has changed\";\n"
+                },
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "fa7b5964-b7c6-420b-af87-632f2be88468"
+        },
+        {
+            "children": [],
+            "next": "690f3f1c4cc8affe01ce1bb2",
+            "_id": "690f3f1c4cc8affe01ce1bb0",
+            "_data": {
+                "type": "executeFlow",
+                "label": "Execute Flow",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": false,
+                "extension": "@cognigy/basic-nodes",
+                "config": {
+                    "flowNode": {
+                        "flow": "817faca8-f573-4fcb-a4f9-f095d0b506a9",
+                        "node": "0b083e7a-2f05-4f94-ad27-04d3932411c5"
+                    },
+                    "parseIntents": true,
+                    "parseKeyphrases": true,
+                    "absorbContext": ""
+                },
+                "preview": {
                     "flow": "817faca8-f573-4fcb-a4f9-f095d0b506a9",
                     "node": "0b083e7a-2f05-4f94-ad27-04d3932411c5"
                 },
-                "parseIntents": true,
-                "parseKeyphrases": true,
-                "absorbContext": ""
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
             },
-            "preview": {
-                "flow": "817faca8-f573-4fcb-a4f9-f095d0b506a9",
-                "node": "0b083e7a-2f05-4f94-ad27-04d3932411c5"
-            },
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "referenceId": "fb9f8554-236d-43de-a16a-cede6216f976"
         },
-        "referenceId": "fb9f8554-236d-43de-a16a-cede6216f976"
-    },
-    {
-        "children": [
-            "690f3f1c4cc8affe01ce1bb4",
-            "690f3f1c4cc8affe01ce1bb5"
-        ],
-        "next": "690f3f1c4cc8affe01ce1bae",
-        "_id": "690f3f1c4cc8affe01ce1bb2",
-        "_data": {
-            "type": "if",
-            "label": "Patient found?",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {
-                "condition": {
+        {
+            "children": [
+                "690f3f1c4cc8affe01ce1bb4",
+                "690f3f1c4cc8affe01ce1bb5"
+            ],
+            "next": "690f3f1c4cc8affe01ce1bae",
+            "_id": "690f3f1c4cc8affe01ce1bb2",
+            "_data": {
+                "type": "if",
+                "label": "Patient found?",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": false,
+                "extension": "@cognigy/basic-nodes",
+                "config": {
+                    "condition": {
+                        "type": "condition",
+                        "rule": {
+                            "left": "1",
+                            "operand": "eq",
+                            "right": "1"
+                        },
+                        "condition": "cc.sessionInfo?.patient?.sysId"
+                    }
+                },
+                "preview": {
                     "type": "condition",
                     "rule": {
                         "left": "1",
@@ -115,172 +126,163 @@
                         "right": "1"
                     },
                     "condition": "cc.sessionInfo?.patient?.sysId"
-                }
-            },
-            "preview": {
-                "type": "condition",
-                "rule": {
-                    "left": "1",
-                    "operand": "eq",
-                    "right": "1"
                 },
-                "condition": "cc.sessionInfo?.patient?.sysId"
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
             },
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "referenceId": "5397d00c-730f-46ad-b447-2ffe1556613a"
         },
-        "referenceId": "5397d00c-730f-46ad-b447-2ffe1556613a"
-    },
-    {
-        "children": [],
-        "next": "690f3f1c4cc8affe01ce1bb7",
-        "_id": "690f3f1c4cc8affe01ce1bb4",
-        "_data": {
-            "type": "then",
-            "label": "Then",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {},
-            "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
-        },
-        "referenceId": "cbb5cf2b-b455-4b59-a2eb-6c016b840fad"
-    },
-    {
-        "children": [],
-        "next": "690f3f1c4cc8affe01ce1bb9",
-        "_id": "690f3f1c4cc8affe01ce1bb5",
-        "_data": {
-            "type": "else",
-            "label": "Else",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {},
-            "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
-        },
-        "referenceId": "d942f7c7-459a-41b2-a3b4-bd6a64e44316"
-    },
-    {
-        "children": [],
-        "next": "690f3f1c4cc8affe01ce1bbb",
-        "_id": "690f3f1c4cc8affe01ce1bb7",
-        "_data": {
-            "type": "code",
-            "label": "C: Set Post Body",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {
-                "code": "cc.sessionInfo.appointments.newAppointment = {\r\n    \"patient\": cc.sessionInfo.patient.sysId,\r\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\r\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\r\n}",
-                "hasError": false,
-                "transpiled": "cc.sessionInfo.appointments.newAppointment = {\n    \"patient\": cc.sessionInfo.patient.sysId,\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\n};\n"
+        {
+            "children": [],
+            "next": "690f3f1c4cc8affe01ce1bb7",
+            "_id": "690f3f1c4cc8affe01ce1bb4",
+            "_data": {
+                "type": "then",
+                "label": "Then",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": false,
+                "extension": "@cognigy/basic-nodes",
+                "config": {},
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
             },
-            "preview": "",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "referenceId": "cbb5cf2b-b455-4b59-a2eb-6c016b840fad"
         },
-        "referenceId": "1001d174-fcdf-4109-aaae-ebe2ac118778"
-    },
-    {
-        "children": [],
-        "next": "690f3f1c4cc8affe01ce1bbd",
-        "_id": "690f3f1c4cc8affe01ce1bbb",
-        "_data": {
-            "type": "httpRequest",
-            "label": "HTTP: Retrieve Appointments by Phone",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {
-                "type": "POST",
-                "url": "{{cc.constants.serviceNowApi.baseUrls.appointments}}",
-                "headers": "{\r\n    \"Accept\": \"application/json\",\r\n    \"Content-Type\": \"application/json\"\r\n}",
-                "payloadType": "json",
-                "payloadText": "",
-                "payloadJSON": "\"{{cc.sessionInfo.appointments.newAppointment}}\"",
-                "payloadFormData": "{}",
-                "storeLocation": "input",
-                "inputKey": "httprequest",
-                "contextKey": "asyncRequest",
-                "authType": "basic",
-                "basicConnection": "b2582db9-2bd7-4a35-94a3-fbbade0a581d",
-                "apiKeyAuthKeyConnection": "",
-                "apiKeyXKeyConnection": "",
-                "oAuth2Connection": "",
-                "async": false,
-                "cache": false,
-                "cacheExpiry": 0,
-                "timeout": 8000,
-                "retryAttempts": 0,
-                "storeResponseHeaders": false,
-                "allowSelfSigned": false,
-                "errorLogging": "none",
-                "debugLogging": "none",
-                "abortOnError": false,
-                "logWarning": ""
+        {
+            "children": [],
+            "next": "690f3f1c4cc8affe01ce1bb9",
+            "_id": "690f3f1c4cc8affe01ce1bb5",
+            "_data": {
+                "type": "else",
+                "label": "Else",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": false,
+                "extension": "@cognigy/basic-nodes",
+                "config": {},
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
             },
-            "preview": "{{cc.constants.serviceNowApi.baseUrls.appointments}}",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "referenceId": "d942f7c7-459a-41b2-a3b4-bd6a64e44316"
         },
-        "referenceId": "5d995006-9279-498f-9925-1fc82c4be6d4"
-    },
-    {
-        "children": [],
-        "next": null,
-        "_id": "690f3f1c4cc8affe01ce1bbd",
-        "_data": {
-            "type": "addToContext",
-            "label": "AC: rtaText",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {
-                "key": "sessionInfo.appointments.newAppointment.rtaText",
-                "value": "The appointment was successfully created.",
-                "mode": "simple"
+        {
+            "children": [],
+            "next": "690f3f1c4cc8affe01ce1bbb",
+            "_id": "690f3f1c4cc8affe01ce1bb7",
+            "_data": {
+                "type": "code",
+                "label": "C: Set Post Body",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": false,
+                "extension": "@cognigy/basic-nodes",
+                "config": {
+                    "code": "cc.sessionInfo.appointments.newAppointment = {\r\n    \"patient\": cc.sessionInfo.patient.sysId,\r\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\r\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\r\n}",
+                    "hasError": false,
+                    "transpiled": "cc.sessionInfo.appointments.newAppointment = {\n    \"patient\": cc.sessionInfo.patient.sysId,\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\n};\n"
+                },
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
             },
-            "preview": "sessionInfo.appointments.newAppointment.rtaText",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "referenceId": "1001d174-fcdf-4109-aaae-ebe2ac118778"
         },
-        "referenceId": "a0e66ed4-b29b-4c7b-9db8-2373a1dac9c6"
-    },
-    {
-        "children": [],
-        "next": null,
-        "_id": "690f3f1c4cc8affe01ce1bb9",
-        "_data": {
-            "type": "addToContext",
-            "label": "AC: rtaText (2)",
-            "comment": "",
-            "commentColor": "",
-            "analyticsLabel": null,
-            "isDisabled": false,
-            "isEntryPoint": false,
-            "extension": "@cognigy/basic-nodes",
-            "config": {
-                "key": "sessionInfo.appointments.newAppointment.rtaText",
-                "value": "The appointment could not be created because the patient name wasnt found. Ask the patient for his name again.",
-                "mode": "simple"
+        {
+            "children": [],
+            "next": "690f3f1c4cc8affe01ce1bbd",
+            "_id": "690f3f1c4cc8affe01ce1bbb",
+            "_data": {
+                "type": "httpRequest",
+                "label": "HTTP: Retrieve Appointments by Phone",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": false,
+                "extension": "@cognigy/basic-nodes",
+                "config": {
+                    "type": "POST",
+                    "url": "{{cc.constants.serviceNowApi.baseUrls.appointments}}",
+                    "headers": "{\r\n    \"Accept\": \"application/json\",\r\n    \"Content-Type\": \"application/json\"\r\n}",
+                    "payloadType": "json",
+                    "payloadText": "",
+                    "payloadJSON": "\"{{cc.sessionInfo.appointments.newAppointment}}\"",
+                    "payloadFormData": "{}",
+                    "storeLocation": "input",
+                    "inputKey": "httprequest",
+                    "contextKey": "asyncRequest",
+                    "authType": "basic",
+                    "basicConnection": "b2582db9-2bd7-4a35-94a3-fbbade0a581d",
+                    "apiKeyAuthKeyConnection": "",
+                    "apiKeyXKeyConnection": "",
+                    "oAuth2Connection": "",
+                    "async": false,
+                    "cache": false,
+                    "cacheExpiry": 0,
+                    "timeout": 8000,
+                    "retryAttempts": 0,
+                    "storeResponseHeaders": false,
+                    "allowSelfSigned": false,
+                    "errorLogging": "none",
+                    "debugLogging": "none",
+                    "abortOnError": false,
+                    "logWarning": ""
+                },
+                "preview": "{{cc.constants.serviceNowApi.baseUrls.appointments}}",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
             },
-            "preview": "sessionInfo.appointments.newAppointment.rtaText",
-            "localeReference": "690f3f1c4cc8affe01ce1a81"
+            "referenceId": "5d995006-9279-498f-9925-1fc82c4be6d4"
         },
-        "referenceId": "2bc2f3a6-5773-4055-be73-3abfe622e5b8"
-    }
-]
+        {
+            "children": [],
+            "next": null,
+            "_id": "690f3f1c4cc8affe01ce1bbd",
+            "_data": {
+                "type": "addToContext",
+                "label": "AC: rtaText",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": false,
+                "extension": "@cognigy/basic-nodes",
+                "config": {
+                    "key": "sessionInfo.appointments.newAppointment.rtaText",
+                    "value": "The appointment was successfully created.",
+                    "mode": "simple"
+                },
+                "preview": "sessionInfo.appointments.newAppointment.rtaText",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "a0e66ed4-b29b-4c7b-9db8-2373a1dac9c6"
+        },
+        {
+            "children": [],
+            "next": null,
+            "_id": "690f3f1c4cc8affe01ce1bb9",
+            "_data": {
+                "type": "addToContext",
+                "label": "AC: rtaText (2)",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isDisabled": false,
+                "isEntryPoint": false,
+                "extension": "@cognigy/basic-nodes",
+                "config": {
+                    "key": "sessionInfo.appointments.newAppointment.rtaText",
+                    "value": "The appointment could not be created because the patient name wasnt found. Ask the patient for his name again.",
+                    "mode": "simple"
+                },
+                "preview": "sessionInfo.appointments.newAppointment.rtaText",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "2bc2f3a6-5773-4055-be73-3abfe622e5b8"
+        }
+    ]
+}
