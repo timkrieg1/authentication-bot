@@ -6,10 +6,10 @@
     "de-DE": "09cadae1-28b7-45d3-974c-91fe2d0b4175"
   },
   "playbook_prefixes": {
-    "de-DE": ["AutomatedTest"]
+    "de-DE": ["AutomatedTesting"]
   },
   "playbook_flow": {
-    "de-DE": "64b86b45-52c9-4f5c-ad57-04d8b1d0a9f5"
+    "de-DE": "57709106-05b8-4df0-a458-353df9a4d899"
   }
 }
 
