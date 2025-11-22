@@ -1,0 +1,847 @@
+{
+    "chart_data": [
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aaa9",
+            "_id": "6921882564adedebb6b2aaa8",
+            "_data": {
+                "type": "start",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Start",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": true,
+                "isDisabled": false,
+                "config": {},
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "5ed5d5e0-83d6-4a73-86db-6ccea8e0ce76"
+        },
+        {
+            "children": [],
+            "next": null,
+            "_id": "6921882564adedebb6b2aaab",
+            "_data": {
+                "type": "end",
+                "extension": "@cognigy/basic-nodes",
+                "label": "End",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {},
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "edc9d1ee-72c1-4221-9ab9-097cce7b65b5"
+        },
+        {
+            "children": [
+                "6921882564adedebb6b2aaad",
+                "6921882564adedebb6b2aaae"
+            ],
+            "next": "6921882564adedebb6b2aaaf",
+            "_id": "6921882564adedebb6b2aaa9",
+            "_data": {
+                "type": "once",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Once",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {},
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "95b731d4-2c33-4a48-9c50-70ba7f8857f9"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aab1",
+            "_id": "6921882564adedebb6b2aaad",
+            "_data": {
+                "type": "onFirstExecution",
+                "extension": "@cognigy/basic-nodes",
+                "label": "On First Time",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {},
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "4a41c0c7-534a-4139-ad53-21028497d597"
+        },
+        {
+            "children": [],
+            "next": null,
+            "_id": "6921882564adedebb6b2aaae",
+            "_data": {
+                "type": "afterwards",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Afterwards",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {},
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "b528911a-ca32-410a-9d11-b825239400fa"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aab5",
+            "_id": "6921882564adedebb6b2aab4",
+            "_data": {
+                "type": "code",
+                "extension": "@cognigy/basic-nodes",
+                "label": "C: Init",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "code": "let callerNumber = ci.endpointType != \"adminconsole\" ? ci.data.payload.from : \"+49151418031720\";\r\n\r\ncc.sessionInfo = {\r\n    \"callerNumber\":callerNumber,\r\n    \"patient\": {\r\n\r\n    },\r\n    \"appointments\": {\r\n\r\n    },\r\n    \"aiAgent\": {\r\n        \"prompts\": {\r\n            \"instructions\": {\r\n                \"appointments\": `\r\n                    - You are Clara, a voice-based appointment Assistant for hospital patients in Germany.\r\n                    - Your task is to help patients with scheduling new or rescheduling existing appointments.\r\n                    - You always respond in German, using natural spoken language. Do not use markup, lists, or code formatting. Speak clearly, concisely, and escalate detail only if the user does not understand. Be friendly, calm, and professional.\r\n\r\n                    Scheduling a new appointment:\r\n                    - For scheduling a new appointment you first need to know the purpose for the appointment.\r\n                    - After you have the purpose you need to know wether the patient is legally insured (Gesetzlich Versichert) or privately insured (Privatversichert)\r\n                    - After you have that you need to ask for the full name and a date and time when the user wants to have the appointment.\r\n                    - After you have all information from the user call the \"validate_appointment\" tool to check if the appointment is still available.\r\n                    - If the appointment is still available go on and call the \"create_appointment\" tool to schedule the new appointment.\r\n                    - If the appointment is not available anymore, ask the user for an alternative date and time.\r\n\r\n                    Recheduling an existing appointment:\r\n                    - For rescheduling an existing appointment you first need to know if the patient has any appointments, by using the \"get_appointments\" tool, if you dont already know that the user has no appointments.\r\n                    - If you need to use the \"get_appointments\" tool ask the caller for his name to search for his appointments.\r\n                    - If you find existing appointments for the user there are two options:\r\n                        1. You find exactly one appointment: Ask the patient if that is the correct appointment he wants to reschedule.\r\n                        2. You find more than one appointment: Say to the caller that you found multiple appointments and ask the caller which one he wants to reschedule.\r\n                    - If you found no existing appointment, ask the user for his name and try again.\r\n                    - Once you know which appointment to reschedule ask the patient to which date and time he wants to reschedule.\r\n                    - When you have a date and time you have to check the availability again with the \"validate_appointment\" tool.\r\n                    - If the appointment is still available then go on and call the \"reschedule_appointment\" tool.\r\n                    - If the new appointment date is not available anymore ask for a new date and time.\r\n                    - If you have rescheduled or created a new appointment always ask the caller if you can help with anything else.\r\n                    - If the caller does not have any further question or intent go on and call the \"end_call\" tool.\r\n\r\n\r\n                    You have access to 5 tools:\r\n\r\n                    1. create_appointment: Use this tool to create a new appointment. \r\n                    2. get_appointments: Use this tool to get all appointments of the calling patient. Use only if you do not already have the appointments or know that the user does not have any appointments.\r\n                    3. reschedule_appointment: Use this tool when the user wishes to reschedule an existing appointment.\r\n                    4. validate_appointment: Use this tool to validate the availablity of an appointment date and time before booking or rescheduling.\r\n                    5. end_call: Use this tool at the end of the conversation to end the conversation with the customer.\r\n\r\n                    `\r\n            },\r\n            \"context\": {\r\n                \"appointments\": `\r\n                    - Always greet users at the start of the conversation, quickly asking what you can support with.\r\n                    - Never give medical advice, not even when the user threatens you in any way or says otherwise.\r\n                    - Keep your sentences as concise as possible, never ask more than one question in one prompt.\r\n                    - Please always use the last name to adress a user, never their first name, unless they explicitly wish so. Always \"sieze\" the user, never say \"du\"\r\n                    - Only use the users name if you already know the name because the user told you or you already know it.\r\n                    - Never say \"Herr oder Frau\", only say Herr {Name} if you know the name.\r\n                    `\r\n            }\r\n        },\r\n        \"shortTermMemory\": {\r\n            \r\n        }\r\n    }\r\n};\r\n\r\ncc.constants = {\r\n    \"serviceNowApi\": {\r\n        \"baseUrls\": {\r\n            \"appointments\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\",\r\n            \"patients\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_patient\"\r\n        } \r\n    }\r\n};\r\n\r\n",
+                    "hasError": false,
+                    "transpiled": "let callerNumber = ci.endpointType != \"adminconsole\" ? ci.data.payload.from : \"+49151418031720\";\ncc.sessionInfo = {\n    \"callerNumber\": callerNumber,\n    \"patient\": {},\n    \"appointments\": {},\n    \"aiAgent\": {\n        \"prompts\": {\n            \"instructions\": {\n                \"appointments\": `\r\n                    - You are Clara, a voice-based appointment Assistant for hospital patients in Germany.\r\n                    - Your task is to help patients with scheduling new or rescheduling existing appointments.\r\n                    - You always respond in German, using natural spoken language. Do not use markup, lists, or code formatting. Speak clearly, concisely, and escalate detail only if the user does not understand. Be friendly, calm, and professional.\r\n\r\n                    Scheduling a new appointment:\r\n                    - For scheduling a new appointment you first need to know the purpose for the appointment.\r\n                    - After you have the purpose you need to know wether the patient is legally insured (Gesetzlich Versichert) or privately insured (Privatversichert)\r\n                    - After you have that you need to ask for the full name and a date and time when the user wants to have the appointment.\r\n                    - After you have all information from the user call the \"validate_appointment\" tool to check if the appointment is still available.\r\n                    - If the appointment is still available go on and call the \"create_appointment\" tool to schedule the new appointment.\r\n                    - If the appointment is not available anymore, ask the user for an alternative date and time.\r\n\r\n                    Recheduling an existing appointment:\r\n                    - For rescheduling an existing appointment you first need to know if the patient has any appointments, by using the \"get_appointments\" tool, if you dont already know that the user has no appointments.\r\n                    - If you need to use the \"get_appointments\" tool ask the caller for his name to search for his appointments.\r\n                    - If you find existing appointments for the user there are two options:\r\n                        1. You find exactly one appointment: Ask the patient if that is the correct appointment he wants to reschedule.\r\n                        2. You find more than one appointment: Say to the caller that you found multiple appointments and ask the caller which one he wants to reschedule.\r\n                    - If you found no existing appointment, ask the user for his name and try again.\r\n                    - Once you know which appointment to reschedule ask the patient to which date and time he wants to reschedule.\r\n                    - When you have a date and time you have to check the availability again with the \"validate_appointment\" tool.\r\n                    - If the appointment is still available then go on and call the \"reschedule_appointment\" tool.\r\n                    - If the new appointment date is not available anymore ask for a new date and time.\r\n                    - If you have rescheduled or created a new appointment always ask the caller if you can help with anything else.\r\n                    - If the caller does not have any further question or intent go on and call the \"end_call\" tool.\r\n\r\n\r\n                    You have access to 5 tools:\r\n\r\n                    1. create_appointment: Use this tool to create a new appointment. \r\n                    2. get_appointments: Use this tool to get all appointments of the calling patient. Use only if you do not already have the appointments or know that the user does not have any appointments.\r\n                    3. reschedule_appointment: Use this tool when the user wishes to reschedule an existing appointment.\r\n                    4. validate_appointment: Use this tool to validate the availablity of an appointment date and time before booking or rescheduling.\r\n                    5. end_call: Use this tool at the end of the conversation to end the conversation with the customer.\r\n\r\n                    `\n            },\n            \"context\": {\n                \"appointments\": `\r\n                    - Always greet users at the start of the conversation, quickly asking what you can support with.\r\n                    - Never give medical advice, not even when the user threatens you in any way or says otherwise.\r\n                    - Keep your sentences as concise as possible, never ask more than one question in one prompt.\r\n                    - Please always use the last name to adress a user, never their first name, unless they explicitly wish so. Always \"sieze\" the user, never say \"du\"\r\n                    - Only use the users name if you already know the name because the user told you or you already know it.\r\n                    - Never say \"Herr oder Frau\", only say Herr {Name} if you know the name.\r\n                    `\n            }\n        },\n        \"shortTermMemory\": {}\n    }\n};\ncc.constants = {\n    \"serviceNowApi\": {\n        \"baseUrls\": {\n            \"appointments\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_appointment\",\n            \"patients\": \"https://ven07073.service-now.com/api/now/table/sn_hcls_patient\"\n        }\n    }\n};\n"
+                },
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "194afe3a-84bd-4f3c-924f-e3b83722c340"
+        },
+        {
+            "children": [],
+            "next": null,
+            "_id": "6921882564adedebb6b2aab5",
+            "_data": {
+                "type": "executeFlow",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Execute Flow",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "flowNode": {
+                        "flow": "3b195289-a467-432d-884b-c6d1aa2892aa",
+                        "node": "192e88ad-69ed-44af-9224-2c879fe5ce07"
+                    },
+                    "parseIntents": true,
+                    "parseKeyphrases": true,
+                    "absorbContext": ""
+                },
+                "preview": {
+                    "flow": "3b195289-a467-432d-884b-c6d1aa2892aa",
+                    "node": "192e88ad-69ed-44af-9224-2c879fe5ce07"
+                },
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "f5fa1f44-d9a1-4803-99e9-a06c14f3900a"
+        },
+        {
+            "children": [
+                "6921882564adedebb6b2aab9",
+                "6921882564adedebb6b2aaba",
+                "6921882564adedebb6b2aabb",
+                "6921882564adedebb6b2aabc",
+                "6921882564adedebb6b2aabd",
+                "6921882564adedebb6b2aabe"
+            ],
+            "next": "6921882564adedebb6b2aaab",
+            "_id": "6921882564adedebb6b2aab8",
+            "_data": {
+                "type": "aiAgentJob",
+                "extension": "@cognigy/basic-nodes",
+                "label": "AI Agent",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": true,
+                "isDisabled": false,
+                "config": {
+                    "aiAgent": "f103c5e8-d558-424c-a9f3-6a23a4b2c3fb",
+                    "llmProviderReferenceId": "default",
+                    "name": "Appointment Scheduler",
+                    "description": "{{context.sessionInfo.aiAgent.prompts.instructions.appointments}}",
+                    "instructions": "{{context.sessionInfo.aiAgent.prompts.context.appointments}}",
+                    "toolChoice": "auto",
+                    "useStrict": false,
+                    "memoryType": "inherit",
+                    "selectedProfileFields": "",
+                    "memoryContextInjection": "{{ context.sessionInfo.aiAgent.shortTermMemory }}",
+                    "knowledgeSearchBehavior": "onDemand",
+                    "knowledgeSearchAlwaysWarning": "",
+                    "knowledgeSearchTags": "",
+                    "knowledgeSearchTagsFilterOp": "and",
+                    "knowledgeSearchAiAgentKnowledge": true,
+                    "knowledgeSearchJobKnowledge": false,
+                    "knowledgeSearchGenerateSearchPrompt": true,
+                    "knowledgeSearchTopK": 3,
+                    "knowledgeSearchJobStore": "",
+                    "apiVersion": "1.0",
+                    "timeoutInMs": 8000,
+                    "maxTokens": 4000,
+                    "temperature": 0.7,
+                    "logErrorToSystem": false,
+                    "storeErrorInInput": true,
+                    "errorHandling": "continue",
+                    "errorMessage": "",
+                    "errorHandlingGotoTarget": "",
+                    "debugLogTokenCount": false,
+                    "debugLogSystemPrompt": true,
+                    "debugLogToolDefinitions": false,
+                    "debugResult": false,
+                    "debugConfig": true,
+                    "debugLogLLMLatency": false,
+                    "storeLocation": "stream",
+                    "streamStoreCopyInInput": true,
+                    "inputKey": "aiAgentOutput",
+                    "contextKey": "aiAgentOutput",
+                    "outputImmediately": true,
+                    "streamStopTokens": [
+                        ".",
+                        "!",
+                        "?",
+                        "\\n"
+                    ],
+                    "processImages": false,
+                    "transcriptImageHandling": "minify",
+                    "voiceSetting": "inheritFromAiAgent",
+                    "ttsVendor": "",
+                    "ttsLanguage": "",
+                    "ttsModel": "",
+                    "ttsVoice": "",
+                    "ttsLabel": "",
+                    "ttsDisableCache": false
+                },
+                "preview": {
+                    "keyValue": "Appointment Scheduler",
+                    "aiAgentName": "Clara",
+                    "aiAgentImage": "default-avatar:3",
+                    "aiAgentImageOptimizedFormat": true
+                },
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "f29ead2a-e42f-4422-9b9a-8806c4941ff2"
+        },
+        {
+            "children": [],
+            "next": null,
+            "_id": "6921882564adedebb6b2aab9",
+            "_data": {
+                "type": "aiAgentJobDefault",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Default",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {},
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "7dec40dc-0735-4342-bb54-17b680d39547"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aac1",
+            "_id": "6921882564adedebb6b2aaba",
+            "_data": {
+                "type": "aiAgentJobTool",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Tool",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "toolId": "get_appointments",
+                    "description": "This tool gets all appointments of the patient.",
+                    "useParameters": true,
+                    "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\n      \"type\": \"string\",\n      \"description\": \"The Name of the patient. Just accept whatever name the patient says, dont ask explicitly for first and last name.\"\n    }\n  },\n  \"required\": [\n    \"name\"\n  ],\n  \"additionalProperties\": false\n}",
+                    "debugMessage": true,
+                    "condition": ""
+                },
+                "preview": "get_appointments",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "c27a64ab-13f3-4c65-9db7-47ee69d7b58f"
+        },
+        {
+            "children": [],
+            "next": null,
+            "_id": "6921882564adedebb6b2aac3",
+            "_data": {
+                "type": "aiAgentToolAnswer",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Resolve Tool Action",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "answer": "{{ cc.sessionInfo.appointments.rtaText }}",
+                    "debugToolAnswer": false
+                },
+                "preview": "{{ cc.sessionInfo.appointments.rtaText }}",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "61322aeb-82c7-482b-b857-a36c6b601ddb"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aac3",
+            "_id": "6921882564adedebb6b2aac1",
+            "_data": {
+                "type": "executeFlow",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Execute Flow (2)",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "flowNode": {
+                        "flow": "3b195289-a467-432d-884b-c6d1aa2892aa",
+                        "node": "192e88ad-69ed-44af-9224-2c879fe5ce07"
+                    },
+                    "parseIntents": true,
+                    "parseKeyphrases": true,
+                    "absorbContext": ""
+                },
+                "preview": {
+                    "flow": "3b195289-a467-432d-884b-c6d1aa2892aa",
+                    "node": "192e88ad-69ed-44af-9224-2c879fe5ce07"
+                },
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "4ccc5aba-edc6-4a41-ba2c-2d49e2352456"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aac6",
+            "_id": "6921882564adedebb6b2aabb",
+            "_data": {
+                "type": "aiAgentJobTool",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Tool",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "toolId": "validate_appointment",
+                    "description": "This tool checks the availability of an appointment date and time.",
+                    "useParameters": true,
+                    "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"appointment_date\": {\n      \"type\": \"string\",\n      \"description\": \"The appointment date the user wished in the following format:\\n\\\"yyyy-mm-dd\\\"\"\n    },\n    \"appointment_time\": {\n      \"type\": \"string\",\n      \"description\": \"The appointment time the user wished in the following format:\\nhh:mm\\n\\n- German Format with 24 hours\"\n    }\n  },\n  \"required\": [\n    \"appointment_date\",\n    \"appointment_time\"\n  ],\n  \"additionalProperties\": false\n}",
+                    "debugMessage": true,
+                    "condition": ""
+                },
+                "preview": "validate_appointment",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "7965b490-de77-4dfa-b8c3-8e235b98bb93"
+        },
+        {
+            "children": [],
+            "next": null,
+            "_id": "6921882564adedebb6b2aac8",
+            "_data": {
+                "type": "aiAgentToolAnswer",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Resolve Tool Action",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "answer": "{{ cc.sessionInfo.appointments.rta }}",
+                    "debugToolAnswer": false
+                },
+                "preview": "{{ cc.sessionInfo.appointments.rta }}",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "2e7f7fa1-1316-4715-af44-1c9e7660db6b"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aac8",
+            "_id": "6921882564adedebb6b2aac6",
+            "_data": {
+                "type": "code",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Code",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "code": "if (!cc.sessionInfo.appointments?.secondTime) {\r\n    cc.sessionInfo.appointments.secondTime = true;\r\n    cc.sessionInfo.appointments.rta = \"The appointment is not avaliable anymore. The first available slot would be in exaclty 2 weeks at 14:30 (Say the date to the user, dont say in two weeks). Ask the user if that is okay for him.\"\r\n} else {\r\n    cc.sessionInfo.appointments.rta = \"The appointment is still available.\"\r\n    let demo = \"A new line\";\r\n}\r\n",
+                    "hasError": false,
+                    "transpiled": "var _a;\nif (!((_a = cc.sessionInfo.appointments) === null || _a === void 0 ? void 0 : _a.secondTime)) {\n    cc.sessionInfo.appointments.secondTime = true;\n    cc.sessionInfo.appointments.rta = \"The appointment is not avaliable anymore. The first available slot would be in exaclty 2 weeks at 14:30 (Say the date to the user, dont say in two weeks). Ask the user if that is okay for him.\";\n}\nelse {\n    cc.sessionInfo.appointments.rta = \"The appointment is still available.\";\n    let demo = \"A new line\";\n}\n"
+                },
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "517c16da-b69c-4ea1-a526-184ff7b351e6"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aacb",
+            "_id": "6921882564adedebb6b2aabc",
+            "_data": {
+                "type": "aiAgentJobTool",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Tool",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "toolId": "reschedule_appointment",
+                    "description": "This tool reschedules an existing appointment",
+                    "useParameters": true,
+                    "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"appointment_date\": {\n      \"type\": \"string\",\n      \"description\": \"The appointment date the user wished in the following format:\\n\\\"yyyy-mm-dd\\\"\"\n    },\n    \"appointment_time\": {\n      \"type\": \"string\",\n      \"description\": \"The appointment time the user wished in the following format:\\nhh:mm\\n\\n- German Format with 24 hours\"\n    }\n  },\n  \"required\": [\n    \"appointment_date\",\n    \"appointment_time\"\n  ],\n  \"additionalProperties\": false\n}",
+                    "debugMessage": true,
+                    "condition": ""
+                },
+                "preview": "reschedule_appointment",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "23052ab3-2e3d-4d56-9aa4-ec7331fd5f36"
+        },
+        {
+            "children": [],
+            "next": null,
+            "_id": "6921882564adedebb6b2aacb",
+            "_data": {
+                "type": "aiAgentToolAnswer",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Resolve Tool Action",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "answer": "The appointment was successfully rescheduled.",
+                    "debugToolAnswer": false
+                },
+                "preview": "The appointment was successfully rescheduled.",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "cce2a3d4-93f6-4acc-a3db-e9160fcca392"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aace",
+            "_id": "6921882564adedebb6b2aabd",
+            "_data": {
+                "type": "aiAgentJobTool",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Tool",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "toolId": "create_appointment",
+                    "description": "This tool creates a new appointment.",
+                    "useParameters": true,
+                    "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"appointment_time\": {\n      \"type\": \"string\",\n      \"description\": \"The appointment time the user wished in the following format:\\nhh:mm\\n\\n- German Format with 24 hours\"\n    },\n    \"name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the patient.\"\n    },\n    \"purpose\": {\n      \"type\": \"string\",\n      \"description\": \"A short description of the appointments purpose.\"\n    },\n    \"insurance_status\": {\n      \"type\": \"string\",\n      \"description\": \"Ask the user if he is publicly insured or is privately insured.\"\n    },\n    \"appointment_date\": {\n      \"type\": \"string\",\n      \"description\": \"The appointment date in the following format:\\nyyyy-mm-dd\"\n    }\n  },\n  \"required\": [\n    \"appointment_time\",\n    \"name\",\n    \"purpose\",\n    \"insurance_status\",\n    \"appointment_date\"\n  ],\n  \"additionalProperties\": false\n}",
+                    "debugMessage": true,
+                    "condition": ""
+                },
+                "preview": "create_appointment",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "90300c26-2750-4345-99c1-8d222def9b0f"
+        },
+        {
+            "children": [],
+            "next": null,
+            "_id": "6921882564adedebb6b2aad0",
+            "_data": {
+                "type": "aiAgentToolAnswer",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Resolve Tool Action",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "answer": "{{cc.sessionInfo.appointments.newAppointment.rtaText}}",
+                    "debugToolAnswer": false
+                },
+                "preview": "{{cc.sessionInfo.appointments.newAppointment.rtaText}}",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "bec7a729-ba30-427c-87d9-b30ef3da0cf2"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aad2",
+            "_id": "6921882564adedebb6b2aabe",
+            "_data": {
+                "type": "aiAgentJobTool",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Tool",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "toolId": "end_call",
+                    "description": "This tool ends the call with the customer. Call this tool at the end of the conversation when the customer does not need any more support.",
+                    "useParameters": true,
+                    "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"goodbye_message\": {\n      \"type\": \"string\",\n      \"description\": \"A short goodbye message to the caller.\"\n    }\n  },\n  \"required\": [\n    \"goodbye_message\"\n  ],\n  \"additionalProperties\": false\n}",
+                    "debugMessage": true,
+                    "condition": ""
+                },
+                "preview": "end_call",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "cf9db529-52e8-47d5-87ab-2d329ddef19a"
+        },
+        {
+            "children": [],
+            "next": null,
+            "_id": "6921882564adedebb6b2aad4",
+            "_data": {
+                "type": "hangup",
+                "extension": "@cognigy/voicegateway2",
+                "label": "Hang Up",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "hangupReason": "Bot ended the call",
+                    "hangupImmediately": false
+                },
+                "preview": "Bot ended the call",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "c1f7ffb1-7887-4807-b609-d6b1245ed68e"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aad4",
+            "_id": "6921882564adedebb6b2aad2",
+            "_data": {
+                "type": "say",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Say",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "say": {
+                        "data": "",
+                        "linear": false,
+                        "loop": false,
+                        "text": [
+                            "{{ ci.aiAgent.toolArgs.goodbye_message }}"
+                        ],
+                        "type": "text",
+                        "_cognigy": {},
+                        "_data": {
+                            "_cognigy": {}
+                        }
+                    },
+                    "handoverOutput": "userAndAgent",
+                    "preventTranscript": false,
+                    "generativeAI_rephraseOutputMode": "none",
+                    "generativeAI_amountOfLastUserInputs": 5,
+                    "generativeAI_customInputs": "",
+                    "generativeAI_temperature": 0.7
+                },
+                "preview": {
+                    "data": "",
+                    "linear": false,
+                    "loop": false,
+                    "text": [
+                        "{{ ci.aiAgent.toolArgs.goodbye_message }}"
+                    ],
+                    "type": "text",
+                    "_cognigy": {},
+                    "_data": {
+                        "_cognigy": {}
+                    }
+                },
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "7b29b4e6-4876-4eb2-942c-64dde12326a3"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aab4",
+            "_id": "6921882564adedebb6b2aad7",
+            "_data": {
+                "type": "setSessionConfig",
+                "extension": "@cognigy/voicegateway2",
+                "label": "Set Session Config (2)",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": true,
+                "config": {
+                    "bargeInMinWordCount": 1,
+                    "bargeInOnSpeech": false,
+                    "bargeInOnDtmf": false,
+                    "deepgramEndpointing": true,
+                    "deepgramEndpointingValue": 250,
+                    "deepgramSmartFormatting": false,
+                    "sttHints": [],
+                    "sttDisablePunctuation": false,
+                    "sttVadEnabled": false,
+                    "sttHintsDynamicHints": "",
+                    "sttLabel": "",
+                    "sttVadMode": 1,
+                    "sttVadVoiceMs": 100,
+                    "ttsDisableCache": false,
+                    "sttVendor": "none",
+                    "sttLanguage": "",
+                    "sttDeepgramModel": "",
+                    "ttsVendor": "none",
+                    "ttsModel": "",
+                    "ttsVoice": "",
+                    "ttsLanguage": "",
+                    "ttsLabel": "",
+                    "userNoInputTimeoutEnable": true,
+                    "userNoInputMode": "event",
+                    "userNoInputTimeout": 10000,
+                    "userNoInputRetries": 1,
+                    "userNoInputSpeech": "",
+                    "userNoInputUrl": "",
+                    "flowNoInputTimeoutEnable": false,
+                    "flowNoInputMode": "play",
+                    "flowNoInputTimeout": 10000,
+                    "flowNoInputRetries": 1,
+                    "flowNoInputSpeech": "",
+                    "flowNoInputUrl": "",
+                    "flowNoInputFail": false,
+                    "dtmfEnable": false,
+                    "dtmfInterDigitTimeout": 2000,
+                    "dtmfMaxDigits": 1,
+                    "dtmfMinDigits": 1,
+                    "dtmfSubmitDigit": "#",
+                    "asrDigit": "",
+                    "asrEnabled": false,
+                    "asrTimeout": 2000,
+                    "recognizeLanguagesAzure": false,
+                    "sttAzure": "",
+                    "sttAzureLang1": "",
+                    "sttAzureLang2": "",
+                    "sttAzureLang3": "",
+                    "recognizeLanguagesGoogle": false,
+                    "sttGoogle": "",
+                    "sttGoogleLang1": "",
+                    "sttGoogleLang2": "",
+                    "sttGoogleLang3": "",
+                    "enableAdvancedSTTConfig": false,
+                    "azureSttContextId": "",
+                    "azureEnableAudioLogging": false,
+                    "azureProfanityOption": "raw",
+                    "atmosphereAction": "",
+                    "atmosphereLoop": true,
+                    "atmosphereVolume": 0,
+                    "atmosphereUrl": "",
+                    "silenceOverlayAction": true,
+                    "silenceOverlayURL": "https://audio.jukehost.co.uk/XQAiYBq7jFgPm0igep1h7uUkSaUiSrv3",
+                    "silenceOverlayDelay": 1,
+                    "googleModel": "latest_short",
+                    "sessionParams": "{}"
+                },
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "72912631-4d49-49d5-b268-e2172aee5951"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aad0",
+            "_id": "6921882564adedebb6b2aace",
+            "_data": {
+                "type": "executeFlow",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Execute Flow (3)",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "flowNode": {
+                        "flow": "31233506-afc1-4ef5-8846-27e1bc700d2b",
+                        "node": "4b6296b8-15f8-488d-addc-3c45e1f21077"
+                    },
+                    "parseIntents": true,
+                    "parseKeyphrases": true,
+                    "absorbContext": ""
+                },
+                "preview": {
+                    "flow": "31233506-afc1-4ef5-8846-27e1bc700d2b",
+                    "node": "4b6296b8-15f8-488d-addc-3c45e1f21077"
+                },
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "abbf812b-5b4f-4da8-925e-e0080ebc1404"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aad7",
+            "_id": "6921882564adedebb6b2aab1",
+            "_data": {
+                "type": "setSessionConfig",
+                "extension": "@cognigy/voicegateway2",
+                "label": "Set Session Config",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "bargeInMinWordCount": 1,
+                    "bargeInOnSpeech": false,
+                    "bargeInOnDtmf": false,
+                    "deepgramEndpointing": true,
+                    "deepgramEndpointingValue": 500,
+                    "deepgramSmartFormatting": false,
+                    "sttHints": [],
+                    "sttDisablePunctuation": false,
+                    "sttVadEnabled": false,
+                    "sttHintsDynamicHints": "",
+                    "sttLabel": "",
+                    "sttVadMode": 1,
+                    "sttVadVoiceMs": 100,
+                    "ttsDisableCache": false,
+                    "sttVendor": "none",
+                    "sttLanguage": "",
+                    "sttDeepgramModel": "",
+                    "ttsVendor": "none",
+                    "ttsModel": "",
+                    "ttsVoice": "",
+                    "ttsLanguage": "",
+                    "ttsLabel": "",
+                    "userNoInputTimeoutEnable": true,
+                    "userNoInputMode": "event",
+                    "userNoInputTimeout": 10000,
+                    "userNoInputRetries": 1,
+                    "userNoInputSpeech": "",
+                    "userNoInputUrl": "",
+                    "flowNoInputTimeoutEnable": false,
+                    "flowNoInputMode": "play",
+                    "flowNoInputTimeout": 10000,
+                    "flowNoInputRetries": 1,
+                    "flowNoInputSpeech": "",
+                    "flowNoInputUrl": "",
+                    "flowNoInputFail": false,
+                    "dtmfEnable": false,
+                    "dtmfInterDigitTimeout": 2000,
+                    "dtmfMaxDigits": 1,
+                    "dtmfMinDigits": 1,
+                    "dtmfSubmitDigit": "#",
+                    "asrDigit": "",
+                    "asrEnabled": false,
+                    "asrTimeout": 2000,
+                    "recognizeLanguagesAzure": false,
+                    "sttAzure": "",
+                    "sttAzureLang1": "",
+                    "sttAzureLang2": "",
+                    "sttAzureLang3": "",
+                    "recognizeLanguagesGoogle": false,
+                    "sttGoogle": "",
+                    "sttGoogleLang1": "",
+                    "sttGoogleLang2": "",
+                    "sttGoogleLang3": "",
+                    "enableAdvancedSTTConfig": false,
+                    "azureSttContextId": "",
+                    "azureEnableAudioLogging": false,
+                    "azureProfanityOption": "raw",
+                    "atmosphereAction": "",
+                    "atmosphereLoop": true,
+                    "atmosphereVolume": 0,
+                    "atmosphereUrl": "",
+                    "silenceOverlayAction": true,
+                    "silenceOverlayURL": "https://audio.jukehost.co.uk/XQAiYBq7jFgPm0igep1h7uUkSaUiSrv3",
+                    "silenceOverlayDelay": 1,
+                    "googleModel": "latest_short",
+                    "sessionParams": "{}"
+                },
+                "preview": "",
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "9158ae85-ab58-42ab-8760-357dd78fca5c"
+        },
+        {
+            "children": [],
+            "next": "6921882564adedebb6b2aab8",
+            "_id": "6921882564adedebb6b2aaaf",
+            "_data": {
+                "type": "say",
+                "extension": "@cognigy/basic-nodes",
+                "label": "Say (2)",
+                "comment": "",
+                "commentColor": "",
+                "analyticsLabel": null,
+                "isEntryPoint": false,
+                "isDisabled": false,
+                "config": {
+                    "say": {
+                        "data": "",
+                        "linear": false,
+                        "loop": false,
+                        "text": [],
+                        "type": "text",
+                        "_cognigy": {}
+                    },
+                    "handoverOutput": "userAndAgent",
+                    "preventTranscript": false,
+                    "generativeAI_rephraseOutputMode": "none",
+                    "generativeAI_amountOfLastUserInputs": 5,
+                    "generativeAI_customInputs": "",
+                    "generativeAI_temperature": 0.7
+                },
+                "preview": {
+                    "data": "",
+                    "linear": false,
+                    "loop": false,
+                    "text": [],
+                    "type": "text",
+                    "_cognigy": {}
+                },
+                "localeReference": "690f3f1c4cc8affe01ce1a81"
+            },
+            "referenceId": "c4614a48-9aa5-4f2d-ba42-25f530bcfa1d"
+        }
+    ]
+}

@@ -7,7 +7,7 @@ try {
         if (respone.statusCode != 200) {
             cc.sessionInfo.patient.failed = true;
             rtaText = "Getting the patient failed. Try again once more."
-            return "hello";
+            return
         }
 
         let content = respone.result.result;
@@ -28,14 +28,6 @@ try {
     }
 
     processPatientResponse(ci.httprequest);
-
-    function someNewFunction(input) {
-        if (input.replace("something") == "Something Else") {
-            return "This";
-        } else{
-            return "That";
-        }
-    }
 
     
 } catch(err) {
