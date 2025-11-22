@@ -183,9 +183,9 @@
                 "isEntryPoint": false,
                 "isDisabled": false,
                 "config": {
-                    "code": "cc.sessionInfo.appointments.newAppointment = {\r\n    \"patient\": cc.sessionInfo.patient.sysId,\r\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\r\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\r\n}",
+                    "code": "cc.sessionInfo.appointments.newAppointment = {\r\n    \"patient\": cc.sessionInfo.patient.sysId,\r\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\r\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\r\n}\r\n\r\nlet demoText = \"Here is something new\";",
                     "hasError": false,
-                    "transpiled": "cc.sessionInfo.appointments.newAppointment = {\n    \"patient\": cc.sessionInfo.patient.sysId,\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\n};\n"
+                    "transpiled": "cc.sessionInfo.appointments.newAppointment = {\n    \"patient\": cc.sessionInfo.patient.sysId,\n    \"procedures\": ci.aiAgent.toolArgs.purpose,\n    \"start_date_time\": `${ci.aiAgent.toolArgs.appointment_date} ${ci.aiAgent.toolArgs.appointment_time}:00`\n};\nlet demoText = \"Here is something new\";\n"
                 },
                 "preview": "",
                 "localeReference": "690f3f1c4cc8affe01ce1a81"
