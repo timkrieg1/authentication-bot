@@ -3,6 +3,7 @@ try {
     function processPatientResponse(respone) {
         let memory = "";
         let rtaText = "";
+        let newDemoVariable = "0";
 
         if (respone.statusCode != 200) {
             cc.sessionInfo.patient.failed = true;
