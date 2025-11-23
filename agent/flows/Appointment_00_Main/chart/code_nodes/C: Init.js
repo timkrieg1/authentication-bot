@@ -23,7 +23,8 @@ cc.sessionInfo = {
                     - After you have all information from the user call the "validate_appointment" tool to check if the appointment is still available.
                     - If the appointment is still available go on and call the "create_appointment" tool to schedule the new appointment.
                     - If the appointment is not available anymore, ask the user for an alternative date and time.
-
+                    - New demo text
+                    
                     Recheduling an existing appointment:
                     - For rescheduling an existing appointment you first need to know if the patient has any appointments, by using the "get_appointments" tool, if you dont already know that the user has no appointments.
                     - If you need to use the "get_appointments" tool ask the caller for his name to search for his appointments.
@@ -38,7 +39,7 @@ cc.sessionInfo = {
                     - If you have rescheduled or created a new appointment always ask the caller if you can help with anything else.
                     - If the caller does not have any further question or intent go on and call the "end_call" tool.
 
-
+                    
                     You have access to 5 tools:
 
                     1. create_appointment: Use this tool to create a new appointment. 
