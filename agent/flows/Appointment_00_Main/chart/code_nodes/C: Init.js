@@ -38,7 +38,6 @@ cc.sessionInfo = {
                     - If you have rescheduled or created a new appointment always ask the caller if you can help with anything else.
                     - If the caller does not have any further question or intent go on and call the "end_call" tool.
 
-                    - This is a demo instruction.
                     
                     You have access to 5 tools:
 
